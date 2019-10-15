@@ -1,16 +1,16 @@
 default:
   text_skin: default
   highlight_theme: default
-  lang: pt-br
+  lang: en
   paths:
     root: /
     home: /
     archive:  /archive.html
     rss:  /feed.xml
   mathjax: true
-  mathjax_autoNumber: true
-  mermaid: false
-  chart: false
+  mathjax_autoNumber: false
+  mermaid: true
+  chart: true
   toc:
     selectors: 'h1,h2,h3'
   sources: bootcdn
@@ -27,7 +27,7 @@ default:
       show_readmore: true
       show_info: true
     show_title: true
-    show_edit_on_github: false
+    show_edit_on_github: true
     show_date: true
     show_tags: true
     show_author_profile: true

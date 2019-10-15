@@ -332,18 +332,18 @@ voices and music from a mesh of sounds at a cocktail party).
     of an average) of all the results of the hypothesis with inputs from
     x's and the actual output y's.
     
-    \[ J(\theta_0, \theta_1) = \frac{1}{2m} \sum^{m}_{i=1} (\hat{y}_i - y_i)^2 =
-    \frac{1}{2m}\sum^{m}_{i=1} (h_\theta(x_i)-y_i)^2\]
+    $$ J(\theta_0, \theta_1) = \frac{1}{2m} \sum^{m}_{i=1} (\hat{y}_i - y_i)^2 =
+    \frac{1}{2m}\sum^{m}_{i=1} (h_\theta(x_i)-y_i)^2$$
     
-    To break it apart, it is \[ \frac{1}{2} \hat{x} \] where \[ \hat{x} \] is the mean
-    of the squares of \[ h_\theta (x_{i}) - y_{i} \] , or the difference between
+    To break it apart, it is $$ \frac{1}{2} \hat{x} $$ where $$ \hat{x} $$ is the mean
+    of the squares of $$ h_\theta (x_{i}) - y_{i} $$ , or the difference between
     the predicted value and the actual value.
     
     This function is otherwise called the "Squared error function", or
-    "Mean squared error". The mean is halved \[ \left(\frac{1}{2}\right)
-    \] as a convenience for the
+    "Mean squared error". The mean is halved $$ \left(\frac{1}{2}\right)
+    $$ as a convenience for the
      computation of the gradient descent, as the derivative term of the
-    square function will cancel out the \[ \frac{1}{2} \] term. The
+    square function will cancel out the $$ \frac{1}{2} $$ term. The
     following image summarizes what the cost function does:
     
     ![img](/assets/images/primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png)
@@ -366,7 +366,7 @@ voices and music from a mesh of sounds at a cocktail party).
     case, the value of J(&theta;<sub>0</sub>, &theta;<sub>1</sub>) will be 0. The following example shows
     the ideal situation where we have a cost function of 0.
     
-    ![img](/assets/images/primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png)
+    ![img](/assets/images/primeira_semana/B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png)
     
     When &theta;<sub>1</sub> = 1, we get a slope of 1 which goes through every
     single data point in our model. Conversely, when &theta;<sub>1</sub> = 0.5, we
@@ -470,7 +470,7 @@ voices and music from a mesh of sounds at a cocktail party).
     
     repeat until convergence:
     
-    \[ \theta_j := \theta_j - \alpha\frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1) \]
+    $$ \theta_j := \theta_j - \alpha\frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1) $$
     
     where
     
@@ -494,9 +494,9 @@ formula for a single parameter was :
 
 Repeat until convergence:
 
-\[ \theta_1 := \theta_1 - \alpha\frac{d}{d\theta_1}J(\theta_1) \]
+$$ \theta_1 := \theta_1 - \alpha\frac{d}{d\theta_1}J(\theta_1) $$
 
-Regardless of the slope's sign for \[ \frac{d}{d\theta_1}J(\theta_1) \], &theta;<sub>1</sub>
+Regardless of the slope's sign for $$ \frac{d}{d\theta_1}J(\theta_1) $$, &theta;<sub>1</sub>
 eventually converges to its minimum value. The following grapg shows
 that when the slope is negative, the value of &theta;<sub>1</sub> increases and when it
 is positive, the value of &theta;<sub>1</sub> decreases.
@@ -512,11 +512,11 @@ our step size is wrong.
 
 How does gradient descent converge with a fixed step size &alpha;?
 
-The intuition behind the convergence is that \[ \frac{d}{d\theta_1} J(\theta_1) \]
+The intuition behind the convergence is that $$ \frac{d}{d\theta_1} J(\theta_1) $$
 approaches 0 as we approach the bottom of our convex function. At the
 minimum, the derivative will always be 0 and thus we get:
 
-\[ \theta_1 := \theta_1 - \alpha.0 \]
+$$ \theta_1 := \theta_1 - \alpha.0 $$
 
 ![img](/assets/images/primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png)
 
@@ -530,10 +530,10 @@ of the gradient descent equation can be derived. We can substitute our
 actual cost function and our actual hypothesis function and modify the
 equation to :
 
-\[ \begin{align*} \text{repeat until convergence: } \lbrace & \\
+$$ \begin{align*} \text{repeat until convergence: } \lbrace & \\
 \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \\
 \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i})
-x_{i}\right) \\ \rbrace& \end{align*} \]
+x_{i}\right) \\ \rbrace& \end{align*} $$
 
 Where m is the size of the training set, &theta;<sub>0</sub> a constant that will be
 changing simultaneously with &theta;<sub>1</sub> and x<sub>i</sub>, y<sub>i</sub> are values of the given
@@ -541,8 +541,8 @@ training set (data).
 
 Note that we have separated out the two cases for &theta;<sub>j</sub> into separte
 equations for &theta;<sub>0</sub> and &theta;<sub>1</sub>; and that for &theta;<sub>1</sub> we are multiplying x<sub>i</sub> at the
-end due to the derivative. The following is a derivation of \[
-\frac{\delta}{\delta\theta_j} J(\theta) \] for a single example:
+end due to the derivative. The following is a derivation of $$
+\frac{\delta}{\delta\theta_j} J(\theta) $$ for a single example:
 
 ![img](/assets/images/primeira_semana/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54_2019-08-09_13-29-59.png)
 
@@ -581,13 +581,13 @@ went through as it converged to its minimum.
 
 Matrices are 2-dimensional arrays:
 
-\[\begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \\ j & k & l\end{bmatrix} \]
+$$\begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \\ j & k & l\end{bmatrix} $$
 
 The above matrix has four rows and three columns, so it is a 4 x 3 matrix.
 
 A vector is a matrix with one column and many rows:
 
-\[ \begin{bmatrix} w \\ x \\ y \\ z \end{bmatrix} \]
+$$ \begin{bmatrix} w \\ x \\ y \\ z \end{bmatrix} $$
 
 Notation and terms:
 
@@ -606,8 +606,8 @@ for some programming languages, the arrays are 0-indexed.
 
 matrix.
 
--   \[\Re\] refers to the set of scalar real numbers.
--   \[\Re^n\] refers to the set of n-dimensional vectors of real numbers.
+-   $$\Re$$ refers to the set of scalar real numbers.
+-   $$\Re^n$$ refers to the set of n-dimensional vectors of real numbers.
 
 Run the cell below to get familiar with the commands in
 Octave/Matlab. Feel free to create matrices and vectors and try out
@@ -625,30 +625,30 @@ nilbody
 Addition and subtraction are element-wise, so you simply add or
 subtract each corresponding element:
 
-\[ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}
+$$ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}
 +\begin{bmatrix} w & x \\ y & z \\ \end{bmatrix}
-=\begin{bmatrix} a+w & b+x \\ c+y & d+z \\ \end{bmatrix} \]
+=\begin{bmatrix} a+w & b+x \\ c+y & d+z \\ \end{bmatrix} $$
 
 Subtracting Matrices:
 
-\[ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} - \begin{bmatrix} w
+$$ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} - \begin{bmatrix} w
 & x \\ y & z \\ \end{bmatrix} =\begin{bmatrix} a-w & b-x \\ c-y & d-z
-\\ \end{bmatrix} \]
+\\ \end{bmatrix} $$
 
 To add or subtract two matrices, their dimensions must be the same.
 
 In scalar multiplication, we simply multiply every element by the
 scalar value:
 
-\[ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} * x
-=\begin{bmatrix} a*x & b*x \\ c*x & d*x \\ \end{bmatrix} \]
+$$ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} * x
+=\begin{bmatrix} a*x & b*x \\ c*x & d*x \\ \end{bmatrix} $$
 
 In scalar division, we simply divide every element by the scalar
 value:
 
-\[ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} / x
+$$ \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} / x
 =\begin{bmatrix} a /x & b/x \\ c /x & d /x \\
-\end{bmatrix} \]
+\end{bmatrix} $$
 
 Experiment below with the Octave/Matlab commands for matrix addition
 and scalar multiplication. Feel free to try out different
@@ -754,16 +754,16 @@ ans = mult_AB
 
 ### matrix multiplication properties
 
--   Matrices are not commutative: \[ A * B \neq B * A \]
--   Matrices are associative: \[ (A * B) * C = A * (B * C) \]
+-   Matrices are not commutative: $$ A * B \neq B * A $$
+-   Matrices are associative: $$ (A * B) * C = A * (B * C) $$
 
 The identity matrix, when multiplied by any matrix of the same
 dimensions, results in the original matrix. It's just like multiplying
 numbers by 1. The identity matrix simply has 1's on the diagonal
 (upper left to lower right diagonal) and 0's elsewhere.
 
-\[ \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
-\\ \end{bmatrix} \]
+$$ \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+\\ \end{bmatrix} $$
 
 When multiplying the identity matrix after some matrix (A∗I), the
 square identity matrix's dimension should match the other matrix's
@@ -814,11 +814,11 @@ clockwise direction and then reversing it. We can compute
 transposition of matrices in matlab with the transpose(A) function or
 A':
 
-\[ A = \begin{bmatrix} a & b \\ c & d \\ e & f
-\end{bmatrix} \]
+$$ A = \begin{bmatrix} a & b \\ c & d \\ e & f
+\end{bmatrix} $$
 
-\[ A^T = \begin{bmatrix} a & c & e \\ b & d & f \\
-\end{bmatrix} \]
+$$ A^T = \begin{bmatrix} a & c & e \\ b & d & f \\
+\end{bmatrix} $$
 
 In other words:
 
@@ -880,10 +880,10 @@ the house,x<sub>2</sub> the number of floors, etc.
 Using the definition of matrix multiplication, our multivariable
 hypothesis function can be concisely represented as:
 
-\[ \begin{align*}h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em}
+$$ \begin{align*}h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em}
 \theta_1 \hspace{2em} ... \hspace{2em} \theta_n\end{bmatrix}\begin{bmatrix}x_0
 \\ x_1 \\ \vdots \\ x_n\end{bmatrix}= \theta^T
-x\end{align*} \]
+x\end{align*} $$
 
 This is a vectorization of our hypothesis function for one training
 example; see the lessons on vectorization to learn more.
@@ -901,19 +901,19 @@ other element-wise (that is, have the same number of elements: n+1).]
 The gradient descent equation itself is generally the same form; we
 just have to repeat it for our 'n' features:
 
-\[ \begin{align*} & \text{repeat until convergence:} \; \lbrace
+$$ \begin{align*} & \text{repeat until convergence:} \; \lbrace
 \\ \; & \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) -
 y^{(i)}) \cdot x_0^{(i)}\\ \; & \theta_1 := \theta_1 - \alpha \frac{1}{m}
 \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} \\ \; & \theta_2
 := \theta_2 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)}
-\\ & \cdots \\ \rbrace \end{align*} \]
+\\ & \cdots \\ \rbrace \end{align*} $$
 
 In other words:
 
-\[ \begin{align*}& \text{repeat until convergence:} \; \lbrace
+$$ \begin{align*}& \text{repeat until convergence:} \; \lbrace
 \\ \; & \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) -
 y^{(i)}) \cdot x_j^{(i)} \; & \text{for j := 0...n}\\
-\rbrace\end{align*} \]
+\rbrace\end{align*} $$
 
 The following image compares gradient descent with one variable to
 gradient descent with multiple variables:
@@ -952,7 +952,7 @@ values for that input variable resulting in a new average value for
 the input variable of just zero. To implement both of these
 techniques, adjust your input values as shown in this formula:
 
-\[ x_i := \frac{x_i - \mu_i}{s_i} \]
+$$ x_i := \frac{x_i - \mu_i}{s_i} $$
 
 Where &mu;<sub>i</sub> is the average of all the values for feature (i) and s<sub>i</sub> is
 the range of values (max - min), or s<sub>i</sub> is the standard deviation.
@@ -962,7 +962,7 @@ deviation, give different results. The quizzes in this course use
 range - the programming exercises use standard deviation.
 
 For example, if x<sub>i</sub> represents housing prices with a range of 100 to
-2000 and a mean value of 1000, then, \[ x_i := \dfrac{price-1000}{1900} \].
+2000 and a mean value of 1000, then, $$ x_i := \dfrac{price-1000}{1900} $$.
 
 
 <a id="org812a258"></a>
@@ -1013,19 +1013,19 @@ We can change the behavior or curve of our hypothesis function by
 making it a quadratic, cubic or square root function (or any other
 form).
 
-For example, if our hypothesis function is \[ h_\theta(x) = \theta_0 +
-\theta_1 x_1 \]
+For example, if our hypothesis function is $$ h_\theta(x) = \theta_0 +
+\theta_1 x_1 $$
 then we can create additional features based on x<sub>1</sub>, to get the
-quadratic function \[ h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2
-\] or the cubic 
-function \[ h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 +
-\theta_3 x_1^3 \]
+quadratic function $$ h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2
+$$ or the cubic 
+function $$ h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 +
+\theta_3 x_1^3 $$
 
 In the cubic version, we have created new features x<sub>2</sub> and x<sub>3</sub>
 where x<sub>2</sub> = x<sub>1</sub><sup>2</sup> and x<sub>3</sub> = x<sub>1</sub><sup>3</sup> .
 
-To make it a square root function, we could do: \[ h_\theta(x) = \theta_0 +
-\theta_1 x_1 + \theta_2 \sqrt{x_1} \] ​ ​
+To make it a square root function, we could do: $$ h_\theta(x) = \theta_0 +
+\theta_1 x_1 + \theta_2 \sqrt{x_1} $$ ​ ​
 
 One important thing to keep in mind is, if you choose your features
 this way then feature scaling becomes very important.
@@ -1304,15 +1304,15 @@ to predict y given x. However, it is easy to construct examples where
 this method performs very poorly. Intuitively, it also doesn’t make
 sense for h<sub>&theta;</sub>(x) to take values larger than 1 or smaller
 than 0 when we know that y ∈ {0, 1}. To fix this, let’s change the
-form for our hypotheses h<sub>&theta;</sub>(x) to satisfy \[ 0 \leq h_\theta(x)
-\leq 1 \]. 
+form for our hypotheses h<sub>&theta;</sub>(x) to satisfy $$ 0 \leq h_\theta(x)
+\leq 1 $$. 
 This is accomplished by plugging &theta;<sup>Txθ</sup> T x into the Logistic Function.
 
 Our new form uses the "Sigmoid Function," also called the "Logistic
 Function":
 
-\[ \begin{align*}& h_\theta (x) = g ( \theta^T x ) \\ \\& z
-= \theta^T x \\& g(z) = \dfrac{1}{1 + e^{-z}}\end{align*} \]
+$$ \begin{align*}& h_\theta (x) = g ( \theta^T x ) \\ \\& z
+= \theta^T x \\& g(z) = \dfrac{1}{1 + e^{-z}}\end{align*} $$
 
 The following image shows us what the sigmoid function looks like:
 
@@ -1328,8 +1328,8 @@ is 1. Our probability that our prediction is 0 is just the complement
 of our probability that it is 1 (e.g. if probability that it is 1 is
 70%, then the probability that it is 0 is 30%).
 
-\[\begin{align*}& h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ;
-\theta) \\& P(y = 0 | x;\theta) + P(y = 1 | x ; \theta) = 1\end{align*}\]
+$$\begin{align*}& h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ;
+\theta) \\& P(y = 0 | x;\theta) + P(y = 1 | x ; \theta) = 1\end{align*}$$
 
 
 <a id="orgaa7bcc4"></a>
@@ -1339,40 +1339,40 @@ of our probability that it is 1 (e.g. if probability that it is 1 is
 In order to get our discrete 0 or 1 classification, we can translate
 the output of the hypothesis function as follows:
 
-\[ \begin{align*}& h_\theta(x) \geq 0.5 \rightarrow y = 1 \\&
-h_\theta(x) < 0.5 \rightarrow y = 0 \\\end{align*} \]
+$$ \begin{align*}& h_\theta(x) \geq 0.5 \rightarrow y = 1 \\&
+h_\theta(x) < 0.5 \rightarrow y = 0 \\\end{align*} $$
 
 The way our logistic function g behaves is that when its input is
 greater than or equal to zero, its output is greater than or equal to
 0.5:
 
-\[ \begin{align*}& g(z) \geq 0.5 \\& when \; z \geq 0\end{align*} \]
+$$ \begin{align*}& g(z) \geq 0.5 \\& when \; z \geq 0\end{align*} $$
 
 Remember.
 
-\[ \begin{align*}z=0, e^{0}=1 \Rightarrow g(z)=1/2\\ z \to \infty, e^{-\infty} \to 0
+$$ \begin{align*}z=0, e^{0}=1 \Rightarrow g(z)=1/2\\ z \to \infty, e^{-\infty} \to 0
 \Rightarrow g(z)=1 \\ z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)=0
-\end{align*} \]
+\end{align*} $$
 
 So if our input to g is &theta;<sup>T</sup> X, then that means:
 
-\[ \begin{align*}& h_\theta(x) = g(\theta^T x) \geq 0.5 \\& when
-\; \theta^T x \geq 0\end{align*} \]
+$$ \begin{align*}& h_\theta(x) = g(\theta^T x) \geq 0.5 \\& when
+\; \theta^T x \geq 0\end{align*} $$
 
 From these statements we can now say:
 
-\[ \begin{align*}& \theta^T x \geq 0 \Rightarrow y = 1 \\& \theta^T x < 0 \Rightarrow y = 0
-\\\end{align*} \]
+$$ \begin{align*}& \theta^T x \geq 0 \Rightarrow y = 1 \\& \theta^T x < 0 \Rightarrow y = 0
+\\\end{align*} $$
 
 The decision boundary is the line that separates the area where y = 0
 and where y = 1. It is created by our hypothesis function.
 
 Example:
 
-\[ \begin{align*}& \theta = \begin{bmatrix}5 \\ -1 \\
+$$ \begin{align*}& \theta = \begin{bmatrix}5 \\ -1 \\
 0\end{bmatrix} \\ & y = 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0
 \\ & 5 - x_1 \geq 0 \\ & - x_1 \geq -5 \\& x_1 \leq 5
-\\ \end{align*} \]
+\\ \end{align*} $$
 
 In this case, our decision boundary is a straight vertical line placed
 on the graph where x<sub>1</sub> = 5, and everything to the left of that
@@ -1399,11 +1399,11 @@ function.
 
 Instead, our cost function for logistic regression looks like:
 
-\[ \begin{align*}& J(\theta) = \dfrac{1}{m} \sum_{i=1}^m
+$$ \begin{align*}& J(\theta) = \dfrac{1}{m} \sum_{i=1}^m
 \mathrm{Cost}(h_\theta(x^{(i)}),y^{(i)}) \\ &
 \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) \; & \text{if y = 1}
 \\ & \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) \; &
-\text{if y = 0}\end{align*} \]
+\text{if y = 0}\end{align*} $$
 
 When y = 1, we get the following plot for J(&theta;) vs h<sub>&theta;</sub> (x):
 
@@ -1414,12 +1414,12 @@ h<sub>&theta;</sub> (x):
 
 ![img](/assets/images/terceira_semana/Ut7vvXnxEead-BJkoDOYOw_f719f2858d78dd66d80c5ec0d8e6b3fa_Logistic_regression_cost_function_negative_class_2019-08-11_15-50-34.png)
 
-\[ \begin{align*}& \mathrm{Cost}(h_\theta(x),y) = 0 \text{ if }
+$$ \begin{align*}& \mathrm{Cost}(h_\theta(x),y) = 0 \text{ if }
 h_\theta(x) = y \\ & \mathrm{Cost}(h_\theta(x),y) \rightarrow
 \infty \text{ if } y = 0 \; \mathrm{and} \; h_\theta(x) \rightarrow 1
 \\ & \mathrm{Cost}(h_\theta(x),y) \rightarrow \infty \text{ if }
 y = 1 \; \mathrm{and} \; h_\theta(x) \rightarrow 0 \\
-\end{align*} \]
+\end{align*} $$
 
 If our correct answer 'y' is 0, then the cost function will be 0 if
 our hypothesis function also outputs 0. If our hypothesis approaches
@@ -1449,25 +1449,25 @@ will not affect the result.
 
 We can fully write out our entire cost function as follows:
 
-\[ J(\theta) = - \frac{1}{m}
-\sum^{m}_{i=1}[y^{(i)} \log(h_\theta(x^{(i)}))+(1-y^{(i)}) \log(1-h_\theta(x^{(i)}))] \]
+$$ J(\theta) = - \frac{1}{m}
+\sum^{m}_{i=1}[y^{(i)} \log(h_\theta(x^{(i)}))+(1-y^{(i)}) \log(1-h_\theta(x^{(i)}))] $$
 
 A vectorized implementation is:
 
-\[ \begin{align*} & h = g(X\theta)\\ & J(\theta) = \frac{1}{m} \cdot
-\left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right) \end{align*} \]
+$$ \begin{align*} & h = g(X\theta)\\ & J(\theta) = \frac{1}{m} \cdot
+\left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right) \end{align*} $$
 
 Gradient Descent
 
 Remember that the general form of gradient descent is:
 
-\[ \begin{align*}& Repeat \; \lbrace \\ & \; \theta_j := \theta_j - \alpha
-\dfrac{\partial}{\partial \theta_j}J(\theta) \\ & \rbrace\end{align*} \]
+$$ \begin{align*}& Repeat \; \lbrace \\ & \; \theta_j := \theta_j - \alpha
+\dfrac{\partial}{\partial \theta_j}J(\theta) \\ & \rbrace\end{align*} $$
 
 We can work out the derivative part using calculus to get:
 
-\[ \begin{align*} & Repeat \; \lbrace \\ & \; \theta_j := \theta_j - \frac{\alpha}{m}
-\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} \\ & \rbrace \end{align*} \]
+$$ \begin{align*} & Repeat \; \lbrace \\ & \; \theta_j := \theta_j - \frac{\alpha}{m}
+\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} \\ & \rbrace \end{align*} $$
 
 Notice that this algorithm is identical to the one we used in linear
 regression. We still have to simultaneously update all values in
@@ -1475,7 +1475,7 @@ theta.
 
 A vectorized implementation is:
 
-\[ \theta:= \theta - \frac{\alpha}{m}X^T(g(X\theta)-\hat{y}) \]
+$$ \theta:= \theta - \frac{\alpha}{m}X^T(g(X\theta)-\hat{y}) $$
 
 
 <a id="orgf9adf04"></a>
@@ -1492,7 +1492,7 @@ optimized. Octave provides them.
 We first need to provide a function that evaluates the following two
 functions for a given input value θ:
 
-\[ \begin{align*} & J(\theta) \\ & \dfrac{\partial}{\partial \theta_j}J(\theta)\end{align*} \]
+$$ \begin{align*} & J(\theta) \\ & \dfrac{\partial}{\partial \theta_j}J(\theta)\end{align*} $$
 
 We can write a single function that returns both of these:
 
@@ -1532,11 +1532,11 @@ Since y = {0,1&#x2026;n}, we divide our problem into n+1 (+1 because the
 index starts at 0) binary classification problems; in each one, we
 predict the probability that 'y' is a member of one of our classes.
 
-\[ \begin{align*}& y \in \lbrace0, 1 ... n\rbrace \\&
+$$ \begin{align*}& y \in \lbrace0, 1 ... n\rbrace \\&
 h_\theta^{(0)}(x) = P(y = 0 | x ; \theta) \\& h_\theta^{(1)}(x) = P(y =
 1 | x ; \theta) \\& \cdots \\& h_\theta^{(n)}(x) = P(y = n | x ; \theta)
 \\& \mathrm{prediction} = \max_i( h_\theta ^{(i)}(x)
-)\\\end{align*} \]
+)\\\end{align*} $$
 
 We are basically choosing one class and then lumping all the others
 into a single second class. We do this repeatedly, applying binary
@@ -1629,7 +1629,7 @@ We'll want to eliminate the influence of &theta;<sub>3</sub> x<sup>3</sup> and &
 actually getting rid of these features or changing the form of our
 hypothesis, we can instead modify our cost function:
 
-\[ \min_{\theta}​ \dfrac{1}{2m}​ \sum_{i=1}^{m} (h_\theta(x^{(i)})- y^{(i)})^2 +1000.\theta_3^2 ​ +1000.\theta_4^2 ​ \]
+$$ \min_{\theta}​ \dfrac{1}{2m}​ \sum_{i=1}^{m} (h_\theta(x^{(i)})- y^{(i)})^2 +1000.\theta_3^2 ​ +1000.\theta_4^2 ​ $$
 
 We've added two extra terms at the end to inflate the cost of &theta;<sub>3</sub>
 and &theta;<sub>4</sub>. Now, in order for the cost function to get close to zero,
@@ -1644,8 +1644,8 @@ and &theta;<sub>4</sub> x<sup>4</sup>.
 
 We could also regularize all of our theta parameters in a single summation as:
 
-\[ \min_\theta \dfrac{1}{2m} \sum^{m}_{i=1} (h_\theta (x^{(i)})-y^{(i)})^2 +
-\lambda\sum^n_{j=1} \theta^2_j \]
+$$ \min_\theta \dfrac{1}{2m} \sum^{m}_{i=1} (h_\theta (x^{(i)})-y^{(i)})^2 +
+\lambda\sum^n_{j=1} \theta^2_j $$
 
 The λ, or lambda, is the regularization parameter. It determines how
 much the costs of our theta parameters are inflated.
@@ -1668,19 +1668,19 @@ Gradient Descent We will modify our gradient descent function to
 separate out &theta;<sub>0</sub> from the rest of the parameters because we do not
 want to penalize &theta;<sub>0</sub>.
 
-\[ \begin{align*} & \text{Repeat}\ \lbrace \\ & \ \ \ \ \theta_0 :=
+$$ \begin{align*} & \text{Repeat}\ \lbrace \\ & \ \ \ \ \theta_0 :=
 \theta_0 - \alpha\ \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} \\ & \ \
 \ \ \theta_j := \theta_j - \alpha\ \left[ \left( \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) -
 y^{(i)})x_j^{(i)} \right) + \frac{\lambda}{m}\theta_j \right] &\ \ \ \ \ \ \ \ \ \ j \in
-\lbrace 1,2...n\rbrace\\ & \rbrace \end{align*} \]
+\lbrace 1,2...n\rbrace\\ & \rbrace \end{align*} $$
 
-The term \[ \dfrac{\lambda}{m}\theta_j \]  performs our regularization. With some
+The term $$ \dfrac{\lambda}{m}\theta_j $$  performs our regularization. With some
 manipulation our update rule can also be represented as:
 
-\[ \theta_j ​ := \theta_j (1 - \dfrac{\alpha\lambda}{m}) - \dfrac{\alpha}{m} \sum^m_{i=1} (h \theta ​ (x^{(i)}
-)-y^{(i)})x_j^{(i)} \]
+$$ \theta_j ​ := \theta_j (1 - \dfrac{\alpha\lambda}{m}) - \dfrac{\alpha}{m} \sum^m_{i=1} (h \theta ​ (x^{(i)}
+)-y^{(i)})x_j^{(i)} $$
 
-The first term in the above equation, \[ 1 - \alpha\dfrac{\lambda}{m} \] will
+The first term in the above equation, $$ 1 - \alpha\dfrac{\lambda}{m} $$ will
 always be less than 1. Intuitively you can see it as reducing the
 value of &theta;<sub>j</sub> by some amount on every update. Notice that the second
 term is now exactly the same as it was before.
@@ -1693,11 +1693,11 @@ method of the non-iterative normal equation.
 To add in regularization, the equation is the same as our original,
 except that we add another term inside the parentheses:
 
-​\[ \begin{align*}& \theta = \left( X^TX + \lambda \cdot L \right)^{-1} X^Ty \\&
+​$$ \begin{align*}& \theta = \left( X^TX + \lambda \cdot L \right)^{-1} X^Ty \\&
 \text{where}\ \ L = \begin{bmatrix} 0 & & & & \\ & 1 & & &
 \\ & & 1 & & \\ & & & \ddots & \\ & & & & 1
 \\\end{bmatrix}\end{align*}
-\]
+$$
 
 L is a matrix with 0 at the top left and 1's down the diagonal, with
 0's everywhere else. It should have dimension
@@ -1724,14 +1724,14 @@ Cost Function
 
 Recall that our cost function for logistic regression was:
 
-\[ J(\theta) = -\dfrac{1}{m}\sum^m_{i=1}[y^{(i)}
-\log(h_\theta(x^{(i)}))+(1-y^{(i)})\log(1-h_\theta(x^{(i)}))] \]
+$$ J(\theta) = -\dfrac{1}{m}\sum^m_{i=1}[y^{(i)}
+\log(h_\theta(x^{(i)}))+(1-y^{(i)})\log(1-h_\theta(x^{(i)}))] $$
 
 We can regularize this equation by adding a term to the end:
 
-\[ J(\theta) = -\dfrac{1}{m}\sum^m_{i=1}[y^{(i)}
+$$ J(\theta) = -\dfrac{1}{m}\sum^m_{i=1}[y^{(i)}
 \log(h_\theta(x^{(i)}))+(1-y^{(i)})\log(1-h_\theta(x^{(i)}))] +
-\dfrac{\lambda}{2m}\sum^n_{j=1}\theta^2_j \]
+\dfrac{\lambda}{2m}\sum^n_{j=1}\theta^2_j $$
 
 The second sum, &sum;<sub>j=1</sub><sup>n</sup> &theta;<sub>j</sub><sup>2</sup> means to explicitly exclude the bias
 term, &theta;<sub>0</sub>. I.e. the θ vector is indexed from 0 to n (holding n+1
@@ -1764,13 +1764,13 @@ dendrites are like the input features x1⋯xn, and the output is the
 result of our hypothesis function. In this model our x<sub>0</sub> input node
 is sometimes called the "bias unit." It is always equal to 1. In
 neural networks, we use the same logistic function as in
-classification,\[ \frac{1}{1 + e^{-\theta^Tx}}\], yet we sometimes call it a sigmoid (logistic) activation
+classification,$$ \frac{1}{1 + e^{-\theta^Tx}}$$, yet we sometimes call it a sigmoid (logistic) activation
 function. In this situation, our "theta" parameters are sometimes
 called "weights".
 
 Visually, a simplistic representation looks like:
 
-\[ \begin{bmatrix}x_0 \\ x_1 \\ x_2 \\ \end{bmatrix}\rightarrow\begin{bmatrix}\ \ \ \\ \end{bmatrix}\rightarrow h_\theta(x) \]
+$$ \begin{bmatrix}x_0 \\ x_1 \\ x_2 \\ \end{bmatrix}\rightarrow\begin{bmatrix}\ \ \ \\ \end{bmatrix}\rightarrow h_\theta(x) $$
 
 Our input nodes (layer 1), also known as the "input layer", go into
 another node (layer 2), which finally outputs the hypothesis function,
@@ -1782,15 +1782,15 @@ layers called the "hidden layers."
 In this example, we label these intermediate or "hidden" layer nodes
 a<sup>2</sup><sub>0</sub>⋯a<sup>2</sup><sub>n</sub> and call them "activation units."
 
-\[ \begin{align*}& a_i^{(j)} = \text{"activation" of unit $i$ in layer $j$} \\& \Theta^{(j)} = \text{matrix of weights controlling function mapping from layer $j$ to layer $j+1$}\end{align*} \]
+$$ \begin{align*}& a_i^{(j)} = \text{"activation" of unit $i$ in layer $j$} \\& \Theta^{(j)} = \text{matrix of weights controlling function mapping from layer $j$ to layer $j+1$}\end{align*} $$
 
 If we had one hidden layer, it would look like:
 
-\[ \begin{bmatrix}x_0 \\ x_1 \\ x_2 \\ x_3\end{bmatrix}\rightarrow\begin{bmatrix}a_1^{(2)} \\ a_2^{(2)} \\ a_3^{(2)} \\ \end{bmatrix}\rightarrow h_\theta(x) \]
+$$ \begin{bmatrix}x_0 \\ x_1 \\ x_2 \\ x_3\end{bmatrix}\rightarrow\begin{bmatrix}a_1^{(2)} \\ a_2^{(2)} \\ a_3^{(2)} \\ \end{bmatrix}\rightarrow h_\theta(x) $$
 
 The values for each of the "activation" nodes is obtained as follows:
 
-\[ \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \\ a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \\ a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \\ h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \\ \end{align*} \]
+$$ \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \\ a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \\ a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \\ h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \\ \end{align*} $$
 
 This is saying that we compute our activation nodes by using a 3×4
 matrix of parameters. We apply each row of the parameters to our
@@ -1823,33 +1823,33 @@ so s<sub>j+1</sub> &times; (s<sub>j</sub> + 1) = 4 &times; 3.
 
 To re-iterate, the following is an example of a neural network:
 
-\[ \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3)
+$$ \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3)
 \\ a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \\
 a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \\
 h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} +
-\Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \\ \end{align*} \]
+\Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \\ \end{align*} $$
 
 In this section we'll do a vectorized implementation of the above
 functions. We're going to define a new variable z<sub>k</sub><sup>(j)</sup> that encompasses
 the parameters inside our g function. In our previous example if we
 replaced by the variable z for all the parameters we would get:
 
-\[ \begin{align*}a_1^{(2)} = g(z_1^{(2)}) \\ a_2^{(2)} = g(z_2^{(2)}) \\
-a_3^{(2)} = g(z_3^{(2)}) \\ \end{align*} \]
+$$ \begin{align*}a_1^{(2)} = g(z_1^{(2)}) \\ a_2^{(2)} = g(z_2^{(2)}) \\
+a_3^{(2)} = g(z_3^{(2)}) \\ \end{align*} $$
 
 In other words, for layer j=2 and node k, the variable z will be:
 
-\[ z_k^{(2)} = \Theta_{k,0}^{(1)}x_0 + \Theta_{k,1}^{(1)}x_1 + \cdots + \Theta_{k,n}^{(1)}x_n \]
+$$ z_k^{(2)} = \Theta_{k,0}^{(1)}x_0 + \Theta_{k,1}^{(1)}x_1 + \cdots + \Theta_{k,n}^{(1)}x_n $$
 
 The vector representation of x and z<sup>j</sup> is:
 
-\[ \begin{align*}x = \begin{bmatrix}x_0 \\ x_1 \\\cdots
+$$ \begin{align*}x = \begin{bmatrix}x_0 \\ x_1 \\\cdots
 \\ x_n\end{bmatrix} &z^{(j)} = \begin{bmatrix}z_1^{(j)} \\ z_2^{(j)}
-\\\cdots \\ z_n^{(j)}\end{bmatrix}\end{align*} \]
+\\\cdots \\ z_n^{(j)}\end{bmatrix}\end{align*} $$
 
 Setting x = a<sup>(1)</sup>, we can rewrite the equation as:
 
-\[ z^{(j)} = \Theta^{(j-1)}a^{(j-1)} \]
+$$ z^{(j)} = \Theta^{(j-1)}a^{(j-1)} $$
 
 We are multiplying our matrix Θ(j−1) with dimensions s<sub>j</sub> &times; (n+1)
 (where s<sub>j</sub> is the number of our activation nodes) by our vector a<sup>(j-1)</sup>
@@ -1864,7 +1864,7 @@ We can then add a bias unit (equal to 1) to layer j after we have
 computed a<sup>(j)</sup> . This will be element a<sub>0</sub><sup>(j)</sup> and will be equal to 1. To
 compute our final hypothesis, let's first compute another z vector:
 
-\[ z^{(j+1)} = \Theta^{(j)}a^{(j)} \]
+$$ z^{(j+1)} = \Theta^{(j)}a^{(j)} $$
 
 Notice that in this last step, between layer j and layer j+1, we are
 doing exactly the same thing as we did in logistic regression. Adding
@@ -1887,18 +1887,18 @@ both x<sub>1</sub> and x<sub>2</sub> are 1.
 
 The graph of our functions will look like:
 
-\[ \begin{align*}\begin{bmatrix}x_0 \\ x_1 \\ x_2\end{bmatrix} \rightarrow\begin{bmatrix}g(z^{(2)})\end{bmatrix} \rightarrow h_\Theta(x)\end{align*} \]
+$$ \begin{align*}\begin{bmatrix}x_0 \\ x_1 \\ x_2\end{bmatrix} \rightarrow\begin{bmatrix}g(z^{(2)})\end{bmatrix} \rightarrow h_\Theta(x)\end{align*} $$
 
 Remember that x<sub>0</sub> is our bias variable and is always 1.
 
 Let's set our first theta matrix as:
 
-\[ \Theta^{(1)} =\begin{bmatrix}-30 & 20 & 20\end{bmatrix} \]
+$$ \Theta^{(1)} =\begin{bmatrix}-30 & 20 & 20\end{bmatrix} $$
 
 This will cause the output of our hypothesis to only be positive if
 both x<sub>1</sub> and x<sub>2</sub> are 1. In other words:
 
-\[ \begin{align*}& h_\Theta(x) = g(-30 + 20x_1 + 20x_2) \\ \\ & x_1 = 0 \ \ and \ \ x_2 = 0 \ \ then \ \ g(-30) \approx 0 \\ & x_1 = 0 \ \ and \ \ x_2 = 1 \ \ then \ \ g(-10) \approx 0 \\ & x_1 = 1 \ \ and \ \ x_2 = 0 \ \ then \ \ g(-10) \approx 0 \\ & x_1 = 1 \ \ and \ \ x_2 = 1 \ \ then \ \ g(10) \approx 1\end{align*} \]
+$$ \begin{align*}& h_\Theta(x) = g(-30 + 20x_1 + 20x_2) \\ \\ & x_1 = 0 \ \ and \ \ x_2 = 0 \ \ then \ \ g(-30) \approx 0 \\ & x_1 = 0 \ \ and \ \ x_2 = 1 \ \ then \ \ g(-10) \approx 0 \\ & x_1 = 1 \ \ and \ \ x_2 = 0 \ \ then \ \ g(-10) \approx 0 \\ & x_1 = 1 \ \ and \ \ x_2 = 1 \ \ then \ \ g(10) \approx 1\end{align*} $$
 
 So we have constructed one of the fundamental operations in computers
 by using a small neural network rather than using an actual AND
@@ -1919,26 +1919,26 @@ Where g(z) is the following:
 
 The Θ(1) matrices for AND, NOR, and OR are:
 
-\[ \begin{align*}AND:\\\Theta^{(1)} &=\begin{bmatrix}-30 & 20 & 20\end{bmatrix} \\ NOR:\\\Theta^{(1)} &= \begin{bmatrix}10 & -20 & -20\end{bmatrix} \\ OR:\\\Theta^{(1)} &= \begin{bmatrix}-10 & 20 & 20\end{bmatrix} \\\end{align*} \]
+$$ \begin{align*}AND:\\\Theta^{(1)} &=\begin{bmatrix}-30 & 20 & 20\end{bmatrix} \\ NOR:\\\Theta^{(1)} &= \begin{bmatrix}10 & -20 & -20\end{bmatrix} \\ OR:\\\Theta^{(1)} &= \begin{bmatrix}-10 & 20 & 20\end{bmatrix} \\\end{align*} $$
 
 We can combine these to get the XNOR logical operator (which gives 1
 if x<sub>1</sub> and x<sub>2</sub> are both 0 or both 1).
 
-\[ \begin{align*}\begin{bmatrix}x_0 \\ x_1 \\ x_2\end{bmatrix} \rightarrow\begin{bmatrix}a_1^{(2)} \\ a_2^{(2)} \end{bmatrix} \rightarrow\begin{bmatrix}a^{(3)}\end{bmatrix} \rightarrow h_\Theta(x)\end{align*} \]
+$$ \begin{align*}\begin{bmatrix}x_0 \\ x_1 \\ x_2\end{bmatrix} \rightarrow\begin{bmatrix}a_1^{(2)} \\ a_2^{(2)} \end{bmatrix} \rightarrow\begin{bmatrix}a^{(3)}\end{bmatrix} \rightarrow h_\Theta(x)\end{align*} $$
 
 For the transition between the first and second layer, we'll use a
 Θ<sup>(1)</sup> matrix that combines the values for AND and NOR:
 
-\[ \Theta^{(1)} =\begin{bmatrix}-30 & 20 & 20 \\ 10 & -20 & -20\end{bmatrix} \]
+$$ \Theta^{(1)} =\begin{bmatrix}-30 & 20 & 20 \\ 10 & -20 & -20\end{bmatrix} $$
 
 For the transition between the second and third layer, we'll use a
 Θ<sup>(2)</sup> matrix that uses the value for OR:
 
-\[ \Theta^{(2)} =\begin{bmatrix}-10 & 20 & 20\end{bmatrix} \]
+$$ \Theta^{(2)} =\begin{bmatrix}-10 & 20 & 20\end{bmatrix} $$
 
 Let's write out the values for all our nodes:
 
-\[ \begin{align*}& a^{(2)} = g(\Theta^{(1)} \cdot x) \\& a^{(3)} = g(\Theta^{(2)} \cdot a^{(2)}) \\& h_\Theta(x) = a^{(3)}\end{align*} \]
+$$ \begin{align*}& a^{(2)} = g(\Theta^{(1)} \cdot x) \\& a^{(3)} = g(\Theta^{(2)} \cdot a^{(2)}) \\& h_\Theta(x) = a^{(3)}\end{align*} $$
 
 And there we have the XNOR operator using a hidden layer with two
 nodes! The following summarizes the above algorithm:
@@ -1971,7 +1971,7 @@ function. The setup looks like:
 
 Our resulting hypothesis for one set of inputs may look like:
 
-\[ h_\Theta(x) =\begin{bmatrix}0 \\ 0 \\ 1 \\ 0 \\\end{bmatrix} \]
+$$ h_\Theta(x) =\begin{bmatrix}0 \\ 0 \\ 1 \\ 0 \\\end{bmatrix} $$
 
 In which case our resulting class is the third one down, or h<sub>Θ</sub>(x)<sub>3</sub>,
 which represents the motorcycle.
@@ -2003,12 +2003,12 @@ output. Our cost function for neural networks is going to be a
 generalization of the one we used for logistic regression. Recall that
 the cost function for regularized logistic regression was:
 
-\[ J(\theta) = - \frac{1}{m}
-\sum^{m}_{i=1}[y^{(i)} \log(h_\theta(x^{(i)}))+(1-y^{(i)}) \log(1-h_\theta(x^{(i)}))] \]
+$$ J(\theta) = - \frac{1}{m}
+\sum^{m}_{i=1}[y^{(i)} \log(h_\theta(x^{(i)}))+(1-y^{(i)}) \log(1-h_\theta(x^{(i)}))] $$
 
 For neural networks, it is going to be slightly more complicated:
 
-\[ J(\Theta) = - \frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K \left[y^{(i)}_k \log ((h_\Theta (x^{(i)}))_k) + (1 - y^{(i)}_k)\log (1 - (h_\Theta(x^{(i)}))_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_{l+1}} ( \Theta_{j,i}^{(l)})^2 \]
+$$ J(\Theta) = - \frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K \left[y^{(i)}_k \log ((h_\Theta (x^{(i)}))_k) + (1 - y^{(i)}_k)\log (1 - (h_\Theta(x^{(i)}))_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_{l+1}} ( \Theta_{j,i}^{(l)})^2 $$
 
 We have added a few nested summations to account for our multiple
 output nodes. In the first part of the equation, before the square
@@ -2044,13 +2044,13 @@ the entire network.
 cost function, just like what we were doing with gradient descent in
 logistic and linear regression. Our goal is to compute:
 
-\[ \min_\Theta J(\Theta) \] 
+$$ \min_\Theta J(\Theta) $$ 
 
 That is, we want to minimize our cost function J using an optimal set
 of parameters in theta. In this section we'll look at the equations we
 use to compute the partial derivative of J(Θ):
 
-\[ \dfrac{\partial}{\partial \Theta_{i,j}^{(l)}}J(\Theta) \]
+$$ \dfrac{\partial}{\partial \Theta_{i,j}^{(l)}}J(\Theta) $$
 
 To do so, we use the following algorithm:
 
@@ -2058,7 +2058,7 @@ To do so, we use the following algorithm:
 
 Back propagation Algorithm
 
-Given training set \[ \lbrace (x^{(1)}, y^{(1)}) \cdots (x^{(m)}, y^{(m)})\rbrace \]
+Given training set $$ \lbrace (x^{(1)}, y^{(1)}) \cdots (x^{(m)}, y^{(m)})\rbrace $$
 
 -   Set &Delta;<sup>(l)</sup><sub>i,j</sub> := 0 for all (l,i,j), (hence you end up having a matrix full of zeros)
 
@@ -2078,7 +2078,7 @@ results in the last layer and the correct outputs in y. To get the
 delta values of the layers before the last layer, we can use an
 equation that steps us back from right to left:
 
-1.  Compute &delta;<sup>(L-1)</sup>, &delta;<sup>(L-2)</sup>,&hellip;,&delta;<sup>(2)</sup> using \[ \delta^{(l)} = ((\Theta^{(l)})^T \delta^{(l+1)})\ .*\ a^{(l)}\ .*\ (1 - a^{(l)}) \]
+1.  Compute &delta;<sup>(L-1)</sup>, &delta;<sup>(L-2)</sup>,&hellip;,&delta;<sup>(2)</sup> using $$ \delta^{(l)} = ((\Theta^{(l)})^T \delta^{(l+1)})\ .*\ a^{(l)}\ .*\ (1 - a^{(l)}) $$
 
 The delta values of layer l are calculated by multiplying the delta
 values in the next layer with the theta matrix of layer l. We then
@@ -2096,13 +2096,13 @@ g'(z<sup>(l)</sup>) = a<sup>(l)</sup> .\* (1 - a<sup>(l)</sup>)
 
 Hence we update our new &Delta; matrix.
 
--   \[ D^{(l)}_{i,j} := \dfrac{1}{m}\left(\Delta^{(l)}_{i,j} + \lambda\Theta^{(l)}_{i,j}\right) \]
+-   $$ D^{(l)}_{i,j} := \dfrac{1}{m}\left(\Delta^{(l)}_{i,j} + \lambda\Theta^{(l)}_{i,j}\right) $$
 
--   \[ D^{(l)}_{i,j} := \dfrac{1}{m}\Delta^{(l)}_{i,j} \ \ \ \text{if j = 0}\]
+-   $$ D^{(l)}_{i,j} := \dfrac{1}{m}\Delta^{(l)}_{i,j} \ \ \ \text{if j = 0}$$
 
 The capital-delta matrix D is used as an "accumulator" to add up our
 values as we go along and eventually compute our partial
-derivative. Thus we get \[ \frac \partial {\partial \Theta_{ij}^{(l)}} J(\Theta)\]
+derivative. Thus we get $$ \frac \partial {\partial \Theta_{ij}^{(l)}} J(\Theta)$$
 
 
 <a id="org3a2c682"></a>
@@ -2111,18 +2111,18 @@ derivative. Thus we get \[ \frac \partial {\partial \Theta_{ij}^{(l)}} J(\Theta)
 
 Recall that the cost function for a neural network is:
 
-\[ J(\Theta) = - \frac{1}{m} \sum_{t=1}^m\sum_{k=1}^K \left[ y^{(t)}_k \ \log (h_\Theta (x^{(t)}))_k + (1 - y^{(t)}_k)\ \log (1 - h_\Theta(x^{(t)})_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_l+1} ( \Theta_{j,i}^{(l)})^2 \]
+$$ J(\Theta) = - \frac{1}{m} \sum_{t=1}^m\sum_{k=1}^K \left[ y^{(t)}_k \ \log (h_\Theta (x^{(t)}))_k + (1 - y^{(t)}_k)\ \log (1 - h_\Theta(x^{(t)})_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_l+1} ( \Theta_{j,i}^{(l)})^2 $$
 
 If we consider simple non-multiclass classification (k = 1) and
 disregard regularization, the cost is computed with:
 
-\[ cost(t) =y^{(t)} \ \log (h_\Theta (x^{(t)})) + (1 - y^{(t)})\ \log (1 - h_\Theta(x^{(t)})) \]
+$$ cost(t) =y^{(t)} \ \log (h_\Theta (x^{(t)})) + (1 - y^{(t)})\ \log (1 - h_\Theta(x^{(t)})) $$
 
 Intuitively, &delta;<sub>j</sub><sup>(l)</sup> is the "error" for a<sup>(l)</sup><sub>j</sub> (unit j in layer l). More
 formally, the delta values are actually the derivative of the cost
 function:
 
-\[ \delta_j^{(l)} = \dfrac{\partial}{\partial z_j^{(l)}} cost(t) \]
+$$ \delta_j^{(l)} = \dfrac{\partial}{\partial z_j^{(l)}} cost(t) $$
 
 Recall that our derivative is the slope of a line tangent to the cost
 function, so the steeper the slope the more incorrect we are. Let us
@@ -2152,7 +2152,7 @@ from. Hence, another example would be &delta;<sub>2</sub><sup>(3)</sup> = Θ<sup
 
 With neural networks, we are working with sets of matrices:
 
-\[ \begin{align*} \Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}, \dots \\ D^{(1)}, D^{(2)}, D^{(3)}, \dots \end{align*} \]
+$$ \begin{align*} \Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}, \dots \\ D^{(1)}, D^{(2)}, D^{(3)}, \dots \end{align*} $$
 
 In order to use optimizing functions such as "fminunc()", we will want
 to "unroll" all the elements and put them into one long vector:
@@ -2184,12 +2184,12 @@ To summarize:
 Gradient checking will assure that our backpropagation works as
 intended. We can approximate the derivative of our cost function with:
 
-\[ \dfrac{\partial}{\partial\Theta}J(\Theta) \approx \dfrac{J(\Theta + \epsilon) - J(\Theta - \epsilon)}{2\epsilon} \]
+$$ \dfrac{\partial}{\partial\Theta}J(\Theta) \approx \dfrac{J(\Theta + \epsilon) - J(\Theta - \epsilon)}{2\epsilon} $$
 
 With multiple theta matrices, we can approximate the derivative with
 respect to Θ<sub>j</sub> as follows:
 
-\[ \dfrac{\partial}{\partial\Theta_j}J(\Theta) \approx \dfrac{J(\Theta_1, \dots, \Theta_j + \epsilon, \dots, \Theta_n) - J(\Theta_1, \dots, \Theta_j - \epsilon, \dots, \Theta_n)}{2\epsilon} \]
+$$ \dfrac{\partial}{\partial\Theta_j}J(\Theta) \approx \dfrac{J(\Theta_1, \dots, \Theta_j + \epsilon, \dots, \Theta_n) - J(\Theta_1, \dots, \Theta_j - \epsilon, \dots, \Theta_n)}{2\epsilon} $$
 
 A small value for ϵ (epsilon) such as ϵ=10<sup>-4</sup>, guarantees that the math
 works out properly. If the value for ϵ is too small, we can end up
@@ -2341,15 +2341,15 @@ The new procedure using these two sets is then:
 
 The test set error
 
-1.  For linear regression: \[ J_{test}(\Theta) = \dfrac{1}{2m_{test}} \sum_{i=1}^{m_{test}}(h_\Theta(x^{(i)}_{test}) - y^{(i)}_{test})^2 \]
+1.  For linear regression: $$ J_{test}(\Theta) = \dfrac{1}{2m_{test}} \sum_{i=1}^{m_{test}}(h_\Theta(x^{(i)}_{test}) - y^{(i)}_{test})^2 $$
 2.  For classification ~ Misclassification error (aka 0/1 misclassification error):
 
-\[ err(h_\Theta(x),y) = \begin{matrix} 1 & \mbox{if } h_\Theta(x) \geq 0.5\ and\ y = 0\ or\ h_\Theta(x) < 0.5\ and\ y = 1\newline 0 & \mbox otherwise \end{matrix} \]
+$$ err(h_\Theta(x),y) = \begin{matrix} 1 & \mbox{if } h_\Theta(x) \geq 0.5\ and\ y = 0\ or\ h_\Theta(x) < 0.5\ and\ y = 1\newline 0 & \mbox otherwise \end{matrix} $$
 
 This gives us a binary 0 or 1 error result based on a
 misclassification. The average test error for the test set is:
 
-\[ \text{Test Error} = \dfrac{1}{m_{test}} \sum^{m_{test}}_{i=1} err(h_\Theta(x^{(i)}_{test}), y^{(i)}_{test}) \]
+$$ \text{Test Error} = \dfrac{1}{m_{test}} \sum^{m_{test}}_{i=1} err(h_\Theta(x^{(i)}_{test}), y^{(i)}_{test}) $$
 
 This gives us the proportion of the test data that was misclassified.
 
@@ -2427,7 +2427,7 @@ The is summarized in the figure below:
 ### regulatization and bias/variance
 
 Note: [The regularization term below and through out the video should
-be \[ \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2 \] and NOT \[\frac{\lambda}{2m} \sum_{j=1}^m \theta_j^2\] ]
+be $$ \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2 $$ and NOT $$\frac{\lambda}{2m} \sum_{j=1}^m \theta_j^2$$ ]
 
 ![img](/assets/images/sexta_semana/3XyCytntEeataRJ74fuL6g_3b6c06d065d24e0bf8d557e59027e87a_Screenshot-2017-01-13-16.09.36_2019-08-24_00-26-19.png)
 
@@ -2630,20 +2630,20 @@ machine learning algorithm. It is sometimes cleaner and more powerful.
 
 Recall that in logistic regression, we use the following rules:
 
-if y=1, then h<sub>&theta;</sub>(x) &asymp; 1 and \[ \Theta^Tx \gg 0 \]
+if y=1, then h<sub>&theta;</sub>(x) &asymp; 1 and $$ \Theta^Tx \gg 0 $$
 
-if y=0, then h<sub>&theta;</sub>(x) &asymp; 0 and \[ \Theta^Tx \ll 0 \]
+if y=0, then h<sub>&theta;</sub>(x) &asymp; 0 and $$ \Theta^Tx \ll 0 $$
 
 Recall the cost function for (unregularized) logistic regression:
 
-\[ \begin{align*}J(\theta) & = \frac{1}{m}\sum_{i=1}^m -y^{(i)} \log(h_\theta(x^{(i)})) -
+$$ \begin{align*}J(\theta) & = \frac{1}{m}\sum_{i=1}^m -y^{(i)} \log(h_\theta(x^{(i)})) -
 (1 - y^{(i)})\log(1 - h_\theta(x^{(i)}))\\ & = \frac{1}{m}\sum_{i=1}^m -y^{(i)}
 \log\Big(\dfrac{1}{1 + e^{-\theta^Tx^{(i)}}}\Big) - (1 -
-y^{(i)})\log\Big(1 - \dfrac{1}{1 + e^{-\theta^Tx^{(i)}}}\Big)\end{align*} \]
+y^{(i)})\log\Big(1 - \dfrac{1}{1 + e^{-\theta^Tx^{(i)}}}\Big)\end{align*} $$
 
 To make a support vector machine, we will modify the first term of the
-cost function \[ - \log(h_\theta(x)) = - \log
-\Big(\frac{1}{1+e^{-\theta^T x}}\Big) \] so that when θ<sup>T</sup> x (from now on,
+cost function $$ - \log(h_\theta(x)) = - \log
+\Big(\frac{1}{1+e^{-\theta^T x}}\Big) $$ so that when θ<sup>T</sup> x (from now on,
 we shall refer to this as z) is greater than 1, it
 outputs 0. Furthermore, for values of z less than 1, we shall use a
 straight decreasing line instead of the sigmoid curve.(In the
@@ -2653,8 +2653,8 @@ literature, this is called a hinge loss
 ![img](/assets/images/sétima_semana/67xwSHtkEeam4BLcQYZr8Q_1877395fcce3436991415c70ed819461_Svm_hing_2019-09-01_08-28-51.png)
 
 Similarly, we modify the second term of the cost function
- \[ -
-\log(1 - h_\theta(x)) = - \log\Big(1 - \frac{1}{1+e^{-\theta^T x}}\Big) \]
+ $$ -
+\log(1 - h_\theta(x)) = - \log\Big(1 - \frac{1}{1+e^{-\theta^T x}}\Big) $$
  so that when z is less than -1, it outputs 0. We also modify it so
 that for values of z greater than -1, we use a straight increasing
 line instead of the sigmoid curve.
@@ -2674,9 +2674,9 @@ cost1(z) = max(0,k(1−z))
 
 Recall the full cost function from (regularized) logistic regression:
 
-\[ J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)}(-\log(h_\theta(x^{(i)}))) + (1 -
+$$ J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)}(-\log(h_\theta(x^{(i)}))) + (1 -
 y^{(i)})(-\log(1 - h_\theta(x^{(i)}))) + \dfrac{\lambda}{2m}\sum_{j=1}^n \Theta^2_j
-\]
+$$
 
 Note that the negative sign has been distributed into the sum in the
 above equation.
@@ -2684,9 +2684,9 @@ above equation.
 We may transform this into the cost function for support vector
 machines by substituting cost<sub>0</sub>(z) and cost<sub>1</sub>(z):
 
-\[ J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 -
+$$ J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 -
 y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2m}\sum_{j=1}^n
-\Theta^2_j \]
+\Theta^2_j $$
 
 We can optimize this a bit by multiplying this by m (thus removing the
 m factor in the denominators). Note that this does not affect our
@@ -2695,11 +2695,11 @@ positive constant (for example, minimizing (u-5)<sup>2</sup> + 1 gives us 5;
 multiplying it by 10 to make it 10(u-5)<sup>2</sup> + 10 still gives us 5 when
 minimized).
 
-\[ J(\theta) = \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \
-\text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2}\sum_{j=1}^n \Theta^2_j \]
+$$ J(\theta) = \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \
+\text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2}\sum_{j=1}^n \Theta^2_j $$
 
-This is equivalent to multiplying the equation by \[ C = \dfrac{1}{\lambda}
-\], and thus results in the same values when optimized. Now, when we
+This is equivalent to multiplying the equation by $$ C = \dfrac{1}{\lambda}
+$$, and thus results in the same values when optimized. Now, when we
 wish to regularize more (that is, reduce overfitting), we decrease C,
 and when we wish to regularize less (that is, reduce underfitting), we
 increase C.
@@ -2709,8 +2709,8 @@ interpreted as the probability of y being 1 or 0 (as it is for the
 hypothesis of logistic regression). Instead, it outputs either 1
 or 0. (In technical terms, it is a discriminant function.)
 
-\[ h_\theta(x) =\begin{cases}    1 & \text{if} \ \Theta^Tx \geq 0
-\\    0 & \text{otherwise}\end{cases} \] 
+$$ h_\theta(x) =\begin{cases}    1 & \text{if} \ \Theta^Tx \geq 0
+\\    0 & \text{otherwise}\end{cases} $$ 
 
 
 <a id="org24e9a11"></a>
@@ -2733,15 +2733,15 @@ following constraints on Θ:
 
 If C is very large, we must choose Θ parameters such that:
 
-\[ \sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tx) + (1 - y^{(i)})\text{cost}_0(\Theta^Tx)
-= 0 \]
+$$ \sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tx) + (1 - y^{(i)})\text{cost}_0(\Theta^Tx)
+= 0 $$
 
 This reduces our cost function to:
 
-\[ \begin{align*}
+$$ \begin{align*}
 J(\theta) = C \cdot 0 + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j \\
 = \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j
-\end{align*} \]
+\end{align*} $$
 
 Recall the decision boundary from logistic regression (the line
 separating the positive and negative examples). In SVMs, the decision
@@ -2775,13 +2775,13 @@ Vector Inner Product
 
 Say we have two vectors, u and v:
 
-\[ \begin{align*} u = \begin{bmatrix} u_1 \\ u_2 \end{bmatrix} &\  v
-= \begin{bmatrix}v_1 \\ v_2 \end{bmatrix} \end{align*} \]
+$$ \begin{align*} u = \begin{bmatrix} u_1 \\ u_2 \end{bmatrix} &\  v
+= \begin{bmatrix}v_1 \\ v_2 \end{bmatrix} \end{align*} $$
 
 The length of vector v is denoted ||v||, and it describes the line on
 a graph from origin (0,0) to (v<sub>1</sub>, v<sub>2</sub>).
 
-The length of vector v can be calculated with \[ \sqrt{v_1^2 + v_2^2} \]
+The length of vector v can be calculated with $$ \sqrt{v_1^2 + v_2^2} $$
 ​by the Pythagorean theorem.
 
 The projection of vector v onto vector u is found by taking a right
@@ -2791,36 +2791,36 @@ angle from u to the end of v, creating a right triangle.
 
 -   u<sup>T</sup> v = p &sdot; ||u||
 
-Note that \[ u^T v = ||u|| \cdot ||v|| \cos \theta \] where θ is the angle
-between u and v. Also, \[ p = ||v|| \cos \theta \]. If you substitute p
-for \[ ||v|| \cos \theta \], you get \[ u^T v = p \cdot ||u||\].
+Note that $$ u^T v = ||u|| \cdot ||v|| \cos \theta $$ where θ is the angle
+between u and v. Also, $$ p = ||v|| \cos \theta $$. If you substitute p
+for $$ ||v|| \cos \theta $$, you get $$ u^T v = p \cdot ||u||$$.
 
 So the product u<sup>T</sup> v is equal to the length of the projection times
 the length of vector u.
 
-In our example, since u and v are vectors of the same length, \[u^T v =
-v^T u \].
+In our example, since u and v are vectors of the same length, $$u^T v =
+v^T u $$.
 
-\[ u^T v = v^T u = p \cdot ||u|| = u_1 v_1 + u_2 v_2 \]
+$$ u^T v = v^T u = p \cdot ||u|| = u_1 v_1 + u_2 v_2 $$
 
 If the angle between the lines for v and u is greater than 90 degrees,
 then the projection p will be negative.
 
-\[ \begin{align*}&\min_\Theta \dfrac{1}{2}\sum_{j=1}^n \Theta_j^2 \\&=
+$$ \begin{align*}&\min_\Theta \dfrac{1}{2}\sum_{j=1}^n \Theta_j^2 \\&=
 \dfrac{1}{2}(\Theta_1^2 + \Theta_2^2 + \dots + \Theta_n^2) \\&= \dfrac{1}{2}(\sqrt{\Theta_1^2 +
-\Theta_2^2 + \dots + \Theta_n^2})^2 \\&= \dfrac{1}{2}||\Theta ||^2 \\\end{align*} \]
+\Theta_2^2 + \dots + \Theta_n^2})^2 \\&= \dfrac{1}{2}||\Theta ||^2 \\\end{align*} $$
 
-We can use the same rules to rewrite \[ \Theta^Tx^{(i)} \]:
+We can use the same rules to rewrite $$ \Theta^Tx^{(i)} $$:
 
-\[ \Theta^Tx^{(i)} = p^{(i)} \cdot ||\Theta || = \Theta_1x_1^{(i)} + \Theta_2x_2^{(i)} +
-\dots + \Theta_n x_n^{(i)} \] 
+$$ \Theta^Tx^{(i)} = p^{(i)} \cdot ||\Theta || = \Theta_1x_1^{(i)} + \Theta_2x_2^{(i)} +
+\dots + \Theta_n x_n^{(i)} $$ 
 
-So we now have a new optimization objective by substituting \[ p^{(i)}
-\cdot ||\Theta || \] in for \[ \Theta^Tx^{(i)} \]:
+So we now have a new optimization objective by substituting $$ p^{(i)}
+\cdot ||\Theta || $$ in for $$ \Theta^Tx^{(i)} $$:
 
-If y=1, we want \[p^{(i)}⋅||\theta||\geq1\]
+If y=1, we want $$p^{(i)}⋅||\theta||\geq1$$
 
-If y=0, we want \[p^{(i)}⋅||\theta||\leq−1\]
+If y=0, we want $$p^{(i)}⋅||\theta||\leq−1$$
 
 The reason this causes a "large margin" is because: the vector for Θ
 is perpendicular to the decision boundary. In order for our
@@ -2842,21 +2842,21 @@ Given x, compute new feature depending on proximity to landmarks l<sup>(1)</sup>
 
 To do this, we find the "similarity" of x and some landmark l<sup>(i)</sup>:
 
-\[ f_i = similarity(x, l^{(i)}) = \exp(-\dfrac{||x - l^{(i)}||^2}{2\sigma^2}) \]
+$$ f_i = similarity(x, l^{(i)}) = \exp(-\dfrac{||x - l^{(i)}||^2}{2\sigma^2}) $$
 
 This "similarity" function is called a Gaussian Kernel. It is a
 specific example of a kernel.
 
 The similarity function can also be written as follows:
 
-\[ f_i = similarity(x, l^{(i)}) = \exp(-\dfrac{\sum^n_{j=1}(x_j-l_j^{(i)})^2}{2\sigma^2}) \]
+$$ f_i = similarity(x, l^{(i)}) = \exp(-\dfrac{\sum^n_{j=1}(x_j-l_j^{(i)})^2}{2\sigma^2}) $$
 
 There are a couple properties of the similarity function:
 
-If x ≈ l<sup>(i)</sup>, then \[ f_i = \exp(-\dfrac{\approx 0^2}{2\sigma^2}) \approx 1 \]
+If x ≈ l<sup>(i)</sup>, then $$ f_i = \exp(-\dfrac{\approx 0^2}{2\sigma^2}) \approx 1 $$
 
-If x is far from l<sup>(i)</sup>, then \[ f_i = \exp(-\dfrac{(large\
-number)^2}{2\sigma^2}) \approx 0 \]
+If x is far from l<sup>(i)</sup>, then $$ f_i = \exp(-\dfrac{(large\
+number)^2}{2\sigma^2}) \approx 0 $$
 
 In other words, if x and the landmark are close, then the similarity
 will be close to 1, and if x and the landmark are far away from each
@@ -2864,9 +2864,9 @@ other, the similarity will be close to 0.
 
 Each landmark gives us the features in our hypothesis:
 
-\[ \begin{align*}l^{(1)} \rightarrow f_1 \\ l^{(2)} \rightarrow f_2
+$$ \begin{align*}l^{(1)} \rightarrow f_1 \\ l^{(2)} \rightarrow f_2
 \\ l^{(3)} \rightarrow f_3 \\\dots \\ h_\Theta(x) =
-\Theta_1f_1 + \Theta_2f_2 + \Theta_3f_3 + \dots\end{align*} \]
+\Theta_1f_1 + \Theta_2f_2 + \Theta_3f_3 + \dots\end{align*} $$
 
 σ<sup>2</sup> is a parameter of the Gaussian Kernel, and it can be modified to
 increase or decrease the drop-off of our feature f<sub>i</sub>. Combined with
@@ -2890,15 +2890,15 @@ This gives us a "feature vector," f<sub>(i)</sub> of all our features for
 example x<sub>(i)</sub>. We may also set f<sub>0</sub> = 1 to correspond with Θ<sub>0</sub>. Thus given
 training example x<sub>(i)</sub>:
 
-\[ x^{(i)} \rightarrow \begin{bmatrix}f_1^{(i)} = similarity(x^{(i)}, l^{(1)})
+$$ x^{(i)} \rightarrow \begin{bmatrix}f_1^{(i)} = similarity(x^{(i)}, l^{(1)})
 \\ f_2^{(i)} = similarity(x^{(i)}, l^{(2)}) \\\vdots \\ f_m^{(i)}
-= similarity(x^{(i)}, l^{(m)}) \\\end{bmatrix} \]
+= similarity(x^{(i)}, l^{(m)}) \\\end{bmatrix} $$
 
 Now to get the parameters Θ we can use the SVM minimization algorithm
 but with f<sup>(i)</sup> substituted in for x<sup>(i)</sup>:
 
-\[ \min_{\Theta} C \sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tf^{(i)}) + (1 -
-y^{(i)})\text{cost}_0(\theta^Tf^{(i)}) + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j \]
+$$ \min_{\Theta} C \sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tf^{(i)}) + (1 -
+y^{(i)})\text{cost}_0(\theta^Tf^{(i)}) + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j $$
 
 Using kernels to generate f(i) is not exclusive to SVMs and may also
 be applied to logistic regression. However, because of computational
@@ -2911,7 +2911,7 @@ only with SVMs.
 
 ## choosing SVM parameters
 
-Choosing C (recall that \[ C = \dfrac{1}{\lambda}\])
+Choosing C (recall that $$ C = \dfrac{1}{\lambda}$$)
 ​	 
 
 -   If C is large, then we get higher variance/lower bias
@@ -3057,7 +3057,7 @@ c where c(i) represents the centroid assigned to example x(i).
 We can write the operation of the Cluster Assignment step more
 mathematically as follows:
 
-\[ c^{(i)} = argmin_k\ ||x^{(i)} - \mu_k||^2 \]
+$$ c^{(i)} = argmin_k\ ||x^{(i)} - \mu_k||^2 $$
 
 That is, each c<sup>(i)</sup> contains the index of the centroid that has
 minimal distance to x<sup>(i)</sup>.
@@ -3070,13 +3070,13 @@ canceled.
 
 Without the square:
 
-\[ || x^{(i)} - \mu_k ||\ =\ ||\ \sqrt{(x^1_1 - \mu_{1(k)})^2 + (x^i_2 - \mu_{2(k)})^2 + (x^i_3 -
-\mu_{3(k)})^2 +...}\ || \]
+$$ || x^{(i)} - \mu_k ||\ =\ ||\ \sqrt{(x^1_1 - \mu_{1(k)})^2 + (x^i_2 - \mu_{2(k)})^2 + (x^i_3 -
+\mu_{3(k)})^2 +...}\ || $$
 
 With the square:
 
-\[ || x^{(i)} - \mu_k ||\ =\ ||\ (x^1_1 - \mu_{1(k)})^2 + (x^i_2 - \mu_{2(k)})^2 + (x^i_3 -
-\mu_{3(k)})^2 +...\ || \]
+$$ || x^{(i)} - \mu_k ||\ =\ ||\ (x^1_1 - \mu_{1(k)})^2 + (x^i_2 - \mu_{2(k)})^2 + (x^i_3 -
+\mu_{3(k)})^2 +...\ || $$
 
 ..so the square convention serves two purposes, minimize more sharply
 and less computation.
@@ -3086,7 +3086,7 @@ centroid to the average of its group.
 
 More formally, the equation for this loop is as follows:
 
-\[ \mu_k = \dfrac{1}{n}[x^{(k_1)} + x^{(k_2)} + \dots + x^{(k_n)}] \in \mathbb{R}^n \]
+$$ \mu_k = \dfrac{1}{n}[x^{(k_1)} + x^{(k_2)} + \dots + x^{(k_n)}] \in \mathbb{R}^n $$
 
 Where each of x<sup>(k<sub>1</sub>)</sup>, x<sup>(k<sub>2</sub>)</sup>, &hellip;, x<sup>(k<sub>n</sub>)</sup> are the training examples
 assigned to group mμ<sub>k</sub>.
@@ -3120,8 +3120,8 @@ currently assigned
 
 Using these variables we can define our cost function:
 
-\[ J(c^{(i)},...,c^{(m)},\mu_1,..., \mu_K) = \frac{1}{m} \sum\limits^{m}_{i=1} ||x^{(i)} -
-\mu_{c^(i)}||^2 \]
+$$ J(c^{(i)},...,c^{(m)},\mu_1,..., \mu_K) = \frac{1}{m} \sum\limits^{m}_{i=1} ||x^{(i)} -
+\mu_{c^(i)}||^2 $$
 
 Our optimization objective is to minimize all our parameters using the
 above cost function:
@@ -3607,7 +3607,7 @@ perform:
 -   Given training set: x(1),x(2),…,x(m)
 -   Preprocess (feature scaling/mean normalization):
 
-\[ \mu_j = \frac{1}{m} \sum^{m}_{i=1} x^{(i)}_j \]
+$$ \mu_j = \frac{1}{m} \sum^{m}_{i=1} x^{(i)}_j $$
 
 -   Replace each x<sub>j</sub><sup>(i)</sup> with x<sub>j</sub><sup>(i)</sup> - &mu;<sub>j</sub> ​
 
@@ -3617,13 +3617,13 @@ house, x<sub>2</sub> = number of bedrooms), scale features to have comparable
 range of values.
 
 Above, we first subtract the mean of each feature from the original
-feature. Then we scale all the features \[ x_j^{(i)} = \dfrac{x_j^{(i)} -
-\mu_j}{s_j} ​\]
+feature. Then we scale all the features $$ x_j^{(i)} = \dfrac{x_j^{(i)} -
+\mu_j}{s_j} ​$$
 
 We can define specifically what it means to reduce from 2d to 1d data
 as follows:
 
-\[ \Sigma = \dfrac{1}{m}\sum^m_{i=1}(x^{(i)})(x^{(i)})^T \]
+$$ \Sigma = \dfrac{1}{m}\sum^m_{i=1}(x^{(i)})(x^{(i)})^T $$
 
 The z values are all real numbers and are the projections of our features onto u<sup>(1)</sup>u 
 (1)
@@ -3637,7 +3637,7 @@ beyond the scope of this course.
 
 **1. Compute "covariance matrix"**
 
-\[ \Sigma = \dfrac{1}{m}\sum^m_{i=1}(x^{(i)})(x^{(i)})^T \]
+$$ \Sigma = \dfrac{1}{m}\sum^m_{i=1}(x^{(i)})(x^{(i)})^T $$
 
 This can be vectorized in Octave as:
 
@@ -3719,12 +3719,12 @@ Recall that k is the dimension we are reducing to.
 
 One way to choose k is by using the following formula:
 
--   Given the average squared projection error: \[ \frac{1}{m} \sum^m_{i=1} ||x^{(i)}-x^{(i)}_{approx}||^2\]
+-   Given the average squared projection error: $$ \frac{1}{m} \sum^m_{i=1} ||x^{(i)}-x^{(i)}_{approx}||^2$$
 
--   Also given the total variation in the data: \[ \frac{1}{m} \sum^{m}_{i=1} ||x^{(i)}||^2 \]
+-   Also given the total variation in the data: $$ \frac{1}{m} \sum^{m}_{i=1} ||x^{(i)}||^2 $$
 
--   Choose k to be the smallest value such that: \[ \frac{ \frac{1}{m}
-      \sum^m_{i=1} ||x^{(i)}-x^{(i)}_{approx}||^2}{\frac{1}{m} \sum^{m}_{i=1} ||x^{(i)}||^2} \leq 0.01 \]
+-   Choose k to be the smallest value such that: $$ \frac{ \frac{1}{m}
+      \sum^m_{i=1} ||x^{(i)}-x^{(i)}_{approx}||^2}{\frac{1}{m} \sum^{m}_{i=1} ||x^{(i)}||^2} \leq 0.01 $$
 
 In other words, the squared projection error divided by the total
 variation should be less than one percent, so that 99% of the variance
@@ -3748,7 +3748,7 @@ will call svd:
 Which gives us a matrix S. We can actually check for 99% of retained
 variance using the S matrix as follows:
 
-\[ \dfrac{\sum^k_{i=1}S _{ii}}{\sum^n_{i=1}S _{ii}} \geq 0.99 \]
+$$ \dfrac{\sum^k_{i=1}S _{ii}}{\sum^n_{i=1}S _{ii}} \geq 0.99 $$
 
 
 <a id="org0c750af"></a>
@@ -3827,12 +3827,12 @@ we need to decrease our threshold ϵ
 ### gaussian distribution
 
 The Gaussian Distribution is a familiar bell-shaped curve that can be
-described by a function \[ \mathcal{N}(\mu,\sigma^2) \]
+described by a function $$ \mathcal{N}(\mu,\sigma^2) $$
 
 Let x∈ℝ. If the probability distribution of x is Gaussian with mean μ,
 variance &sigma;<sup>2</sup>, then:
 
-\[ x \sim \mathcal{N}(\mu, \sigma^2)\]
+$$ x \sim \mathcal{N}(\mu, \sigma^2)$$
 
 The little ∼ or 'tilde' can be read as "distributed as."
 
@@ -3844,36 +3844,36 @@ deviation.
 
 The full function is as follows:
 
-\[ \large p(x;\mu,\sigma^2) = \dfrac{1}{\sigma\sqrt{(2\pi)}}e^{-\dfrac{1}{2}(\dfrac{x -
-\mu}{\sigma})^2} \] 
+$$ \large p(x;\mu,\sigma^2) = \dfrac{1}{\sigma\sqrt{(2\pi)}}e^{-\dfrac{1}{2}(\dfrac{x -
+\mu}{\sigma})^2} $$ 
 
 We can estimate the parameter μ from a given dataset by simply taking
 the average of all the examples:
 
-\[ \mu = \frac{1}{m} \sum^m_{i=1} x^{(i)} \]
+$$ \mu = \frac{1}{m} \sum^m_{i=1} x^{(i)} $$
 
 We can estimate the other parameter, &sigma;<sup>2</sup>, with our familiar squared
 error formula:
 
-\[ \sigma^2 = \frac{1}{m}\sum^m_{i=1}(x^{(i)} - \mu)^2 \] 
+$$ \sigma^2 = \frac{1}{m}\sum^m_{i=1}(x^{(i)} - \mu)^2 $$ 
 
 
 <a id="org4715068"></a>
 
 ### algorithm
 
-Given a training set of examples, \[ \lbrace x^{(1)},\dots,x^{(m)}\rbrace \]
+Given a training set of examples, $$ \lbrace x^{(1)},\dots,x^{(m)}\rbrace $$
 where each example is a vector, x∈R<sup>n</sup>.
 
-\[ p(x) = p(x_1;\mu_1,\sigma_1^2)p(x_2;\mu_2,\sigma^2_2)\cdots
-p(x_n;\mu_n,\sigma^2_n) \]
+$$ p(x) = p(x_1;\mu_1,\sigma_1^2)p(x_2;\mu_2,\sigma^2_2)\cdots
+p(x_n;\mu_n,\sigma^2_n) $$
 
 In statistics, this is called an "independence assumption" on the
 values of the features inside training example x.
 
 More compactly, the above expression can be written as follows:
 
-\[ = \displaystyle \prod^n_{j=1} p(x_j;\mu_j,\sigma_j^2) \]
+$$ = \displaystyle \prod^n_{j=1} p(x_j;\mu_j,\sigma_j^2) $$
 
 **The algorithm**
 
@@ -3882,19 +3882,19 @@ examples.
 
 Fit parameters &mu;<sub>1</sub> ,&hellip;,&mu;<sub>n</sub> ,&sigma;<sub>1</sub><sup>2</sup> ,&hellip;,&sigma;<sub>n</sub><sup>2</sup> 
 
-Calculate \[ \mu_j = \frac{1}{m} \sum^m_{i=1}x^{(i)}_j \]
+Calculate $$ \mu_j = \frac{1}{m} \sum^m_{i=1}x^{(i)}_j $$
 
-Calculate \[ \sigma^2 = \frac{1}{m}\sum^m_{i=1}(x^{(i)}_j - \mu_j)^2 \]
+Calculate $$ \sigma^2 = \frac{1}{m}\sum^m_{i=1}(x^{(i)}_j - \mu_j)^2 $$
 
 Given a new example x, compute p(x):
 
-\[ p(x) = \displaystyle \prod^n_{j=1} p(x_j;\mu_j,\sigma_j^2) = \prod\limits^n_{j=1}
-\dfrac{1}{\sqrt{2\pi}\sigma_j}exp(-\dfrac{(x_j - \mu_j)^2}{2\sigma^2_j}) \]
+$$ p(x) = \displaystyle \prod^n_{j=1} p(x_j;\mu_j,\sigma_j^2) = \prod\limits^n_{j=1}
+\dfrac{1}{\sqrt{2\pi}\sigma_j}exp(-\dfrac{(x_j - \mu_j)^2}{2\sigma^2_j}) $$
 
 Anomaly if p(x)<ϵ
 
-A vectorized version of the calculation for μ is \[ \mu = \frac{1}{m}
-\sum^m_{i=1}x^{(i)} \]. 
+A vectorized version of the calculation for μ is $$ \mu = \frac{1}{m}
+\sum^m_{i=1}x^{(i)} $$. 
 You can vectorize &sigma;<sup>2</sup> similarly.
 
 
@@ -3924,7 +3924,7 @@ split the anomalous examples 50/50 between the CV and test sets.
 
 **Algorithm evaluation:**
 
-Fit model p(x) on training set \[\lbrace x^{(1)},\dots,x^{(m)} \rbrace\]
+Fit model p(x) on training set $$\lbrace x^{(1)},\dots,x^{(m)} \rbrace$$
 
 On a cross validation/test example x, predict:
 
@@ -3978,11 +3978,11 @@ our data and checking for the bell-shaped curve.
 Some transforms we can try on an example feature x that does not have
 the bell-shaped curve are:
 
--   \[log(x)\]
--   \[log(x+1)\]
--   \[log(x+c) \text{for some constant}\]
--   \[\sqrt{x} \]
--   \[x^{1/3}\]
+-   $$log(x)$$
+-   $$log(x+1)$$
+-   $$log(x+c) \text{for some constant}$$
+-   $$\sqrt{x} $$
+-   $$x^{1/3}$$
 
 We can play with each of these to try and achieve the gaussian shape
 in our data.
@@ -4012,8 +4012,8 @@ detection and may (or may not) catch more anomalies.
 Instead of modeling p(x<sub>1</sub>),p(x<sub>2</sub>),… separately, we will model p(x) all
 in one go. Our parameters will be: μ∈R<sup>n</sup> and Σ∈R<sup>n×n</sup>
 
-\[ p(x;\mu,\Sigma) = \dfrac{1}{(2\pi)^{n/2} |\Sigma|^{1/2}}
-exp(-1/2(x-\mu)^T\Sigma^{-1}(x-\mu)) \]
+$$ p(x;\mu,\Sigma) = \dfrac{1}{(2\pi)^{n/2} |\Sigma|^{1/2}}
+exp(-1/2(x-\mu)^T\Sigma^{-1}(x-\mu)) $$
 
 The important effect is that we can model oblong gaussian contours,
 allowing us to better fit data that might not fit into the normal
@@ -4094,21 +4094,21 @@ For user j, movie i, predicted rating: (&theta;<sup>(j)</sup>)<sup>T</sup>(x<sup
 
 To learn &theta;<sup>(j)</sup>, we do the following
 
-\[ min_{\theta^{(j)}} = \dfrac{1}{2}\displaystyle \sum_{i:r(i,j)=1}
-((\theta^{(j)})^T(x^{(i)}) - y^{(i,j)})^2 + \dfrac{\lambda}{2} \sum_{k=1}^n(\theta_k^{(j)})^2 \]
+$$ min_{\theta^{(j)}} = \dfrac{1}{2}\displaystyle \sum_{i:r(i,j)=1}
+((\theta^{(j)})^T(x^{(i)}) - y^{(i,j)})^2 + \dfrac{\lambda}{2} \sum_{k=1}^n(\theta_k^{(j)})^2 $$
 
 This is our familiar linear regression. The base of the first
 summation is choosing all i such that r(i,j) = 1.
 
 To get the parameters for all our users, we do the following:
 
-\[min_{\theta^{(1)},\dots,\theta^{(n_u)}} = \dfrac{1}{2}\displaystyle
+$$min_{\theta^{(1)},\dots,\theta^{(n_u)}} = \dfrac{1}{2}\displaystyle
 \sum_{j=1}^{n_u} \sum_{i:r(i,j)=1} ((\theta^{(j)})^T(x^{(i)}) - y^{(i,j)})^2 +
-\dfrac{\lambda}{2} \sum_{j=1}^{n_u} \sum_{k=1}^n(\theta_k^{(j)})^2 \]
+\dfrac{\lambda}{2} \sum_{j=1}^{n_u} \sum_{k=1}^n(\theta_k^{(j)})^2 $$
 
 We can apply our linear regression gradient descent update using the above cost function.
 
-The only real difference is that we eliminate the constant \[\dfrac{1}{m}\].
+The only real difference is that we eliminate the constant $$\dfrac{1}{m}$$.
 
 
 <a id="org11b8129"></a>
@@ -4117,10 +4117,10 @@ The only real difference is that we eliminate the constant \[\dfrac{1}{m}\].
 
 To speed things up, we can simultaneously minimize our features and our parameters:
 
-\[ J(x,\theta) = \dfrac{1}{2} \displaystyle
+$$ J(x,\theta) = \dfrac{1}{2} \displaystyle
 \sum_{(i,j):r(i,j)=1}((\theta^{(j)})^Tx^{(i)} - y^{(i,j)})^2 +
 \dfrac{\lambda}{2}\sum_{i=1}^{n_m} \sum_{k=1}^{n} (x_k^{(i)})^2 + \dfrac{\lambda}{2}\sum_{j=1}^{n_u}
-\sum_{k=1}^{n} (\theta_k^{(j)})^2 \]
+\sum_{k=1}^{n} (\theta_k^{(j)})^2 $$
 
 It looks very complicated, but we've only combined the cost function
 for theta and the cost function for x.
@@ -4138,12 +4138,12 @@ These are the steps in the algorithm:
 2.  Minimize J(x<sup>(i)</sup>,&#x2026;,x<sup>(n<sub>m</sub>)</sup>,&theta;<sup>(1)</sup>,&#x2026;,&theta;<sup>(n<sub>u</sub>)</sup>) using gradient descent (or
     an advanced optimization algorithm).E.g. for every
 
-\[ j=1,...,n_u ,i=1,...n_m := x_k^{(i)} -
+$$ j=1,...,n_u ,i=1,...n_m := x_k^{(i)} -
  \alpha\left (\displaystyle \sum_{j:r(i,j)=1}{((\theta^{(j)})^T x^{(i)} - y^{(i,j)})
- \theta_k^{(j)}} + \lambda x_k^{(i)} \right) ​ \]
+ \theta_k^{(j)}} + \lambda x_k^{(i)} \right) ​ $$
 
-\[\theta_k^{(j)} := \theta_k^{(j)} - \alpha\left (\displaystyle \sum_{i:r(i,j)=1}{((\theta^{(j)})^T x^{(i)} - y^{(i,j)}) x_k^{(i)}} + \lambda
- \theta_k^{(j)} \right)\]
+$$\theta_k^{(j)} := \theta_k^{(j)} - \alpha\left (\displaystyle \sum_{i:r(i,j)=1}{((\theta^{(j)})^T x^{(i)} - y^{(i,j)}) x_k^{(i)}} + \lambda
+ \theta_k^{(j)} \right)$$
 
 1.  For a user with parameters θ and a movie with (learned) features x,
     predict a star rating of &theta;<sup>T</sup> x.
@@ -4181,11 +4181,11 @@ the jth column corresponds to the ratings for the jth user.
 
 We can now define a vector
 
-\[ \mu = [\mu_1, \mu_2, \dots , \mu_{n_m}] \]
+$$ \mu = [\mu_1, \mu_2, \dots , \mu_{n_m}] $$
 
 such that
 
-\[ \mu_i = \frac{\sum_{j:r(i,j)=1}{Y_{i,j}}}{\sum_{j}{r(i,j)}} \]
+$$ \mu_i = \frac{\sum_{j:r(i,j)=1}{Y_{i,j}}}{\sum_{j}{r(i,j)}} $$
 
 Which is effectively the mean of the previous ratings for the ith
 movie (where only movies that have been watched by users are
@@ -4194,7 +4194,7 @@ rating, from the actual ratings for each user (column in matrix Y):
 
 As an example, consider the following matrix Y and mean ratings μ:
 ​	
-\[ Y = 
+$$ Y = 
 \begin{bmatrix}
     5 & 5 & 0 & 0  \\
     4 & ? & ? & 0  \\
@@ -4207,17 +4207,17 @@ As an example, consider the following matrix Y and mean ratings μ:
     2  \\
     2.25 \\
     1.25 \\
-\end{bmatrix} \]
+\end{bmatrix} $$
 
 The resulting Y′ vector is:
 
-\[ Y' =
+$$ Y' =
 \begin{bmatrix}
   2.5    & 2.5   & -2.5 & -2.5 \\
   2      & ?     & ?    & -2 \\
   -.2.25 & -2.25 & 3.75 & 1.25 \\
   -1.25  & -1.25 & 3.75 & -1.25
-\end{bmatrix} \]
+\end{bmatrix} $$
 
 Now we must slightly modify the linear regression prediction to
 include the mean normalization term:
@@ -4225,7 +4225,7 @@ include the mean normalization term:
 Now we must slightly modify the linear regression prediction to
 include the mean normalization term:
 
-\[ (\theta^{(j)})^T x^{(i)} + \mu_i \] 
+$$ (\theta^{(j)})^T x^{(i)} + \mu_i $$ 
 
 Now, for a new user, the initial predicted values will be equal to the
 μ term instead of simply being initialized to zero, which is more
@@ -4261,13 +4261,13 @@ sets.
 
 Stochastic gradient descent is written out in a different but similar way:
 
-\[ cost(\theta,(x^{(i)}, y^{(i)})) = \dfrac{1}{2}(h_{\theta}(x^{(i)}) - y^{(i)})^2 \]
+$$ cost(\theta,(x^{(i)}, y^{(i)})) = \dfrac{1}{2}(h_{\theta}(x^{(i)}) - y^{(i)})^2 $$
 
 The only difference in the above cost function is the elimination of
-the m constant within \[\dfrac{1}{2} \].
+the m constant within $$\dfrac{1}{2} $$.
 
-\[ J_{train}(\theta) = \dfrac{1}{m} \displaystyle \sum_{i=1}^m
-cost(\theta,(x^{(i)}, y^{(i)})) \]
+$$ J_{train}(\theta) = \dfrac{1}{m} \displaystyle \sum_{i=1}^m
+cost(\theta,(x^{(i)}, y^{(i)})) $$
 
 J<sub>train</sub> is now just the average of the cost applied to all of our training examples.
 
@@ -4305,8 +4305,8 @@ Repeat:
 
 For i = 1,11,21,31,&hellip;,991
 
-\[ \theta_j := \theta_j - \alpha \dfrac{1}{10} \displaystyle \sum_{k=i}^{i+9} (h_\theta(x^{(k)}) -
-y^{(k)})x_j^{(k)} \]
+$$ \theta_j := \theta_j - \alpha \dfrac{1}{10} \displaystyle \sum_{k=i}^{i+9} (h_\theta(x^{(k)}) -
+y^{(k)})x_j^{(k)} $$
 
 We're simply summing over ten examples at a time. The advantage of
 computing more than one example at a time is that we can use
@@ -4338,8 +4338,8 @@ With a very small number of examples for the average, the line will be
 too noisy and it will be difficult to find the trend.
 
 One strategy for trying to actually converge at the global minimum is
-to slowly decrease α over time. For example \[\alpha =
-\dfrac{const1}{iterationNumber + const2} \]
+to slowly decrease α over time. For example $$\alpha =
+\dfrac{const1}{iterationNumber + const2} $$
 
 However, this is not often done because people don't want to have to
 fiddle with even more parameters.
@@ -4367,8 +4367,8 @@ for a subset of the data to many different machines so that we can
 train our algorithm in parallel.
 
 You can split your training set into z subsets corresponding to the
-number of machines you have. On each of those machines calculate \[
-\displaystyle \sum_{i=p}^{q}(h_{\theta}(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} \],
+number of machines you have. On each of those machines calculate $$
+\displaystyle \sum_{i=p}^{q}(h_{\theta}(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} $$,
 where we've split the data starting at p and ending at q.
 
 MapReduce will take all these dispatched (or 'mapped') jobs and
