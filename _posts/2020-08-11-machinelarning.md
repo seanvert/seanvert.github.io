@@ -2,8 +2,8 @@
 title: "Machine Learning"
 date: 2020-08-11
 layout: 
-categories: notes
-tags: notes
+categories: notas
+tags: notas
 ---
 
 
