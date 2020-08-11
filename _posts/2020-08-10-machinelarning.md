@@ -311,7 +311,7 @@ voices and music from a mesh of sounds at a cocktail party).
         historical reasons, this function h is called a hypothesis. Seen
         pictorially, the process is therefore like this:
         
-        ![img](primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png)
+        ![img](../assets/images/primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png)
         
         When the target variable that we’re trying to predict is continuous,
         such as in our housing example, we call the learning problem a
@@ -346,7 +346,7 @@ voices and music from a mesh of sounds at a cocktail party).
     square function will cancel out the \[ \frac{1}{2} \] term. The
     following image summarizes what the cost function does:
     
-    ![img](primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png)
+    ![img](../assets/images/primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png)
 
 
 <a id="orgcb6ae7d"></a>
@@ -366,18 +366,18 @@ voices and music from a mesh of sounds at a cocktail party).
     case, the value of J(&theta;<sub>0</sub>, &theta;<sub>1</sub>) will be 0. The following example shows
     the ideal situation where we have a cost function of 0.
     
-    ![img](primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png)
+    ![img](../assets/images/primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png)
     
     When &theta;<sub>1</sub> = 1, we get a slope of 1 which goes through every
     single data point in our model. Conversely, when &theta;<sub>1</sub> = 0.5, we
     see the vertical distance from our fit to the data points increase.
     
-    ![img](primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png)
+    ![img](../assets/images/primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png)
     
     This increases our cost function to 0.58. Plotting several other
     points yields to the following graph:
     
-    ![img](primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png)
+    ![img](../assets/images/primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png)
     
     Thus as a goal, we should try to minimize the cost function. In this
     case, &theta;<sub>1</sub> = 1 is our global minimum.
@@ -394,7 +394,7 @@ voices and music from a mesh of sounds at a cocktail party).
     the same line. An example of such a graph is the one to the right
     below.
     
-    ![img](primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png)
+    ![img](../assets/images/primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png)
     
     Taking any color and going along the 'circle', one would expect to get
     the same value of the cost function. For example, the three green
@@ -404,14 +404,14 @@ voices and music from a mesh of sounds at a cocktail party).
     the graph on the left when &theta;<sub>0</sub> = 800 and &theta;<sub>1</sub> = -0.15. Taking another
     h(x) and plotting its contour plot, one gets the following graphs:
     
-    ![img](primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png)
+    ![img](../assets/images/primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png)
     
     When &theta;<sub>0</sub> = 360 and &theta;<sub>1</sub> = 0, the value of J(&theta;<sub>0</sub>, &theta;<sub>1</sub>) the contour plot gets
     closer to the center thus reducing the cost function error. Now giving
     our hypothesis function a slightly positive slope results in a better
     fit of the data.
     
-    ![img](primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png)
+    ![img](../assets/images/primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png)
     
     The graph above minimizes the cost function as much as possible and
     consequently, the result of &theta;<sub>1</sub> and &theta;<sub>0</sub> tend to be around 0.12 and 250
@@ -445,7 +445,7 @@ voices and music from a mesh of sounds at a cocktail party).
     result of the cost function using our hypothesis with those specific
     theta parameters. The graph below depicts such a setup.
     
-    ![img](primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png)
+    ![img](../assets/images/primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png)
     
     We will know that we have succeeded when our cost function is at the
     very bottom of the pits in our graph, i.e. when its value is the
@@ -481,7 +481,7 @@ voices and music from a mesh of sounds at a cocktail party).
     another one on the j<sup>(th)</sup> iteration would yield to a wrong
     implementation.
     
-    ![img](primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png)
+    ![img](../assets/images/primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png)
 
 
 <a id="org2092390"></a>
@@ -501,14 +501,14 @@ eventually converges to its minimum value. The following grapg shows
 that when the slope is negative, the value of &theta;<sub>1</sub> increases and when it
 is positive, the value of &theta;<sub>1</sub> decreases.
 
-![img](primeira_semana/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06_2019-08-09_10-33-08.png)
+![img](../assets/images/primeira_semana/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06_2019-08-09_10-33-08.png)
 
 On a side note, we should adjust our parameter &alpha; to ensure that
 the gradient descent algorithm converges in a reasonable time. Failure
 to converge or too much time to obtain the minimum value imply that
 our step size is wrong.
 
-![img](primeira_semana/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27_2019-08-09_12-32-34.png)
+![img](../assets/images/primeira_semana/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27_2019-08-09_12-32-34.png)
 
 How does gradient descent converge with a fixed step size &alpha;?
 
@@ -518,7 +518,7 @@ minimum, the derivative will always be 0 and thus we get:
 
 \[ \theta_1 := \theta_1 - \alpha.0 \]
 
-![img](primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png)
+![img](../assets/images/primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png)
 
 
 <a id="org4c6a073"></a>
@@ -544,7 +544,7 @@ equations for &theta;<sub>0</sub> and &theta;<sub>1</sub>; and that for &theta;<
 end due to the derivative. The following is a derivation of \[
 \frac{\delta}{\delta\theta_j} J(\theta) \] for a single example:
 
-![img](primeira_semana/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54_2019-08-09_13-29-59.png)
+![img](../assets/images/primeira_semana/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54_2019-08-09_13-29-59.png)
 
 The point of all this is that if we start with a guess for our
 hypothesis and then repeatedly apply these gradient descent equations,
@@ -561,7 +561,7 @@ global minimum. Indeed, J is a convex quadratic function. Here is an
 example of gradient descent as it is run to minimize a quadratic
 function.
 
-![img](primeira_semana/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49_2019-08-09_13-34-35.png)
+![img](../assets/images/primeira_semana/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49_2019-08-09_13-34-35.png)
 
 The ellipses shown above are the contours of a quadratic
 function. Also shown is the trajectory taken by gradient descent,
@@ -918,7 +918,7 @@ y^{(i)}) \cdot x_j^{(i)} \; & \text{for j := 0...n}\\
 The following image compares gradient descent with one variable to
 gradient descent with multiple variables:
 
-![img](segunda_semana/MYm8uqafEeaZoQ7hPZtKqg_c974c2e2953662e9578b38c7b04591ed_Screenshot-2016-11-09-09.07.04_2019-08-09_20-01-05.png)
+![img](../assets/images/segunda_semana/MYm8uqafEeaZoQ7hPZtKqg_c974c2e2953662e9578b38c7b04591ed_Screenshot-2016-11-09-09.07.04_2019-08-09_20-01-05.png)
 
 
 <a id="org12c2381"></a>
@@ -979,12 +979,12 @@ less than E in one iteration, where E is some small value such as
 10<sup>-3</sup>. However in practice it's difficult to choose this threshold
 value.
 
-![img](segunda_semana/FEfS3aajEea3qApInhZCFg_6be025f7ad145eb0974b244a7f5b3f59_Screenshot-2016-11-09-09.35.59_2019-08-09_22-01-25.png)
+![img](../assets/images/segunda_semana/FEfS3aajEea3qApInhZCFg_6be025f7ad145eb0974b244a7f5b3f59_Screenshot-2016-11-09-09.35.59_2019-08-09_22-01-25.png)
 
 It has been proven that if learning rate α is sufficiently small, then
 J(θ) will decrease on every iteration.
 
-![img](segunda_semana/rC2jGKgvEeamBAoLccicqA_ec9e40a58588382f5b6df60637b69470_Screenshot-2016-11-11-08.55.21_2019-08-09_22-02-59.png)
+![img](../assets/images/segunda_semana/rC2jGKgvEeamBAoLccicqA_ec9e40a58588382f5b6df60637b69470_Screenshot-2016-11-11-08.55.21_2019-08-09_22-02-59.png)
 
 To summarize:
 
@@ -1053,7 +1053,7 @@ given below:
 
 θ = (X<sup>T</sup> X)<sup>-1</sup> X<sup>T</sup> y
 
-![img](segunda_semana/dykma6dwEea3qApInhZCFg_333df5f11086fee19c4fb81bc34d5125_Screenshot-2016-11-10-10.06.16_2019-08-09_22-56-41.png)
+![img](../assets/images/segunda_semana/dykma6dwEea3qApInhZCFg_333df5f11086fee19c4fb81bc34d5125_Screenshot-2016-11-10-10.06.16_2019-08-09_22-56-41.png)
 
 There is no need to do feature scaling with the normal equation.
 
@@ -1316,7 +1316,7 @@ Function":
 
 The following image shows us what the sigmoid function looks like:
 
-![img](terceira_semana/1WFqZHntEead-BJkoDOYOw_2413fbec8ff9fa1f19aaf78265b8a33b_Logistic_function_2019-08-11_12-31-29.png)
+![img](../assets/images/terceira_semana/1WFqZHntEead-BJkoDOYOw_2413fbec8ff9fa1f19aaf78265b8a33b_Logistic_function_2019-08-11_12-31-29.png)
 
 The function g(z), shown here, maps any real number to the (0, 1)
 interval, making it useful for transforming an arbitrary-valued
@@ -1407,12 +1407,12 @@ Instead, our cost function for logistic regression looks like:
 
 When y = 1, we get the following plot for J(&theta;) vs h<sub>&theta;</sub> (x):
 
-![img](terceira_semana/Q9sX8nnxEeamDApmnD43Fw_1cb67ecfac77b134606532f5caf98ee4_Logistic_regression_cost_function_positive_class_2019-08-11_15-50-01.png)
+![img](../assets/images/terceira_semana/Q9sX8nnxEeamDApmnD43Fw_1cb67ecfac77b134606532f5caf98ee4_Logistic_regression_cost_function_positive_class_2019-08-11_15-50-01.png)
 
 Similarly, when y = 0, we get the following plot for J(&theta;) vs
 h<sub>&theta;</sub> (x):
 
-![img](terceira_semana/Ut7vvXnxEead-BJkoDOYOw_f719f2858d78dd66d80c5ec0d8e6b3fa_Logistic_regression_cost_function_negative_class_2019-08-11_15-50-34.png)
+![img](../assets/images/terceira_semana/Ut7vvXnxEead-BJkoDOYOw_f719f2858d78dd66d80c5ec0d8e6b3fa_Logistic_regression_cost_function_negative_class_2019-08-11_15-50-34.png)
 
 \[ \begin{align*}& \mathrm{Cost}(h_\theta(x),y) = 0 \text{ if }
 h_\theta(x) = y \\ & \mathrm{Cost}(h_\theta(x),y) \rightarrow
@@ -1545,7 +1545,7 @@ returned the highest value as our prediction.
 
 The following image shows how one could classify 3 classes:
 
-![img](terceira_semana/cqmPjanSEeawbAp5ByfpEg_299fcfbd527b6b5a7440825628339c54_Screenshot-2016-11-13-10.52.29_2019-08-12_00-21-50.png)
+![img](../assets/images/terceira_semana/cqmPjanSEeawbAp5ByfpEg_299fcfbd527b6b5a7440825628339c54_Screenshot-2016-11-13-10.52.29_2019-08-12_00-21-50.png)
 
 To summarize:
 
@@ -1570,7 +1570,7 @@ below shows the result of fitting a y = θ<sub>0</sub>+θ<sub>1</sub> x to a dat
 that the data doesn’t really lie on straight line, and so the fit is
 not very good.
 
-![img](terceira_semana/0cOOdKsMEeaCrQqTpeD5ng_2a806eb8d988461f716f4799915ab779_Screenshot-2016-11-15-00.23.30_2019-08-12_13-26-18.png)
+![img](../assets/images/terceira_semana/0cOOdKsMEeaCrQqTpeD5ng_2a806eb8d988461f716f4799915ab779_Screenshot-2016-11-15-00.23.30_2019-08-12_13-26-18.png)
 
 Instead, if we had added an extra feature x<sup>2</sup>, and fit y = &theta;<sub>0</sub> +
 &theta;<sub>1</sub> x + &theta;<sub>2</sub> x<sup>2</sup>, then we obtain a slightly better
@@ -1640,7 +1640,7 @@ new hypothesis (depicted by the pink curve) looks like a quadratic
 function but fits the data better due to the extra small terms &theta;<sub>3</sub> x<sup>3</sup>
 and &theta;<sub>4</sub> x<sup>4</sup>.
 
-![img](terceira_semana/j0X9h6tUEeawbAp5ByfpEg_ea3e85af4056c56fa704547770da65a6_Screenshot-2016-11-15-08.53.32_2019-08-12_18-28-04.png)
+![img](../assets/images/terceira_semana/j0X9h6tUEeawbAp5ByfpEg_ea3e85af4056c56fa704547770da65a6_Screenshot-2016-11-15-08.53.32_2019-08-12_18-28-04.png)
 
 We could also regularize all of our theta parameters in a single summation as:
 
@@ -1718,7 +1718,7 @@ overfitting. The following image shows how the regularized function,
 displayed by the pink line, is less likely to overfit than the
 non-regularized function represented by the blue line:
 
-![img](terceira_semana/Od9mobDaEeaCrQqTpeD5ng_4f5e9c71d1aa285c1152ed4262f019c1_Screenshot-2016-11-22-09.31.21_2019-08-12_20-58-08.png)
+![img](../assets/images/terceira_semana/Od9mobDaEeaCrQqTpeD5ng_4f5e9c71d1aa285c1152ed4262f019c1_Screenshot-2016-11-22-09.31.21_2019-08-12_20-58-08.png)
 
 Cost Function
 
@@ -1739,7 +1739,7 @@ values, &theta;<sub>0</sub> through &theta;<sub>n</sub>), and this sum explicitl
 from 1 to n, skipping 0. Thus, when computing the equation, we should
 continuously update the two following equations:
 
-![img](terceira_semana/dfHLC70SEea4MxKdJPaTxA_306de28804a7467f7d84da0fe3ee9c7b_Screen-Shot-2016-12-07-at-10.49.02-PM_2019-08-12_21-11-32.png)
+![img](../assets/images/terceira_semana/dfHLC70SEea4MxKdJPaTxA_306de28804a7467f7d84da0fe3ee9c7b_Screen-Shot-2016-12-07-at-10.49.02-PM_2019-08-12_21-11-32.png)
 
 
 <a id="org385c12d"></a>
@@ -1810,7 +1810,7 @@ in &Theta;(j) of the "bias nodes," x<sub>0</sub> and Θ<sup>(j)</sup><sub>0</sub
 output nodes will not include the bias nodes while the inputs
 will. The following image summarizes our model representation:
 
-![img](quarta_semana/0rgjYLDeEeajLxLfjQiSjg_0c07c56839f8d6e8d7b0d09acedc88fd_Screenshot-2016-11-22-10.08.51_2019-08-14_10-54-08.png)
+![img](../assets/images/quarta_semana/0rgjYLDeEeajLxLfjQiSjg_0c07c56839f8d6e8d7b0d09acedc88fd_Screenshot-2016-11-22-10.08.51_2019-08-14_10-54-08.png)
 
 Example: If layer 1 has 2 input nodes and layer 2 has 4 activation
 nodes. Dimension of Θ<sup>(1)</sup> is going to be 4×3 where s<sub>j</sub> = 2 and s<sub>j+1</sub> = 4,
@@ -1906,11 +1906,11 @@ gate. Neural networks can also be used to simulate all the other
 logical gates. The following is an example of the logical operator
 'OR', meaning either x<sub>1</sub> is true or x<sub>2</sub> is true, or both:
 
-![img](quarta_semana/f_ueJLGnEea3qApInhZCFg_a5ff8edc62c9a09900eae075e8502e34_Screenshot-2016-11-23-10.03.48_2019-08-14_11-58-31.png)
+![img](../assets/images/quarta_semana/f_ueJLGnEea3qApInhZCFg_a5ff8edc62c9a09900eae075e8502e34_Screenshot-2016-11-23-10.03.48_2019-08-14_11-58-31.png)
 
 Where g(z) is the following:
 
-![img](quarta_semana/wMOiMrGnEeajLxLfjQiSjg_bbbdad80f5c95068bde7c9134babdd77_Screenshot-2016-11-23-10.07.24_2019-08-14_11-58-55.png)
+![img](../assets/images/quarta_semana/wMOiMrGnEeajLxLfjQiSjg_bbbdad80f5c95068bde7c9134babdd77_Screenshot-2016-11-23-10.07.24_2019-08-14_11-58-55.png)
 
 
 <a id="org9b42e24"></a>
@@ -1943,7 +1943,7 @@ Let's write out the values for all our nodes:
 And there we have the XNOR operator using a hidden layer with two
 nodes! The following summarizes the above algorithm:
 
-![img](quarta_semana/rag_zbGqEeaSmhJaoV5QvA_52c04a987dcb692da8979a2198f3d8d7_Screenshot-2016-11-23-10.28.41_2019-08-14_13-16-52.png)
+![img](../assets/images/quarta_semana/rag_zbGqEeaSmhJaoV5QvA_52c04a987dcb692da8979a2198f3d8d7_Screenshot-2016-11-23-10.28.41_2019-08-14_13-16-52.png)
 
 
 <a id="org56762e2"></a>
@@ -1956,18 +1956,18 @@ of four categories. We will use the following example to see how this
 classification is done. This algorithm takes as input an image and
 classifies it accordingly:
 
-![img](quarta_semana/9Aeo6bGtEea4MxKdJPaTxA_4febc7ec9ac9dd0e4309bd1778171d36_Screenshot-2016-11-23-10.49.05_2019-08-14_14-45-35.png)
+![img](../assets/images/quarta_semana/9Aeo6bGtEea4MxKdJPaTxA_4febc7ec9ac9dd0e4309bd1778171d36_Screenshot-2016-11-23-10.49.05_2019-08-14_14-45-35.png)
 
 We can define our set of resulting classes as y:
 
-![img](quarta_semana/KBpHLXqiEealOA67wFuqoQ_95654ff11df1261d935ab00553d724e5_Screenshot-2016-09-14-10.38.27_2019-08-14_14-45-49.png)
+![img](../assets/images/quarta_semana/KBpHLXqiEealOA67wFuqoQ_95654ff11df1261d935ab00553d724e5_Screenshot-2016-09-14-10.38.27_2019-08-14_14-45-49.png)
 
 Each y<sup>(i)</sup> represents a different image corresponding to either a
 car, pedestrian, truck, or motorcycle. The inner layers, each provide
 us with some new information which leads to our final hypothesis
 function. The setup looks like:
 
-![img](quarta_semana/VBxpV7GvEeamBAoLccicqA_3e7f67888330b131426ecffd27936f61_Screenshot-2016-11-23-10.59.19_2019-08-14_14-46-22.png)
+![img](../assets/images/quarta_semana/VBxpV7GvEeamBAoLccicqA_3e7f67888330b131426ecffd27936f61_Screenshot-2016-11-23-10.59.19_2019-08-14_14-46-22.png)
 
 Our resulting hypothesis for one set of inputs may look like:
 
@@ -2054,7 +2054,7 @@ use to compute the partial derivative of J(Θ):
 
 To do so, we use the following algorithm:
 
-![img](quinta_semana/Ul6i5teoEea1UArqXEX_3g_a36fb24a11c744d7552f0fecf2fdd752_Screenshot-2017-01-10-17.13.27_2019-08-15_21-35-41.png)
+![img](../assets/images/quinta_semana/Ul6i5teoEea1UArqXEX_3g_a36fb24a11c744d7552f0fecf2fdd752_Screenshot-2017-01-10-17.13.27_2019-08-15_21-35-41.png)
 
 Back propagation Algorithm
 
@@ -2067,7 +2067,7 @@ For training example t =1 to m:
 1.  Set a<sup>(1)</sup> := x<sup>(t)</sup>
 2.  Perform forward propagation to compute a<sup>(l)</sup> for l=2,3,…,L
 
-![img](quinta_semana/bYLgwteoEeaX9Qr89uJd1A_73f280ff78695f84ae512f19acfa29a3_Screenshot-2017-01-10-18.16.50_2019-08-15_21-38-10.png)
+![img](../assets/images/quinta_semana/bYLgwteoEeaX9Qr89uJd1A_73f280ff78695f84ae512f19acfa29a3_Screenshot-2017-01-10-18.16.50_2019-08-15_21-38-10.png)
 
 1.  Using y<sup>(t)</sup>, compute &delta;<sup>(L)</sup> = a<sup>(L)</sup> - y<sup>(t)</sup>
 
@@ -2129,7 +2129,7 @@ function, so the steeper the slope the more incorrect we are. Let us
 consider the following neural network below and see how we could
 calculate some &delta;<sub>j</sub><sup>(l)</sup>:
 
-![img](quinta_semana/qc309rdcEea4MxKdJPaTxA_324034f1a3c3a3be8e7c6cfca90d3445_fixx_2019-08-15_22-19-20.png)
+![img](../assets/images/quinta_semana/qc309rdcEea4MxKdJPaTxA_324034f1a3c3a3be8e7c6cfca90d3445_fixx_2019-08-15_22-19-20.png)
 
 In the image above, to calculate &delta;<sub>2</sub><sup>(2)</sup>, we multiply the weights Θ<sup>(2)</sup><sub>12</sub>
 and Θ<sup>(2)</sup><sub>22</sub> by their respective &delta; values found to the right of each
@@ -2174,7 +2174,7 @@ Theta3 = reshape(thetaVector(221:231),1,11)
 
 To summarize:
 
-![img](quinta_semana/kdK7ubT2EeajLxLfjQiSjg_d35545b8d6b6940e8577b5a8d75c8657_Screenshot-2016-11-27-15.09.24_2019-08-16_14-17-33.png)
+![img](../assets/images/quinta_semana/kdK7ubT2EeajLxLfjQiSjg_d35545b8d6b6940e8577b5a8d75c8657_Screenshot-2016-11-27-15.09.24_2019-08-16_14-17-33.png)
 
 
 <a id="orge38541f"></a>
@@ -2226,7 +2226,7 @@ networks. When we backpropagate, all nodes will update to the same
 value repeatedly. Instead we can randomly initialize our weights for
 our Θ matrices using the following method:
 
-![img](quinta_semana/y7gaS7pXEeaCrQqTpeD5ng_8868ccda2c387f5d481d0c54ab78a86e_Screen-Shot-2016-12-04-at-11.27.28-AM_2019-08-16_15-50-08.png)
+![img](../assets/images/quinta_semana/y7gaS7pXEeaCrQqTpeD5ng_8868ccda2c387f5d481d0c54ab78a86e_Screen-Shot-2016-12-04-at-11.27.28-AM_2019-08-16_15-50-08.png)
 
 Hence, we initialize each Θ<sup>(l)</sup><sub>ij</sub> to a random value
 between[−ϵ,ϵ]. Using the above formula guarantees that we get the
@@ -2296,7 +2296,7 @@ for i = 1:m,
 The following image gives us an intuition of what is happening as we
 are implementing our neural network:
 
-![img](quinta_semana/hGk18LsaEea7TQ6MHcgMPA_8de173808f362583eb39cdd0c89ef43e_Screen-Shot-2016-12-05-at-10.40.35-AM_2019-08-16_16-53-23.png)
+![img](../assets/images/quinta_semana/hGk18LsaEea7TQ6MHcgMPA_8de173808f362583eb39cdd0c89ef43e_Screen-Shot-2016-12-05-at-10.40.35-AM_2019-08-16_16-53-23.png)
 
 Ideally, you want h<sub>Θ</sub>(x(i)) ≈ y<sup>(i)</sup> . This will minimize our cost
 function. However, keep in mind that J(Θ) is not convex and thus we
@@ -2419,7 +2419,7 @@ High variance (overfitting): J<sub>train</sub><sup>(Θ)</sup> will be low and J<
 
 The is summarized in the figure below:
 
-![img](sexta_semana/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed_2019-08-24_00-06-26.png)
+![img](../assets/images/sexta_semana/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed_2019-08-24_00-06-26.png)
 
 
 <a id="orgb4fa3a3"></a>
@@ -2429,7 +2429,7 @@ The is summarized in the figure below:
 Note: [The regularization term below and through out the video should
 be \[ \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2 \] and NOT \[\frac{\lambda}{2m} \sum_{j=1}^m \theta_j^2\] ]
 
-![img](sexta_semana/3XyCytntEeataRJ74fuL6g_3b6c06d065d24e0bf8d557e59027e87a_Screenshot-2017-01-13-16.09.36_2019-08-24_00-26-19.png)
+![img](../assets/images/sexta_semana/3XyCytntEeataRJ74fuL6g_3b6c06d065d24e0bf8d557e59027e87a_Screenshot-2017-01-13-16.09.36_2019-08-24_00-26-19.png)
 
 In the figure above, we see that as λ increases, our fit becomes more
 rigid. On the other hand, as λ approaches 0, we tend to over
@@ -2478,7 +2478,7 @@ with J<sub>train</sub>(Θ)≈J<sub>CV</sub>(Θ).
 If a learning algorithm is suffering from high bias, getting more
 training data will not (by itself) help much.
 
-![img](sexta_semana/bpAOvt9uEeaQlg5FcsXQDA_ecad653e01ee824b231ff8b5df7208d9_2-am_2019-08-24_00-43-34.png)
+![img](../assets/images/sexta_semana/bpAOvt9uEeaQlg5FcsXQDA_ecad653e01ee824b231ff8b5df7208d9_2-am_2019-08-24_00-43-34.png)
 
 Experiencing high variance:
 
@@ -2491,7 +2491,7 @@ and J<sub>CV</sub>(Θ) continues to decrease without leveling off. Also, J<sub>t
 If a learning algorithm is suffering from high variance, getting more
 training data is likely to help.
 
-![img](sexta_semana/vqlG7t9uEeaizBK307J26A_3e3e9f42b5e3ce9e3466a0416c4368ee_ITu3antfEeam4BLcQYZr8Q_37fe6be97e7b0740d1871ba99d4c2ed9_300px-Learning1_2019-08-24_00-44-25.png)
+![img](../assets/images/sexta_semana/vqlG7t9uEeaizBK307J26A_3e3e9f42b5e3ce9e3466a0416c4368ee_ITu3antfEeam4BLcQYZr8Q_37fe6be97e7b0740d1871ba99d4c2ed9_300px-Learning1_2019-08-24_00-44-25.png)
 
 
 <a id="org1957621"></a>
@@ -2560,7 +2560,7 @@ not found, that entry would be a 0. Once we have all our x vectors
 ready, we train our algorithm and finally, we could use it to classify
 if an email is a spam or not.
 
-![img](sexta_semana/Ys5NKOLJEeaPWBJZo44gSg_aba93cf4ce4507175d7e47ab5f9b7ce4_Screenshot-2017-01-24-22.29.45_2019-08-24_18-46-11.png)
+![img](../assets/images/sexta_semana/Ys5NKOLJEeaPWBJZo44gSg_aba93cf4ce4507175d7e47ab5f9b7ce4_Screenshot-2017-01-24-22.29.45_2019-08-24_18-46-11.png)
 
 So how could you spend your time to improve the accuracy of this classifier?
 
@@ -2601,7 +2601,7 @@ could find some features that are particular to those emails and add
 them to our model. We could also see how classifying each word
 according to its root changes our error rate:
 
-![img](sexta_semana/kky-ouM6EeacbA6ydECl3A_01b1fa64fcc9a7eb5da8e946f6a12636_Screenshot-2017-01-25-12.08.23_2019-08-24_19-03-22.png)
+![img](../assets/images/sexta_semana/kky-ouM6EeacbA6ydECl3A_01b1fa64fcc9a7eb5da8e946f6a12636_Screenshot-2017-01-25-12.08.23_2019-08-24_19-03-22.png)
 
 It is very important to get error results as a single, numerical
 value. Otherwise it is difficult to assess your algorithm's
@@ -2650,7 +2650,7 @@ straight decreasing line instead of the sigmoid curve.(In the
 literature, this is called a hinge loss
 (<https://en.wikipedia.org/wiki/Hinge_loss>) function.)
 
-![img](s%C3%A9tima_semana/67xwSHtkEeam4BLcQYZr8Q_1877395fcce3436991415c70ed819461_Svm_hing_2019-09-01_08-28-51.png)
+![img](../assets/images/s%C3%A9tima_semana/67xwSHtkEeam4BLcQYZr8Q_1877395fcce3436991415c70ed819461_Svm_hing_2019-09-01_08-28-51.png)
 
 Similarly, we modify the second term of the cost function
  \[ -
@@ -2659,7 +2659,7 @@ Similarly, we modify the second term of the cost function
 that for values of z greater than -1, we use a straight increasing
 line instead of the sigmoid curve.
 
-![img](s%C3%A9tima_semana/KKNB3HtlEeaNlA6zo4Pi2Q_135a50fd32c5eb6f4bd89b22c476c45f_Svm_hinge_negative_class_2019-09-01_08-30-56.png)
+![img](../assets/images/s%C3%A9tima_semana/KKNB3HtlEeaNlA6zo4Pi2Q_135a50fd32c5eb6f4bd89b22c476c45f_Svm_hinge_negative_class_2019-09-01_08-30-56.png)
 
 We shall denote these as cost<sub>1</sub>(z) and cost<sub>0</sub>(z) (respectively, note
 that cost<sub>1</sub>(z) is the cost for classifying when y=1, and cost<sub>0</sub>(z) is
@@ -3213,7 +3213,7 @@ clusters.
     doesn't tell you when the data just does not cluster, and can take
     your research into a dead end this way.
     
-    ![img](oitava_semana/gn1iM_2019-09-01_23-51-27.png)
+    ![img](../assets/images/oitava_semana/gn1iM_2019-09-01_23-51-27.png)
     
     **Sensitive to scale**
     
@@ -3239,7 +3239,7 @@ clusters.
     sufficient to do this in 1 dimension. But the clusters have varying
     variances, and k-means thus splits them incorrectly.
     
-    ![img](oitava_semana/tXGTo_2019-09-01_23-52-11.png)
+    ![img](../assets/images/oitava_semana/tXGTo_2019-09-01_23-52-11.png)
     
     I  don't think this counterexample for k-means is covered by your points:
     
@@ -3260,7 +3260,7 @@ clusters.
     k-means++ and 100 iterations I did get the expected result&#x2026; (below
     is 10 iterations of regular k-means, for illustration).
     
-    ![img](oitava_semana/BILDt_2019-09-01_23-53-01.png)
+    ![img](../assets/images/oitava_semana/BILDt_2019-09-01_23-53-01.png)
     
     You'll quickly find many clusters in this data set, where k-means
     failed to find the correct structure. For example in the bottom right,
@@ -3300,7 +3300,7 @@ clusters.
     it depends on the cluster. Instead, a Gaussian Mixture Model should be
     fit to the data, as in the figure below:
     
-    ![img](oitava_semana/oSVXJ_2019-09-01_23-54-20.png)
+    ![img](../assets/images/oitava_semana/oSVXJ_2019-09-01_23-54-20.png)
     
     (But this is not the ultimate method either. It's just as easy to
     construct data that does not satisfy the "mixture of k Gaussian
@@ -3382,7 +3382,7 @@ clusters.
     But talk is cheap. Let's look at the cold, hard, data. Or actually,
     made-up data.
     
-    ![img](oitava_semana/1nOuj_2019-09-01_20-47-44.png) This is in fact my
+    ![img](../assets/images/oitava_semana/1nOuj_2019-09-01_20-47-44.png) This is in fact my
     favorite made-up data: Anscombe's Quartet. Created in 1973 by
     statistician Francis Anscombe, this delightful concoction illustrates
     the folly of trusting statistical methods blindly. Each of the
@@ -3407,7 +3407,7 @@ clusters.
     algorithm will work fine on non-spherical clusters. Non-spherical
     clusters like&#x2026; these?
     
-    ![img](oitava_semana/g5Jb8_2019-09-01_20-48-55.png)
+    ![img](../assets/images/oitava_semana/g5Jb8_2019-09-01_20-48-55.png)
     
     Maybe this isn't what you were expecting- but it's a perfectly
     reasonable way to construct clusters. Looking at this image, we humans
@@ -3415,7 +3415,7 @@ clusters.
     mistaking them. So let's see how k-means does: assignments are shown
     in color, imputed centers are shown as X's.
     
-    ![img](oitava_semana/SlpL1_2019-09-01_20-49-21.png)
+    ![img](../assets/images/oitava_semana/SlpL1_2019-09-01_20-49-21.png)
     
     Well, that's not right. K-means was trying to fit a square peg in a
     round hole- trying to find nice centers with neat spheres around them-
@@ -3427,7 +3427,7 @@ clusters.
     correctly find clusters that are that weird." Not true! Try single
     linkage hierachical clustering:
     
-    ![img](oitava_semana/vBuTf_2019-09-01_20-49-46.png)
+    ![img](../assets/images/oitava_semana/vBuTf_2019-09-01_20-49-46.png)
     
     Nailed it! This is because single-linkage hierarchical clustering
     makes the right assumptions for this dataset. (There's a whole other
@@ -3445,7 +3445,7 @@ clusters.
     by transforming your data into polar coordinates, the clustering now
     works:
     
-    ![img](oitava_semana/0sUph_2019-09-01_20-50-17.png)
+    ![img](../assets/images/oitava_semana/0sUph_2019-09-01_20-50-17.png)
     
     That's why understanding the assumptions underlying a method is
     essential: it doesn't just tell you when a method has drawbacks, it
@@ -3456,13 +3456,13 @@ clusters.
     Well, consider this set of clusters, of sizes 20, 100, 500. I've
     generated each from a multivariate Gaussian:
     
-    ![img](oitava_semana/WiH4T_2019-09-01_20-50-43.png)
+    ![img](../assets/images/oitava_semana/WiH4T_2019-09-01_20-50-43.png)
     
     This looks like k-means could probably find those clusters, right?
     Everything seems to be generated into neat and tidy groups. So let's
     try k-means:
     
-    ![img](oitava_semana/zAI1g_2019-09-01_20-51-31.png)
+    ![img](../assets/images/oitava_semana/zAI1g_2019-09-01_20-51-31.png)
     
     Ouch. What happened here is a bit subtler. In its quest to minimize
     the within-cluster sum of squares, the k-means algorithm gives more
