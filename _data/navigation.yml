@@ -14,6 +14,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
       ko-KR   : *KO
+      pt-BR   : BR	Arquivo      
     url: /archive.html
 
   - titles:
@@ -30,5 +31,5 @@ header:
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
-      ko-KR   : *KO
+      ko-KR   : *KO      
     url: /about.html

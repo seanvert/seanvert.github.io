@@ -1,9 +1,9 @@
 ---
 title: "Redação Escrever é desvendar o mundo"
 date: 2019-10-15
-layout: 
-categories: 
-tags: 
+layout: article
+categories: notes
+tags: notas livros
 ---
 
 # Table of Contents
