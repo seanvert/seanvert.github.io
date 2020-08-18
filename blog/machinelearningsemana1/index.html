@@ -210,7 +210,7 @@
 	<div class="header">
 		<div class="jumbotron" style="background-image: url(http://seanvert.github.io/assets/images/laptop-1.jpeg)">
 		<h1 class="display-4">Machine Learning Semana 1</h1>
-		<p class="lead">emacs everywhere</p>
+		<p class="lead">Curso de Machine Learning do Coursera</p>
 		<hr class="my-4">
 		<div id="date">
 	
@@ -231,6 +231,12 @@
 	<a class="" href="http://seanvert.github.io/tags/coursera">coursera</a>
 	
 	
+	<a class="" href="http://seanvert.github.io/tags/portugu%C3%AAs">português</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/aprendizado_m%C3%A1quina">aprendizado_máquina</a>
+	
+	
 </div>
 
 
@@ -244,8 +250,8 @@
 Introdução
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
-<p>Copiei as anotações do curso do Andrew Ng de machine learning no
-Coursera e vou dar uma revisitada nelas pra montar um projeto
+<p>Copiei as anotações do <a href="https://www.coursera.org/learn/machine-learning">curso do Andrew Ng de machine learning no
+Coursera</a> e vou dar uma revisitada nelas pra montar um projeto
 pessoal. Vou adicionar algumas coisas aqui conforme for lendo. Mas é
 tudo tirado do Coursera salvo um post do stack overflow que ele indica
 no próprio curso.</p>
@@ -253,288 +259,263 @@ no próprio curso.</p>
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-o que é machine learning?
+Definições, informal e formal, do que é aprendizado de máquina
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
-<p>He says, a computer program is said to learn from experience E with
-respect to some task T and some performance measure P, if its
-performance on T, as measured by P, improves with experience E. </p>
+<p>Há duas definições do que é aprendizado de máquina. Arthur Samuel
+descreveu como: o campo de estudo que dá aos computadores a habilidade
+de aprender sem serem explicitamente programados. Essa é uma definição
+antiga e informal.</p>
 <p>
-Ele diz que um programa de computador aprende com uma experiência E em
-relação a uma tarefa T e uma medida de performance P, se sua
-performance em T, medida por P, melhora com a experiência E.</p>
-<div id="outline-container-headline-3" class="outline-3">
-<h3 id="headline-3">
-leitura
-</h3>
-<div id="outline-text-headline-3" class="outline-text-3">
-<p>Two definitions of Machine Learning are offered. Arthur Samuel
-described it as: &#34;the field of study that gives computers the ability
-to learn without being explicitly programmed.&#34; This is an older,
-informal definition.</p>
+Tom Mitchell propõe uma definição mais moderna. Ele diz que um
+programa de computador aprende de uma experiência E em relação a uma
+tarefa T e uma medida de performance P, se sua performance em T,
+medida por P, melhora com a experiência E.</p>
 <p>
-Tom Mitchell provides a more modern definition: &#34;A computer program is
-said to learn from experience E with respect to some class of tasks T
-and performance measure P, if its performance at tasks in T, as
-measured by P, improves with experience E.&#34;</p>
+Exemplo: jogo de damas</p>
 <p>
-Example: playing checkers.</p>
+E = a experiência de jogar várias partidas de damas</p>
 <p>
-E = the experience of playing many games of checkers</p>
+T = a tarefa de jogar damas.</p>
 <p>
-T = the task of playing checkers.</p>
+P = a probabilidade que o programa vencerá a próxima partida.</p>
 <p>
-P = the probability that the program will win the next game.</p>
-<p>
-In general, any machine learning problem can be assigned to one of two
-broad classifications:</p>
-<p>
-Supervised learning and Unsupervised learning.</p>
+Em geral, qualquer problema de aprendizado de máquina pode ser
+encaixado em duas categorias:</p>
+<ul>
+<li>
+<p>Aprendizado supervisionado</p>
+</li>
+<li>
+<p>Aprendizado não-supervisionado</p>
+</li>
+</ul>
 </div>
 </div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Tipos de algoritmos
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<ul>
+<li>
+<p><code>Aprendizado supervisionado</code></p>
+</li>
+<li>
+<p><code>Aprendizado não-supervisionado</code></p>
+</li>
+<li>
+<p>Aprendizagem por reforço</p>
+</li>
+<li>
+<p>Sistema de recomendação</p>
+</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
-tipos de algoritmos
+Aprendizado Supervisionado
 </h2>
 <div id="outline-text-headline-4" class="outline-text-2">
-<p><code>unsupervised learning</code>
-<code>supervised learning</code>
-reinforced learning
-recommender systems</p>
+<p>
+No aprendizado supervisionado, usamos um conjunto de dados e já temos
+o conhecimento prévio do resultado que queremos, também temos uma
+noção de que já uma relação entre os dados e os resultados.</p>
+<p>
+Problemas de aprendizado supervisionado podem ser divididos em
+problemas de &#34;regressão&#34; ou &#34;classificação.&#34; Em um problema de
+regressão, estimamos resultados dentro de conjuntos contínuos, em
+outras palavras, mapeamos as entradas numa função contínua. Já na
+classificação, estimamos resultados discretos, ou seja, mapeamos as
+variáveis em categorias discretas.</p>
+<p>
+Exemplo 1:</p>
+<p>
+Dado um conjunto de dados com tamanhos de casas tentamos estimar
+o preço de outras casas. Preço em função do tamanho é um conjunto
+contínuo, então seria um problema de regressão.</p>
+<p>
+Esse mesmo problema pode ser transformado numa classificação se
+trocarmos o nosso resultado por se &#34;esta casa venderia por mais ou
+menos do que um preço proposto.&#34; Aqui estaríamos classificando casas
+em duas categorias distintas usando o preço como divisor.</p>
+<p>
+Exemplo 2:</p>
+<p>
+(a) Regressão - Dada a foto de uma pessoa, estimamos a idade baseada na
+sua foto.</p>
+<p>
+(b) Classificação - Dado um paciente com um tumor, estimamos se o tumor
+é maligno ou benigno.</p>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+Problema de regressão
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>
+encaixar uma equação num gráfico com os dados</p>
 </div>
 </div>
-<div id="outline-container-headline-5" class="outline-2">
-<h2 id="headline-5">
-supervised learning
-</h2>
-<div id="outline-text-headline-5" class="outline-text-2">
 <div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
-leitura 
+Problema de classificação
 </h3>
 <div id="outline-text-headline-6" class="outline-text-3">
-<p>In supervised learning, we are given a data set and already know what
-our correct output should look like, having the idea that there is a
-relationship between the input and the output.</p>
 <p>
-Supervised learning problems are categorized into &#34;regression&#34; and
-&#34;classification&#34; problems. In a regression problem, we are trying to
-predict results within a continuous output, meaning that we are trying
-to map input variables to some continuous function. In a
-classification problem, we are instead trying to predict results in a
-discrete output. In other words, we are trying to map input variables
-into discrete categories.</p>
-<p>
-Example 1:</p>
-<p>
-We could turn this example into a classification problem by instead
-making our output about whether the house &#34;sells for more or less than
-the asking price.&#34; Here we are classifying the houses based on price
-into two discrete categories.</p>
-<p>
-Given data about the size of houses on the real estate market, try to
-predict their price. Price as a function of size is a continuous
-output, so this is a regression problem.</p>
-<p>
-Example 2:</p>
-<p>
-(a) Regression - Given a picture of a person, we have to predict their
-age on the basis of the given picture</p>
-<p>
-(b) Classification - Given a patient with a tumor, we have to predict
-whether the tumor is malignant or benign.</p>
-</div>
-</div>
-<div id="outline-container-headline-7" class="outline-3">
-<h3 id="headline-7">
-regression problem
-</h3>
-<div id="outline-text-headline-7" class="outline-text-3">
-<p>encaixar uma equação num gráfico com os dados</p>
-</div>
-</div>
-<div id="outline-container-headline-8" class="outline-3">
-<h3 id="headline-8">
-classification problem
-</h3>
-<div id="outline-text-headline-8" class="outline-text-3">
-<p>valores discretos para separar classificações diferentes</p>
+valores discretos para separar classificações diferentes</p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-headline-9" class="outline-2">
-<h2 id="headline-9">
-unsupervised learning
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Aprendizado não-supervisionado
 </h2>
-<div id="outline-text-headline-9" class="outline-text-2">
-<div id="outline-container-headline-10" class="outline-3">
-<h3 id="headline-10">
-leitura
-</h3>
-<div id="outline-text-headline-10" class="outline-text-3">
-<p>Unsupervised learning allows us to approach problems with little or no
-idea what our results should look like. We can derive structure from
-data where we don&#39;t necessarily know the effect of the variables.</p>
+<div id="outline-text-headline-7" class="outline-text-2">
 <p>
-We can derive this structure by clustering the data based on
-relationships among the variables in the data.</p>
+Aprendizado não-supervisionado nos permite abordar problemas com pouco
+ou nenhuma noção de como o resultado deve parecer. Nós podemos
+descobrir a estrutura de dados, os quais nós não necessariamente
+sabemos os efeitos das variáveis.</p>
 <p>
-With unsupervised learning there is no feedback based on the
-prediction results.</p>
+Com base nas relações entre as variáveis dos dados, podemos derivar
+essa estrutura por agrupamento (clustering). Não há nenhuma outro
+retorno além do agrupamento.</p>
 <p>
-Example:</p>
+Exemplo:</p>
 <p>
-Clustering: Take a collection of 1,000,000 different genes, and find a
-way to automatically group these genes into groups that are somehow
-similar or related by different variables, such as lifespan, location,
-roles, and so on.</p>
+Agrupamento: Usar uma coleção de 1.000.000 de genes diferentes para
+encontrar uma maneira de agrupar esses genes em grupos que de alguma
+maneira são similares ou relacionados por diferentes variáveis, como
+expectativa de vida, localização, funções e etc.</p>
 <p>
-Non-clustering: The &#34;Cocktail Party Algorithm&#34;, allows you to find
-structure in a chaotic environment. (i.e. identifying individual
-voices and music from a mesh of sounds at a cocktail party).</p>
+Não-agrupamento: O &#34;algoritmo da festa&#34;, te permite encontrar
+estrutura num ambiente caótico. (separar vozes e música de um
+emaranhando de sons em uma fest).</p>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-headline-11" class="outline-2">
-<h2 id="headline-11">
-regressão linear 
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+Regressão linear 
 </h2>
-<div id="outline-text-headline-11" class="outline-text-2">
-<div id="outline-container-headline-12" class="outline-3">
-<h3 id="headline-12">
-model and cost function
+<div id="outline-text-headline-8" class="outline-text-2">
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+Modelo e função de custo
 </h3>
-<div id="outline-text-headline-12" class="outline-text-3">
-<div id="outline-container-headline-13" class="outline-4">
-<h4 id="headline-13">
-model representation
+<div id="outline-text-headline-9" class="outline-text-3">
+<div id="outline-container-headline-10" class="outline-4">
+<h4 id="headline-10">
+Representação do modelo
 </h4>
-<div id="outline-text-headline-13" class="outline-text-4">
-<div id="outline-container-headline-14" class="outline-5">
-<h5 id="headline-14">
-leitura
-</h5>
-<div id="outline-text-headline-14" class="outline-text-5">
-<p>To establish notation for future use, we’ll use x<sup>(i)</sup> to denote
-the “input” variables (living area in this example), also called input
-features, and y<sup>(i)</sup> to denote the “output” or target variable that
-we are trying to predict (price). A pair (x<sup>(i)</sup> , y<sup>(i)</sup> ) is called a
-training example, and the dataset that we’ll be using to
-learn—a list of m training examples (x^(i),y^(i));i=1,…,m—is called a
-training set. Note that the superscript “(i)” in the notation is
-simply an index into the training set, and has nothing to do with
-exponentiation. We will also use X to denote the space of input
-values, and Y to denote the space of output values. In this example, X
-= Y = ℝ.</p>
+<div id="outline-text-headline-10" class="outline-text-4">
+<p>Vamos introduzir esta notação que usaremos no decorrer do curso, $x^{(i)}$
+será usado para denotar as variáveis de &#34;entrada&#34; (tamanho da sala neste
+exemplo), também chamadas de características de entrada, e $y^{(i)}$ para
+simbolizar a &#34;saída&#34; ou o resultado alvo que estamos estimando
+(preço). O par $(x^{(i)}, y^{(i)})$ é chamado de exemplo de treinamento, e o
+conjunto de dados que nós usaremos para o aprendizado — uma lista com
+m exemplos de treinamento $(x^{(i)},y^{(i)});i=1,...,m$ — é chamado de
+conjunto de treinamento. Note que o sobrescrito &#34;$(i)$&#34; na notação é
+só um índice no conjunto de treinamento, e não tem nenhuma relação com
+expoentes. Nós usaremos $X$ para denotar o espaço das entradas, e $Y$
+para os valores de saída. Neste exemplo, $X=Y=\mathbb{R}$.</p>
 <p>
-To describe the supervised learning problem slightly more formally,
-our goal is, given a training set, to learn a function h : X → Y so
-that h(x) is a “good” predictor for the corresponding value of y. For
-historical reasons, this function h is called a hypothesis. Seen
-pictorially, the process is therefore like this:</p>
+A descrição do aprendizado supervisionado de uma maneira um pouco mais
+formal seria dado um conjunto de treinamento, para aprender uma função
+$h : X \rightarrow Y$ tal que $h(x)$ é uma &#34;boa&#34; estimação do seu valor
+correspondente em $Y$. Por razões históricas, essa função $h$ é
+chamada de hipótese. O diagrama do processo:</p>
 <p><img src="primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png" alt="primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png" title="primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png" /></p>
 <p>
-When the target variable that we’re trying to predict is continuous,
-such as in our housing example, we call the learning problem a
-regression problem. When y can take on only a small number of discrete
-values (such as if, given the living area, we wanted to predict if a
-dwelling is a house or an apartment, say), we call it a classification
-problem.</p>
+Quando a variável que estamos estimando é contínua, como, por
+exemplo, o preço de casas, nós chamamos o problema de aprendizado uma
+regressão. Quando $Y$ só aceita um número pequeno de valores discretos
+(como dada a área da sala, nós podemos tentar estimar se uma moradia é
+uma casa ou um apartamento), nós o chamaremos de um problema de
+classificação.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-headline-15" class="outline-3">
-<h3 id="headline-15">
-cost function
+<div id="outline-container-headline-11" class="outline-3">
+<h3 id="headline-11">
+Função de Custo
 </h3>
-<div id="outline-text-headline-15" class="outline-text-3">
-<div id="outline-container-headline-16" class="outline-4">
-<h4 id="headline-16">
-leitura
-</h4>
-<div id="outline-text-headline-16" class="outline-text-4">
-<p>We can measure the accuracy of our hypothesis function by using a cost
-function. This takes an average difference (actually a fancier version
-of an average) of all the results of the hypothesis with inputs from
-x&#39;s and the actual output y&#39;s.</p>
+<div id="outline-text-headline-11" class="outline-text-3">
+<p>Nós podemos medir a exatidão da nossa função de hipótese usando uma
+função de custo. Ela tira a média da diferença (na verdade, uma versão
+mais sofisticada de média) dos resultados da hipótese com as entradas
+de $X$ e os dados reais de $Y$.</p>
 <p>
 $$ J(\theta_0, \theta_1) = \frac{1}{2m} \sum^{m}_{i=1} (\hat{y}_i - y_i)^2 =
 \frac{1}{2m}\sum^{m}_{i=1} (h_\theta(x_i)-y_i)^2$$</p>
 <p>
-To break it apart, it is $$ \frac{1}{2} \hat{x} $$ where $$ \hat{x} $$ is the mean
-of the squares of $$ h_\theta (x_{i}) - y_{i} $$ , or the difference between
-the predicted value and the actual value.</p>
+Tomando as partes, é $\frac{1}{2} \hat{x}$ onde $\hat{x}$ é a média dos
+quadrados de $h_\theta(x_i)-y_i$, ou a diferença entre o valor estimado e
+o valor real.</p>
 <p>
-This function is otherwise called the &#34;Squared error function&#34;, or
-&#34;Mean squared error&#34;. The mean is halved $$ \left(\frac{1}{2}\right)
-$$ as a convenience for the
- computation of the gradient descent, as the derivative term of the
-square function will cancel out the $$ \frac{1}{2} $$ term. The
-following image summarizes what the cost function does:</p>
+Essa função é em outros casos chamada de &#34;erro quadrático médio&#34; ou
+&#34;risco quadrático&#34;. A média é multiplicada por $\frac{1}{2}$ como uma
+conveniência para o cálculo do gradiente descendente, porque a
+derivada do termo da função quadrática cancela o $\frac{1}{2}$. A
+imagem abaixo resume o que a função de custo faz:</p>
 <p><img src="primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png" alt="primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png" title="primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png" /></p>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-headline-17" class="outline-3">
-<h3 id="headline-17">
-cost function intuition I
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+Intuição da Função de Custo I
 </h3>
-<div id="outline-text-headline-17" class="outline-text-3">
-<div id="outline-container-headline-18" class="outline-4">
-<h4 id="headline-18">
-leitura
-</h4>
-<div id="outline-text-headline-18" class="outline-text-4">
-<p>If we try to think of it in visual terms, our training data set is
-scattered on the x-y plane. We are trying to make a straight line
-(defined by h_θ(x)) which passes through these scattered data points.</p>
+<div id="outline-text-headline-12" class="outline-text-3">
 <p>
-Our objective is to get the best possible line. The best possible line
-will be such so that the average squared vertical distances of the
-scattered points from the line will be the least. Ideally, the line
-should pass through all the points of our training data set. In such a
-case, the value of J(θ_0, θ_1) will be 0. The following example shows
-the ideal situation where we have a cost function of 0.</p>
+Se pensarmos visualmente, os dados do nosso conjuntos de treinamento
+estão espalhados no plano xy. Estamos tentando fazer uma reta
+(definida por $h_\theta(x)$) que passa por todos os pontos dos dados
+no gráfico.</p>
+<p>
+Nosso objetivo é obter a melhor reta possível. Ela será a reta que
+tiver a menor distância média ao quadrado dos pontos do
+gráfico. Idealmente, a linha deveria passar por todos os pontos do
+conjunto de treinamento. Neste caso, o valor de $J(\theta_0, \theta_1)$
+será 0. O exemplos a seguir mostram a situação ideal em que a função
+de custo tem valor 0.</p>
 <p><img src="primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png" alt="primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png" title="primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png" /></p>
 <p>
-When θ_1 = 1, we get a slope of 1 which goes through every
-single data point in our model. Conversely, when θ_1 = 0.5, we
-see the vertical distance from our fit to the data points increase.</p>
+Quando $\theta_1 = 1$, nós temos uma reta com inclinação 1 que passa
+por todos os pontos do nosso modelo. Já quando o valor de $\theta_1 =
+0.5$, vemos que a distância do nosso modelo dos dados no gráfico
+aumenta.</p>
 <p><img src="primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png" alt="primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png" title="primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png" /></p>
 <p>
-This increases our cost function to 0.58. Plotting several other
-points yields to the following graph:</p>
+Isso aumenta nossa função de custo para 0.58. Colocando outros pontos
+num gráfico, temos:</p>
 <p><img src="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" alt="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" title="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" /></p>
 <p>
-Thus as a goal, we should try to minimize the cost function. In this
-case, θ_1 = 1 is our global minimum.</p>
+Portanto, devemos er como objetivo minimizar o valor da função de
+custo. Neste caso, $\theta_1 = 1$ é o mínimo global.</p>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-headline-19" class="outline-3">
-<h3 id="headline-19">
-cost function intuition II
+<div id="outline-container-headline-13" class="outline-3">
+<h3 id="headline-13">
+Intuição da função de custo II
 </h3>
-<div id="outline-text-headline-19" class="outline-text-3">
-<div id="outline-container-headline-20" class="outline-4">
-<h4 id="headline-20">
-leitura 
-</h4>
-<div id="outline-text-headline-20" class="outline-text-4">
-<p>A contour plot is a graph that contains many contour lines. A contour
-line of a two variable function has a constant value at all points of
-the same line. An example of such a graph is the one to the right
-below.</p>
+<div id="outline-text-headline-13" class="outline-text-3">
+<p>
+Um gráfico de curvas de nível é um gráfico que contém várias curvas
+com mesmo valor associado. Uma curva de nível de uma função de duas
+variáveis possui um valor constante em todos os pontos da mesma
+linha. Um exemplo de um gráfico desse tipo é a figura da direita.</p>
 <p><img src="primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png" alt="primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png" title="primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png" /></p>
+<p>
+Escolhemos qualquer cor e seguindo o &#39;círculo&#39;, obteríamos o mesmo
+valor na função de custo. Por exemplo, os três pontos verdes na linha
+verde acima têm o mesmo valor para $J(\theta_0, \theta_1)$ e
+consequentemente eles estão na mesma linha. O x circulado mostra o
+valor da função de custo para o gráfico da esquerda quando $\theta_0 =
+800$ e $\theta_1 = -0.15$. Com outra $h(x)$ e montamos suas
+curvas de nível, e obtemos os gráficos:</p>
 <p>
 Taking any color and going along the &#39;circle&#39;, one would expect to get
 the same value of the cost function. For example, the three green
@@ -559,23 +540,21 @@ put our point in the center of the inner most &#39;circle&#39;.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-headline-21" class="outline-2">
-<h2 id="headline-21">
+<div id="outline-container-headline-14" class="outline-2">
+<h2 id="headline-14">
 parameter learning
 </h2>
-<div id="outline-text-headline-21" class="outline-text-2">
-<div id="outline-container-headline-22" class="outline-3">
-<h3 id="headline-22">
+<div id="outline-text-headline-14" class="outline-text-2">
+<div id="outline-container-headline-15" class="outline-3">
+<h3 id="headline-15">
 gradient descent
 </h3>
-<div id="outline-text-headline-22" class="outline-text-3">
-<div id="outline-container-headline-23" class="outline-4">
-<h4 id="headline-23">
+<div id="outline-text-headline-15" class="outline-text-3">
+<div id="outline-container-headline-16" class="outline-4">
+<h4 id="headline-16">
 leitura
 </h4>
-<div id="outline-text-headline-23" class="outline-text-4">
+<div id="outline-text-headline-16" class="outline-text-4">
 <p>So we have our hypothesis function and we have a way of measuring how
 well it fits into the data. Now we need to estimate the parameters in
 the hypothesis function. That&#39;s where gradient descent comes in.</p>
@@ -630,11 +609,11 @@ implementation.</p>
 </div>
 </div>
 </div>
-<div id="outline-container-headline-24" class="outline-3">
-<h3 id="headline-24">
+<div id="outline-container-headline-17" class="outline-3">
+<h3 id="headline-17">
 gradient descent intuition
 </h3>
-<div id="outline-text-headline-24" class="outline-text-3">
+<div id="outline-text-headline-17" class="outline-text-3">
 <p>In this video we explored the scenario where we used one parameter θ_1
 and plotted its cost function to implement a gradient descent. Our
 formula for a single parameter was :</p>
@@ -665,11 +644,11 @@ $$ \theta_1 := \theta_1 - \alpha.0 $$</p>
 <p><img src="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" alt="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" title="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" /></p>
 </div>
 </div>
-<div id="outline-container-headline-25" class="outline-3">
-<h3 id="headline-25">
+<div id="outline-container-headline-18" class="outline-3">
+<h3 id="headline-18">
 gradiente descent for linear regression
 </h3>
-<div id="outline-text-headline-25" class="outline-text-3">
+<div id="outline-text-headline-18" class="outline-text-3">
 <p>When specifically applied to the case of linear regression, a new form
 of the gradient descent equation can be derived. We can substitute our
 actual cost function and our actual hypothesis function and modify the
@@ -719,16 +698,16 @@ went through as it converged to its minimum.</p>
 </div>
 </div>
 </div>
-<div id="outline-container-headline-26" class="outline-2">
-<h2 id="headline-26">
+<div id="outline-container-headline-19" class="outline-2">
+<h2 id="headline-19">
 linear algebra review
 </h2>
-<div id="outline-text-headline-26" class="outline-text-2">
-<div id="outline-container-headline-27" class="outline-3">
-<h3 id="headline-27">
+<div id="outline-text-headline-19" class="outline-text-2">
+<div id="outline-container-headline-20" class="outline-3">
+<h3 id="headline-20">
 ☛ TODO matrices and vectors
 </h3>
-<div id="outline-text-headline-27" class="outline-text-3">
+<div id="outline-text-headline-20" class="outline-text-3">
 <p>Matrices are 2-dimensional arrays:</p>
 <p>
 $$\begin{bmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \\ j &amp; k &amp; l\end{bmatrix} $$</p>
@@ -813,11 +792,11 @@ different things.</p>
 </table>
 </div>
 </div>
-<div id="outline-container-headline-28" class="outline-3">
-<h3 id="headline-28">
+<div id="outline-container-headline-21" class="outline-3">
+<h3 id="headline-21">
 addition and scalar multiplication
 </h3>
-<div id="outline-text-headline-28" class="outline-text-3">
+<div id="outline-text-headline-21" class="outline-text-3">
 <p>
 Addition and subtraction are element-wise, so you simply add or
 subtract each corresponding element:</p>
@@ -891,11 +870,11 @@ running the cell below.</p>
 </table>
 </div>
 </div>
-<div id="outline-container-headline-29" class="outline-3">
-<h3 id="headline-29">
+<div id="outline-container-headline-22" class="outline-3">
+<h3 id="headline-22">
 matrix and vector multiplication
 </h3>
-<div id="outline-text-headline-29" class="outline-text-3">
+<div id="outline-text-headline-22" class="outline-text-3">
 <p>We map the column of the vector onto each row of the matrix,
 multiplying each element and summing the result.</p>
 <p>
@@ -923,11 +902,11 @@ matrix-vector multiplications.</p>
 </span><span style="color:#960050;background-color:#1e0010"></span>Av = A <span style="color:#f92672">*</span> v<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% ans = Av</span></code></pre></div>
 </div>
-<div id="outline-container-headline-30" class="outline-3">
-<h3 id="headline-30">
+<div id="outline-container-headline-23" class="outline-3">
+<h3 id="headline-23">
 matrix matrix multiplication
 </h3>
-<div id="outline-text-headline-30" class="outline-text-3">
+<div id="outline-text-headline-23" class="outline-text-3">
 <p>We multiply two matrices by breaking it into several vector
 multiplications and concatenating the result.</p>
 <p>
@@ -973,11 +952,11 @@ For example:</p>
 </div>
 </div>
 </div>
-<div id="outline-container-headline-31" class="outline-3">
-<h3 id="headline-31">
+<div id="outline-container-headline-24" class="outline-3">
+<h3 id="headline-24">
 matrix multiplication properties
 </h3>
-<div id="outline-text-headline-31" class="outline-text-3">
+<div id="outline-text-headline-24" class="outline-text-3">
 <ul>
 <li>
 <p>Matrices are not commutative: $$ A * B \neq B * A $$</p>
@@ -1037,11 +1016,11 @@ matrix&#39;s rows.</p>
 </table>
 </div>
 </div>
-<div id="outline-container-headline-32" class="outline-3">
-<h3 id="headline-32">
+<div id="outline-container-headline-25" class="outline-3">
+<h3 id="headline-25">
 inverse and transpose
 </h3>
-<div id="outline-text-headline-32" class="outline-text-3">
+<div id="outline-text-headline-25" class="outline-text-3">
 <p>The inverse of a matrix A is denoted A<sup>-1</sup>. Multiplying by the
 inverse results in the identity matrix.</p>
 <p>
