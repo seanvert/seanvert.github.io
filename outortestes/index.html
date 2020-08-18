@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>
+		flow
+		</title>
+	
+	<script type="text/javascript" async
+			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+	</script>
+	<script type="text/x-mathjax-config">
+	 MathJax.Hub.Config({
+		 tex2jax: {
+			 inlineMath: [['$','$'], ['\\(','\\)']],
+			 displayMath: [['$$','$$'], ['\[','\]']],
+			 processEscapes: true,
+			 processEnvironments: true,
+			 skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			 TeX: { equationNumbers: { autoNumber: "AMS" },
+					extensions: ["AMSmath.js", "AMSsymbols.js"] }
+		 }
+	 });
+	</script>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" async
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style>
+ body {
+	 background-color: beige;
+ }
+ 
+  
+ #socialmedia {
+	 text-align: center;
+ }
+
+ small > a {
+	 display: inline;
+ }
+
+ small > #date {
+	 display: inline;
+	 float: right;
+ }
+
+ .jumbotron {
+	 background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 vertical-align: middle;
+	 background-color: gray;
+	 background-blend-mode: soft-light;
+ }
+
+ .display-4 {
+	 color: white;
+ }
+
+ .lead {
+	 color: #F0F0F0;
+ }
+
+ .my-4 {
+	 border-color: white;
+	 
+ }
+
+ .card-columns {
+	 @include media-breakpoint-only(lg) {
+		 column-count: 4;
+	 }
+	 @include media-breakpoint-only(xl) {
+		 column-count: 5;
+	 }
+ }
+
+ #title {
+	 text-align: center;
+ }
+
+ #main {
+	 background: beige;
+ }
+
+ #meta {
+	 background: beige;
+ }
+
+ .src {
+	 margin: 2%;
+ }
+
+ main {
+	 padding: 2%;
+ }
+ 
+ pre code {
+	 border: 5%;
+ }
+
+  
+
+ #headline-1 {
+	 margin: 2%;
+ }
+
+ #subtitle {
+	 text-align: center;
+ }
+
+ .jumbotron > #date {
+	 margin: 5%;
+	 color: white;
+	 display: inline;
+ }
+
+ .jumbotron > #tags {
+	 color: white;
+	 margin: 5%;
+ }
+
+ .header {
+	 margin-bottom: 10%;
+ }
+ 
+ #meta {
+	 padding: 10%;
+ }
+
+ #content {
+	 background-color: #dcdcc6;
+	 border-radius: 25px;
+	 padding-left: 3%;
+	 padding-right: 3%;
+	 padding-top: 5px;
+	 padding-bottom: 4%;
+	 margin-left: 2%;
+	 margin-right: 2%;
+	 margin-bottom: 2%;
+ }
+
+  
+ pre {
+	 margin: 1%;
+	 padding: 3%;
+	 border-radius: 20px;
+ }
+ 
+ .previous {
+	 font-size: 1.3rem;
+ }
+
+ .next {
+	 font-size: 1.3rem;
+	 float: right;
+ }
+
+</style>
+
+	</head>
+
+
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<a class="navbar-brand" href="/"><i class="fa fa-grav fa-2x" aria-hidden="true"></i></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		 <span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a>
+			</li>
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/blog/"><i class="fa fa-edit"></i> Blog</a>
+			</li>
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/tags/"><i class="fa fa-tag"></i> Tags</a>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+
+
+		
+		
+<section id="main">
+	<div class="header">
+		<div class="jumbotron" style="background-image: url(#ZgotmplZ)">
+		<h1 class="display-4">flow</h1>
+		<p class="lead">emacs everywhere</p>
+		<hr class="my-4">
+		<div id="date">
+	
+	
+	<i class="fa fa-calendar"></i> <time datetime="02-08-2019">2 Aug 2019</time>
+</div>
+
+
+
+		<div id="tags">
+	
+	<i class="fa fa-tags"></i>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/howto">howto</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/emacs">emacs</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/hugo">hugo</a>
+	
+	
+</div>
+
+
+		</div>
+	</div>
+	<div>
+        <article id="content">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+flow
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+phenomenology of enjoyment
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<div id="outline-container-headline-3" class="outline-4">
+<h4 id="headline-3">
+1
+</h4>
+<div id="outline-text-headline-3" class="outline-text-4">
+<p>the experience usually occurs when we confront tasks we have a chance of
+completing</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-4">
+<h4 id="headline-4">
+2
+</h4>
+<div id="outline-text-headline-4" class="outline-text-4">
+<p>we must be able to concentrate on what we are doing</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-4">
+<h4 id="headline-5">
+3/4
+</h4>
+<div id="outline-text-headline-5" class="outline-text-4">
+<p>concentration is usually possible because the task undertaken has clear goals
+and provides immediate feedback</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-4">
+<h4 id="headline-6">
+5
+</h4>
+<div id="outline-text-headline-6" class="outline-text-4">
+<p>one acts with a deep but effortless involvement that removes from awareness the
+worries and frustrations of everyday life</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-4">
+<h4 id="headline-7">
+6
+</h4>
+<div id="outline-text-headline-7" class="outline-text-4">
+<p>enjoyable experiences allow people to exercise a sense of control over their
+actions</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-4">
+<h4 id="headline-8">
+7
+</h4>
+<div id="outline-text-headline-8" class="outline-text-4">
+<p>concent for the self disappears, yet paradoxically the sense of self emerges
+stronger after the flow experience is over</p>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-4">
+<h4 id="headline-9">
+8
+</h4>
+<div id="outline-text-headline-9" class="outline-text-4">
+<p>the sense of duration of time is altered; hours pass by in minutes, and minutes
+can stretch out to seem like hours. </p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-3">
+<h3 id="headline-10">
+flow in cultures
+</h3>
+<div id="outline-text-headline-10" class="outline-text-3">
+<div id="outline-container-headline-11" class="outline-4">
+<h4 id="headline-11">
+US
+</h4>
+<div id="outline-text-headline-11" class="outline-text-4">
+<div id="outline-container-headline-12" class="outline-5">
+<h5 id="headline-12">
+work
+</h5>
+<div id="outline-text-headline-12" class="outline-text-5">
+<div id="outline-container-headline-13" class="outline-6">
+<h6 id="headline-13">
+30 hours working
+</h6>
+</div>
+<div id="outline-container-headline-14" class="outline-6">
+<h6 id="headline-14">
+10 hours doing things irrelevant
+</h6>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-15" class="outline-5">
+<h5 id="headline-15">
+leisure
+</h5>
+<div id="outline-text-headline-15" class="outline-text-5">
+<div id="outline-container-headline-16" class="outline-6">
+<h6 id="headline-16">
+20 hours
+</h6>
+<div id="outline-text-headline-16" class="outline-text-6">
+<div id="outline-container-headline-17" class="outline-7">
+<h7 id="headline-17">
+7 hours on tv
+</h7>
+</div>
+<div id="outline-container-headline-18" class="outline-7">
+<h7 id="headline-18">
+3 hours reading
+</h7>
+</div>
+<div id="outline-container-headline-19" class="outline-7">
+<h7 id="headline-19">
+2 hours in active pursuits
+</h7>
+</div>
+<div id="outline-container-headline-20" class="outline-7">
+<h7 id="headline-20">
+7 hours in social
+</h7>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-21" class="outline-6">
+<h6 id="headline-21">
+maintenance
+</h6>
+<div id="outline-text-headline-21" class="outline-text-6">
+<div id="outline-container-headline-22" class="outline-7">
+<h7 id="headline-22">
+50-60 hours on &#34;living&#34;
+</h7>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-23" class="outline-3">
+<h3 id="headline-23">
+the effects of the family on the autotelic personality
+</h3>
+<div id="outline-text-headline-23" class="outline-text-3">
+<div id="outline-container-headline-24" class="outline-4">
+<h4 id="headline-24">
+strength, happiness, satisfaction is tied to 5 characteristics
+</h4>
+<div id="outline-text-headline-24" class="outline-text-4">
+<div id="outline-container-headline-25" class="outline-5">
+<h5 id="headline-25">
+clarity
+</h5>
+<div id="outline-text-headline-25" class="outline-text-5">
+<p>unambiguous goals and feedback from what is expected of their parents</p>
+</div>
+</div>
+<div id="outline-container-headline-26" class="outline-5">
+<h5 id="headline-26">
+centering
+</h5>
+<div id="outline-text-headline-26" class="outline-text-5">
+<p>focus on what they&#39;re doing rather than the results of those experiences</p>
+</div>
+</div>
+<div id="outline-container-headline-27" class="outline-5">
+<h5 id="headline-27">
+choice
+</h5>
+<div id="outline-text-headline-27" class="outline-text-5">
+<p>variety in possibilities</p>
+</div>
+</div>
+<div id="outline-container-headline-28" class="outline-5">
+<h5 id="headline-28">
+commitment
+</h5>
+<div id="outline-text-headline-28" class="outline-text-5">
+<p>trust that allows the child to feel comfortable enough to set aside the shield
+of his defenses, and become involved in whatever he is interested in</p>
+</div>
+</div>
+<div id="outline-container-headline-29" class="outline-5">
+<h5 id="headline-29">
+challenge
+</h5>
+<div id="outline-text-headline-29" class="outline-text-5">
+<p>parents&#39; dedication to provide increasingly complex opportunities for action to
+their children</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-30" class="outline-3">
+<h3 id="headline-30">
+steps to transform a simple activity in a flow one
+</h3>
+<div id="outline-text-headline-30" class="outline-text-3">
+<div id="outline-container-headline-31" class="outline-4">
+<h4 id="headline-31">
+set an overall goal
+</h4>
+<div id="outline-text-headline-31" class="outline-text-4">
+<p>and as many subgoals as are realistically feasible</p>
+</div>
+</div>
+<div id="outline-container-headline-32" class="outline-4">
+<h4 id="headline-32">
+find ways of measuring progress
+</h4>
+<div id="outline-text-headline-32" class="outline-text-4">
+<p>in terms of the goals chosen</p>
+</div>
+</div>
+<div id="outline-container-headline-33" class="outline-4">
+<h4 id="headline-33">
+keep concentrating
+</h4>
+<div id="outline-text-headline-33" class="outline-text-4">
+<p>on what one is doing, and to eep making finer and finer distinctions in the
+challenges involved in the activity</p>
+</div>
+</div>
+<div id="outline-container-headline-34" class="outline-4">
+<h4 id="headline-34">
+develop the skills
+</h4>
+<div id="outline-text-headline-34" class="outline-text-4">
+<p>necessary to interact with the opportunities available</p>
+</div>
+</div>
+<div id="outline-container-headline-35" class="outline-4">
+<h4 id="headline-35">
+keep raising the stakes
+</h4>
+<div id="outline-text-headline-35" class="outline-text-4">
+<p>if the activity becomes boring</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-36" class="outline-3">
+<h3 id="headline-36">
+the power of dissipative structures
+</h3>
+<div id="outline-text-headline-36" class="outline-text-3">
+<div id="outline-container-headline-37" class="outline-4">
+<h4 id="headline-37">
+how people turn a hopelessly situation into a flow one
+</h4>
+<div id="outline-text-headline-37" class="outline-text-4">
+<div id="outline-container-headline-38" class="outline-5">
+<h5 id="headline-38">
+unselfconscious self-assurance
+</h5>
+<div id="outline-text-headline-38" class="outline-text-5">
+<p>implicit belief that their destiny was in their hands</p>
+<p>
+tries to do his best within the system in which he must operate</p>
+</div>
+</div>
+<div id="outline-container-headline-39" class="outline-5">
+<h5 id="headline-39">
+focusing attention on the world
+</h5>
+<div id="outline-text-headline-39" class="outline-text-5">
+<p>constantly processing information from their surroundings</p>
+<p>
+check if their personal goals are fit and relevant to external events</p>
+</div>
+</div>
+<div id="outline-container-headline-40" class="outline-5">
+<h5 id="headline-40">
+discovery of new solutions
+</h5>
+<div id="outline-text-headline-40" class="outline-text-5">
+<ul>
+<li>
+<p>focus attention on the obstacles and move them out of the way</p>
+</li>
+<li>
+<p>focus on the entire situation, and think about if alternative goals are ok</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-41" class="outline-3">
+<h3 id="headline-41">
+summary of the autotelic self
+</h3>
+<div id="outline-text-headline-41" class="outline-text-3">
+<div id="outline-container-headline-42" class="outline-4">
+<h4 id="headline-42">
+setting goals
+</h4>
+<div id="outline-text-headline-42" class="outline-text-4">
+<p>clear goals to strive for</p>
+</div>
+</div>
+<div id="outline-container-headline-43" class="outline-4">
+<h4 id="headline-43">
+become immersed in the activity
+</h4>
+</div>
+<div id="outline-container-headline-44" class="outline-4">
+<h4 id="headline-44">
+paying attention to what is happening
+</h4>
+</div>
+<div id="outline-container-headline-45" class="outline-4">
+<h4 id="headline-45">
+learning to enjoy immediate experience
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        </article>
+	</div>
+</section>
+<aside id="meta">
+    <div>
+		
+		<a class="btn btn-sm btn-outline-dark previous" href="http://seanvert.github.io/teste/">
+			<i class="fa fa-arrow-left"></i> 
+		</a>
+		<a class="btn btn-sm previous" href="http://seanvert.github.io/teste/"  aria-hidden="true"> Machine Learning</a>
+				
+		
+
+		<a class="btn btn-sm btn-outline-dark next" href="http://seanvert.github.io/maisumteste/">
+			<i class="fa fa-arrow-right"></i> 
+		</a>
+		<a class="btn btn-sm next" href="http://seanvert.github.io/maisumteste/"  aria-hidden="true"> cbt</a>
+		
+    </div>
+</aside>
+
+
+
+		
+
+
+		
+
+	</body>
+</html>
