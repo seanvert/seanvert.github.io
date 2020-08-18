@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on Salad</title>
+    <link>http://seanvert.github.io/tags/emacs/</link>
+    <description>Recent content in emacs on Salad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>não sei</copyright>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://seanvert.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cbt</title>
+      <link>http://seanvert.github.io/maisumteste/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/maisumteste/</guid>
+      <description>Judith S. Beck Phd - Cognitive Behavior Therapy_ Basics and Beyond, Second Edition -The Guilford Press (2011)  antiga cognitive therapy  agora cognitive behavior therapy
+  effectiveness  post-traumatic stress disorder, obsessive-compulsive disorder, phobias of all kinds, and eating disorders. Can be paired up with medication to help the treatment of bipolar disorder and schizophrenia.
+ It is also beneficial in a wide variety of chronic medical disorders such as low back pain, colitis (?</description>
+    </item>
+    
+    <item>
+      <title>flow</title>
+      <link>http://seanvert.github.io/outortestes/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/outortestes/</guid>
+      <description>flow  phenomenology of enjoyment  1  the experience usually occurs when we confront tasks we have a chance of completing
+  2  we must be able to concentrate on what we are doing
+  3/4  concentration is usually possible because the task undertaken has clear goals and provides immediate feedback
+  5  one acts with a deep but effortless involvement that removes from awareness the worries and frustrations of everyday life</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>http://seanvert.github.io/teste/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/teste/</guid>
+      <description>primeira semana  o que é machine learning?  He says, a computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.  Ele diz que um programa de computador aprende com uma experiência E em relação a uma tarefa T e uma medida de performance P, se sua performance em T, medida por P, melhora com a experiência E.</description>
+    </item>
+    
+  </channel>
+</rss>
