@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Diagrama de Integrais no LaTeX e PlantUML</title>
+      <link>http://seanvert.github.io/integrais/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/integrais/</guid>
+      <description>PlantUML  @startuml (*) --&amp;gt; if &amp;#34;Alguma parte do numerador é\n a derivada de outro termo?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Substituição&amp;#34; else --&amp;gt; [não] if &amp;#34;Há um ou mais termos trigonométricos?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Separe os termos.&amp;#34; -down-&amp;gt; &amp;#34;Identidade de Pitágoras.&amp;#34; else -down-&amp;gt; [não] if &amp;#34;Dá para fatorar o denominador?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Frações parciais&amp;#34; else -down-&amp;gt; [não] if &amp;#34;Tem algum termo (1 ± x²)?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Substituição trigonométrica&amp;#34; else -down-&amp;gt; [não] if &amp;#34;Dá para dividir a integral em duas partes \ndistintas que podem ser integradas ou derivadas?</description>
+    </item>
+    
+    <item>
       <title>Machine Learning Semana 1</title>
       <link>http://seanvert.github.io/blog/machinelearningsemana1/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
@@ -20,68 +29,6 @@
       <guid>http://seanvert.github.io/blog/machinelearningsemana1/</guid>
       <description>Introdução  Copiei as anotações do curso do Andrew Ng de machine learning no Coursera e vou dar uma revisitada nelas pra montar um projeto pessoal. Vou adicionar algumas coisas aqui conforme for lendo. Mas é tudo tirado do Coursera salvo um post do stack overflow que ele indica no próprio curso.
   Definições, informal e formal, do que é aprendizado de máquina  Há duas definições do que é aprendizado de máquina.</description>
-    </item>
-    
-    <item>
-      <title>Teste</title>
-      <link>http://seanvert.github.io/trueteste/</link>
-      <pubDate>Mon, 17 Aug 2020 05:14:54 -0300</pubDate>
-      
-      <guid>http://seanvert.github.io/trueteste/</guid>
-      <description>testes asd asd asd sad sa dsd</description>
-    </item>
-    
-    <item>
-      <title>cbt</title>
-      <link>http://seanvert.github.io/maisumteste/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/maisumteste/</guid>
-      <description>Judith S. Beck Phd - Cognitive Behavior Therapy_ Basics and Beyond, Second Edition -The Guilford Press (2011)  antiga cognitive therapy  agora cognitive behavior therapy
-  effectiveness  post-traumatic stress disorder, obsessive-compulsive disorder, phobias of all kinds, and eating disorders. Can be paired up with medication to help the treatment of bipolar disorder and schizophrenia.
- It is also beneficial in a wide variety of chronic medical disorders such as low back pain, colitis (?</description>
-    </item>
-    
-    <item>
-      <title>flow</title>
-      <link>http://seanvert.github.io/blog/outroteste/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/blog/outroteste/</guid>
-      <description>flow  phenomenology of enjoyment  1  the experience usually occurs when we confront tasks we have a chance of completing
-  2  we must be able to concentrate on what we are doing
-  3/4  concentration is usually possible because the task undertaken has clear goals and provides immediate feedback
-  5  one acts with a deep but effortless involvement that removes from awareness the worries and frustrations of everyday life</description>
-    </item>
-    
-    <item>
-      <title>flow</title>
-      <link>http://seanvert.github.io/outortestes/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/outortestes/</guid>
-      <description>flow  phenomenology of enjoyment  1  the experience usually occurs when we confront tasks we have a chance of completing
-  2  we must be able to concentrate on what we are doing
-  3/4  concentration is usually possible because the task undertaken has clear goals and provides immediate feedback
-  5  one acts with a deep but effortless involvement that removes from awareness the worries and frustrations of everyday life</description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>http://seanvert.github.io/teste/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/teste/</guid>
-      <description>primeira semana  o que é machine learning?  He says, a computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.  Ele diz que um programa de computador aprende com uma experiência E em relação a uma tarefa T e uma medida de performance P, se sua performance em T, medida por P, melhora com a experiência E.</description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>http://seanvert.github.io/blog/teste/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/blog/teste/</guid>
-      <description>asd </description>
     </item>
     
   </channel>

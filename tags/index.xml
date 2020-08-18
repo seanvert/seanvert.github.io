@@ -31,11 +31,38 @@
     </item>
     
     <item>
+      <title>cálculo</title>
+      <link>http://seanvert.github.io/tags/c%C3%A1lculo/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/c%C3%A1lculo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latex</title>
+      <link>http://seanvert.github.io/tags/latex/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>machine_learning</title>
       <link>http://seanvert.github.io/tags/machine_learning/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seanvert.github.io/tags/machine_learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matemática</title>
+      <link>http://seanvert.github.io/tags/matem%C3%A1tica/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/matem%C3%A1tica/</guid>
       <description></description>
     </item>
     
@@ -51,7 +78,7 @@
     <item>
       <title>please ignore</title>
       <link>http://seanvert.github.io/tags/please-ignore/</link>
-      <pubDate>Mon, 17 Aug 2020 05:14:54 -0300</pubDate>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://seanvert.github.io/tags/please-ignore/</guid>
       <description></description>
@@ -60,36 +87,9 @@
     <item>
       <title>test</title>
       <link>http://seanvert.github.io/tags/test/</link>
-      <pubDate>Mon, 17 Aug 2020 05:14:54 -0300</pubDate>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://seanvert.github.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>http://seanvert.github.io/tags/emacs/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>howto</title>
-      <link>http://seanvert.github.io/tags/howto/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/tags/howto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>http://seanvert.github.io/tags/hugo/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>português on Salad</title>
-    <link>http://seanvert.github.io/tags/portugu%C3%AAs/</link>
-    <description>Recent content in português on Salad</description>
+    <title>latex on Salad</title>
+    <link>http://seanvert.github.io/tags/latex/</link>
+    <description>Recent content in latex on Salad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>não sei</copyright>
     <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://seanvert.github.io/tags/portugu%C3%AAs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://seanvert.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>http://seanvert.github.io/integrais/</guid>
       <description>PlantUML  @startuml (*) --&amp;gt; if &amp;#34;Alguma parte do numerador é\n a derivada de outro termo?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Substituição&amp;#34; else --&amp;gt; [não] if &amp;#34;Há um ou mais termos trigonométricos?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Separe os termos.&amp;#34; -down-&amp;gt; &amp;#34;Identidade de Pitágoras.&amp;#34; else -down-&amp;gt; [não] if &amp;#34;Dá para fatorar o denominador?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Frações parciais&amp;#34; else -down-&amp;gt; [não] if &amp;#34;Tem algum termo (1 ± x²)?&amp;#34; then -left-&amp;gt; [sim] &amp;#34;Substituição trigonométrica&amp;#34; else -down-&amp;gt; [não] if &amp;#34;Dá para dividir a integral em duas partes \ndistintas que podem ser integradas ou derivadas?</description>
-    </item>
-    
-    <item>
-      <title>Machine Learning Semana 1</title>
-      <link>http://seanvert.github.io/blog/machinelearningsemana1/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/blog/machinelearningsemana1/</guid>
-      <description>Introdução  Copiei as anotações do curso do Andrew Ng de machine learning no Coursera e vou dar uma revisitada nelas pra montar um projeto pessoal. Vou adicionar algumas coisas aqui conforme for lendo. Mas é tudo tirado do Coursera salvo um post do stack overflow que ele indica no próprio curso.
-  Definições, informal e formal, do que é aprendizado de máquina  Há duas definições do que é aprendizado de máquina.</description>
     </item>
     
   </channel>

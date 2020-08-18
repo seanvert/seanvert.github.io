@@ -18,6 +18,21 @@
   </url>
   
   <url>
+    <loc>http://seanvert.github.io/tags/c%C3%A1lculo/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seanvert.github.io/integrais/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seanvert.github.io/tags/latex/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://seanvert.github.io/blog/machinelearningsemana1/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
@@ -28,13 +43,18 @@
   </url>
   
   <url>
+    <loc>http://seanvert.github.io/tags/matem%C3%A1tica/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://seanvert.github.io/tags/portugu%C3%AAs/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://seanvert.github.io/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
+    <lastmod>2020-08-18T05:09:39-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -54,7 +74,7 @@
   
   <url>
     <loc>http://seanvert.github.io/tags/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
+    <lastmod>2020-08-18T05:09:39-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -73,62 +93,18 @@
   </url>
   
   <url>
-    <loc>http://seanvert.github.io/tags/please-ignore/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/tags/test/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/trueteste/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/maisumteste/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/tags/emacs/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/blog/outroteste/</loc>
-    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/outortestes/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/tags/howto/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/tags/hugo/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/teste/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://seanvert.github.io/posts/</loc>
     <lastmod>2020-08-18T05:09:39-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://seanvert.github.io/blog/teste/</loc>
+    <loc>http://seanvert.github.io/tags/please-ignore/</loc>
+    <lastmod>2020-08-18T05:09:39-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seanvert.github.io/tags/test/</loc>
+    <lastmod>2020-08-18T05:09:39-03:00</lastmod>
   </url>
   
 </urlset>
