@@ -4,4 +4,5 @@
 - [ ] colocar a parte das tags
 - [ ] colocar um condional por tag pra ele só adicionar o mathjax em
   posts com tag matemática ou math
+- [ ] adicionar o resto da tradução do site
 
