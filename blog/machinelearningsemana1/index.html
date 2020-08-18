@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8">
+	<title>
+		Machine Learning Semana 1
+		</title>
+	
+	<script type="text/javascript" async
+			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+	</script>
+	<script type="text/x-mathjax-config">
+	 MathJax.Hub.Config({
+		 tex2jax: {
+			 inlineMath: [['$','$'], ['\\(','\\)']],
+			 displayMath: [['$$','$$'], ['\[','\]']],
+			 processEscapes: true,
+			 processEnvironments: true,
+			 skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			 TeX: { equationNumbers: { autoNumber: "AMS" },
+					extensions: ["AMSmath.js", "AMSsymbols.js"] }
+		 }
+	 });
+	</script>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style>
+ body {
+	 background-color: beige;
+ }
+ 
+  
+ #socialmedia {
+	 text-align: center;
+ }
+
+ small > a {
+	 display: inline;
+ }
+
+ small > #date {
+	 display: inline;
+	 float: right;
+ }
+
+ .jumbotron {
+	 background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 vertical-align: middle;
+	 background-color: gray;
+	 background-blend-mode: soft-light;
+ }
+
+ .display-4 {
+	 color: white;
+ }
+
+ .lead {
+	 color: #F0F0F0;
+ }
+
+ .my-4 {
+	 border-color: white;
+	 
+ }
+
+ .card-columns {
+	 @include media-breakpoint-only(md) {
+		 column-count: 3;
+	 }
+	 
+	 @include media-breakpoint-only(lg) {
+		 column-count: 4;
+	 }
+	 @include media-breakpoint-only(xl) {
+		 column-count: 5;
+	 }
+ }
+
+ #title {
+	 text-align: center;
+ }
+
+ #main {
+	 background: beige;
+ }
+
+ #meta {
+	 background: beige;
+ }
+
+ .src {
+	 margin: 2%;
+ }
+
+ main {
+	 padding: 2%;
+ }
+ 
+ pre code {
+	 border: 5%;
+ }
+
+  
+
+ #headline-1 {
+	 margin: 2%;
+ }
+
+ #subtitle {
+	 text-align: center;
+ }
+
+ .jumbotron > #date {
+	 margin: 5%;
+	 color: white;
+	 display: inline;
+ }
+
+ .jumbotron > #tags {
+	 color: white;
+	 margin: 5%;
+ }
+
+ .header {
+	 margin-bottom: 10%;
+ }
+ 
+ #meta {
+	 padding: 10%;
+ }
+
+ #content {
+	 background-color: #dcdcc6;
+	 border-radius: 25px;
+	 padding-left: 3%;
+	 padding-right: 3%;
+	 padding-top: 5px;
+	 padding-bottom: 4%;
+	 margin-left: 2%;
+	 margin-right: 2%;
+	 margin-bottom: 2%;
+ }
+
+  
+ pre {
+	 margin: 1%;
+	 padding: 3%;
+	 border-radius: 20px;
+ }
+ 
+ .previous {
+	 font-size: 1.3rem;
+ }
+
+ .next {
+	 font-size: 1.3rem;
+	 float: right;
+ }
+
+</style>
+
+	</head>
+
+
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<a class="navbar-brand" href="/"><i class="fa fa-grav fa-2x" aria-hidden="true"></i></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		 <span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a>
+			</li>
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/blog/"><i class="fa fa-edit"></i> Blog</a>
+			</li>
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/tags/"><i class="fa fa-tag"></i> Tags</a>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+
+
+		
+		
+<section id="main">
+	<div class="header">
+		<div class="jumbotron" style="background-image: url(http://seanvert.github.io/assets/images/laptop-1.jpeg)">
+		<h1 class="display-4">Machine Learning Semana 1</h1>
+		<p class="lead">emacs everywhere</p>
+		<hr class="my-4">
+		<div id="date">
+	
+	
+	<i class="fa fa-calendar"></i> <time datetime="18-08-2020">18 Aug 2020</time>
+</div>
+
+
+
+		<div id="tags">
+	
+	<i class="fa fa-tags"></i>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/machine_learning">machine_learning</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/coursera">coursera</a>
+	
+	
+</div>
+
+
+		</div>
+	</div>
+	<div>
+        <article id="content">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Introdução
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Copiei as anotações do curso do Andrew Ng de machine learning no
+Coursera e vou dar uma revisitada nelas pra montar um projeto
+pessoal. Vou adicionar algumas coisas aqui conforme for lendo. Mas é
+tudo tirado do Coursera salvo um post do stack overflow que ele indica
+no próprio curso.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+o que é machine learning?
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>He says, a computer program is said to learn from experience E with
+respect to some task T and some performance measure P, if its
+performance on T, as measured by P, improves with experience E. </p>
+<p>
+Ele diz que um programa de computador aprende com uma experiência E em
+relação a uma tarefa T e uma medida de performance P, se sua
+performance em T, medida por P, melhora com a experiência E.</p>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+leitura
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>Two definitions of Machine Learning are offered. Arthur Samuel
+described it as: &#34;the field of study that gives computers the ability
+to learn without being explicitly programmed.&#34; This is an older,
+informal definition.</p>
+<p>
+Tom Mitchell provides a more modern definition: &#34;A computer program is
+said to learn from experience E with respect to some class of tasks T
+and performance measure P, if its performance at tasks in T, as
+measured by P, improves with experience E.&#34;</p>
+<p>
+Example: playing checkers.</p>
+<p>
+E = the experience of playing many games of checkers</p>
+<p>
+T = the task of playing checkers.</p>
+<p>
+P = the probability that the program will win the next game.</p>
+<p>
+In general, any machine learning problem can be assigned to one of two
+broad classifications:</p>
+<p>
+Supervised learning and Unsupervised learning.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+tipos de algoritmos
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p><code>unsupervised learning</code>
+<code>supervised learning</code>
+reinforced learning
+recommender systems</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+supervised learning
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+leitura 
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>In supervised learning, we are given a data set and already know what
+our correct output should look like, having the idea that there is a
+relationship between the input and the output.</p>
+<p>
+Supervised learning problems are categorized into &#34;regression&#34; and
+&#34;classification&#34; problems. In a regression problem, we are trying to
+predict results within a continuous output, meaning that we are trying
+to map input variables to some continuous function. In a
+classification problem, we are instead trying to predict results in a
+discrete output. In other words, we are trying to map input variables
+into discrete categories.</p>
+<p>
+Example 1:</p>
+<p>
+We could turn this example into a classification problem by instead
+making our output about whether the house &#34;sells for more or less than
+the asking price.&#34; Here we are classifying the houses based on price
+into two discrete categories.</p>
+<p>
+Given data about the size of houses on the real estate market, try to
+predict their price. Price as a function of size is a continuous
+output, so this is a regression problem.</p>
+<p>
+Example 2:</p>
+<p>
+(a) Regression - Given a picture of a person, we have to predict their
+age on the basis of the given picture</p>
+<p>
+(b) Classification - Given a patient with a tumor, we have to predict
+whether the tumor is malignant or benign.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+regression problem
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>encaixar uma equação num gráfico com os dados</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-3">
+<h3 id="headline-8">
+classification problem
+</h3>
+<div id="outline-text-headline-8" class="outline-text-3">
+<p>valores discretos para separar classificações diferentes</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+unsupervised learning
+</h2>
+<div id="outline-text-headline-9" class="outline-text-2">
+<div id="outline-container-headline-10" class="outline-3">
+<h3 id="headline-10">
+leitura
+</h3>
+<div id="outline-text-headline-10" class="outline-text-3">
+<p>Unsupervised learning allows us to approach problems with little or no
+idea what our results should look like. We can derive structure from
+data where we don&#39;t necessarily know the effect of the variables.</p>
+<p>
+We can derive this structure by clustering the data based on
+relationships among the variables in the data.</p>
+<p>
+With unsupervised learning there is no feedback based on the
+prediction results.</p>
+<p>
+Example:</p>
+<p>
+Clustering: Take a collection of 1,000,000 different genes, and find a
+way to automatically group these genes into groups that are somehow
+similar or related by different variables, such as lifespan, location,
+roles, and so on.</p>
+<p>
+Non-clustering: The &#34;Cocktail Party Algorithm&#34;, allows you to find
+structure in a chaotic environment. (i.e. identifying individual
+voices and music from a mesh of sounds at a cocktail party).</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-2">
+<h2 id="headline-11">
+regressão linear 
+</h2>
+<div id="outline-text-headline-11" class="outline-text-2">
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+model and cost function
+</h3>
+<div id="outline-text-headline-12" class="outline-text-3">
+<div id="outline-container-headline-13" class="outline-4">
+<h4 id="headline-13">
+model representation
+</h4>
+<div id="outline-text-headline-13" class="outline-text-4">
+<div id="outline-container-headline-14" class="outline-5">
+<h5 id="headline-14">
+leitura
+</h5>
+<div id="outline-text-headline-14" class="outline-text-5">
+<p>To establish notation for future use, we’ll use x<sup>(i)</sup> to denote
+the “input” variables (living area in this example), also called input
+features, and y<sup>(i)</sup> to denote the “output” or target variable that
+we are trying to predict (price). A pair (x<sup>(i)</sup> , y<sup>(i)</sup> ) is called a
+training example, and the dataset that we’ll be using to
+learn—a list of m training examples (x^(i),y^(i));i=1,…,m—is called a
+training set. Note that the superscript “(i)” in the notation is
+simply an index into the training set, and has nothing to do with
+exponentiation. We will also use X to denote the space of input
+values, and Y to denote the space of output values. In this example, X
+= Y = ℝ.</p>
+<p>
+To describe the supervised learning problem slightly more formally,
+our goal is, given a training set, to learn a function h : X → Y so
+that h(x) is a “good” predictor for the corresponding value of y. For
+historical reasons, this function h is called a hypothesis. Seen
+pictorially, the process is therefore like this:</p>
+<p><img src="primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png" alt="primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png" title="primeira_semana/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58_2019-08-08_19-15-47.png" /></p>
+<p>
+When the target variable that we’re trying to predict is continuous,
+such as in our housing example, we call the learning problem a
+regression problem. When y can take on only a small number of discrete
+values (such as if, given the living area, we wanted to predict if a
+dwelling is a house or an apartment, say), we call it a classification
+problem.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-15" class="outline-3">
+<h3 id="headline-15">
+cost function
+</h3>
+<div id="outline-text-headline-15" class="outline-text-3">
+<div id="outline-container-headline-16" class="outline-4">
+<h4 id="headline-16">
+leitura
+</h4>
+<div id="outline-text-headline-16" class="outline-text-4">
+<p>We can measure the accuracy of our hypothesis function by using a cost
+function. This takes an average difference (actually a fancier version
+of an average) of all the results of the hypothesis with inputs from
+x&#39;s and the actual output y&#39;s.</p>
+<p>
+$$ J(\theta_0, \theta_1) = \frac{1}{2m} \sum^{m}_{i=1} (\hat{y}_i - y_i)^2 =
+\frac{1}{2m}\sum^{m}_{i=1} (h_\theta(x_i)-y_i)^2$$</p>
+<p>
+To break it apart, it is $$ \frac{1}{2} \hat{x} $$ where $$ \hat{x} $$ is the mean
+of the squares of $$ h_\theta (x_{i}) - y_{i} $$ , or the difference between
+the predicted value and the actual value.</p>
+<p>
+This function is otherwise called the &#34;Squared error function&#34;, or
+&#34;Mean squared error&#34;. The mean is halved $$ \left(\frac{1}{2}\right)
+$$ as a convenience for the
+ computation of the gradient descent, as the derivative term of the
+square function will cancel out the $$ \frac{1}{2} $$ term. The
+following image summarizes what the cost function does:</p>
+<p><img src="primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png" alt="primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png" title="primeira_semana/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM_2019-08-08_20-42-43.png" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-17" class="outline-3">
+<h3 id="headline-17">
+cost function intuition I
+</h3>
+<div id="outline-text-headline-17" class="outline-text-3">
+<div id="outline-container-headline-18" class="outline-4">
+<h4 id="headline-18">
+leitura
+</h4>
+<div id="outline-text-headline-18" class="outline-text-4">
+<p>If we try to think of it in visual terms, our training data set is
+scattered on the x-y plane. We are trying to make a straight line
+(defined by h_θ(x)) which passes through these scattered data points.</p>
+<p>
+Our objective is to get the best possible line. The best possible line
+will be such so that the average squared vertical distances of the
+scattered points from the line will be the least. Ideally, the line
+should pass through all the points of our training data set. In such a
+case, the value of J(θ_0, θ_1) will be 0. The following example shows
+the ideal situation where we have a cost function of 0.</p>
+<p><img src="primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png" alt="primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png" title="primeira_semana/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56_2019-08-08_21-16-29.png" /></p>
+<p>
+When θ_1 = 1, we get a slope of 1 which goes through every
+single data point in our model. Conversely, when θ_1 = 0.5, we
+see the vertical distance from our fit to the data points increase.</p>
+<p><img src="primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png" alt="primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png" title="primeira_semana/8guexptSEeanbxIMvDC87g_3d86874dfd37b8e3c53c9f6cfa94676c_Screenshot-2016-10-26-01.03.07_2019-08-08_21-25-47.png" /></p>
+<p>
+This increases our cost function to 0.58. Plotting several other
+points yields to the following graph:</p>
+<p><img src="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" alt="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" title="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" /></p>
+<p>
+Thus as a goal, we should try to minimize the cost function. In this
+case, θ_1 = 1 is our global minimum.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-19" class="outline-3">
+<h3 id="headline-19">
+cost function intuition II
+</h3>
+<div id="outline-text-headline-19" class="outline-text-3">
+<div id="outline-container-headline-20" class="outline-4">
+<h4 id="headline-20">
+leitura 
+</h4>
+<div id="outline-text-headline-20" class="outline-text-4">
+<p>A contour plot is a graph that contains many contour lines. A contour
+line of a two variable function has a constant value at all points of
+the same line. An example of such a graph is the one to the right
+below.</p>
+<p><img src="primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png" alt="primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png" title="primeira_semana/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37_2019-08-08_21-44-54.png" /></p>
+<p>
+Taking any color and going along the &#39;circle&#39;, one would expect to get
+the same value of the cost function. For example, the three green
+points found on the green line above have the same value for
+J(θ_0, θ_1) and as a result, they are found along the
+same line. The circled x displays the value of the cost function for
+the graph on the left when θ_0 = 800 and θ_1 = -0.15. Taking another
+h(x) and plotting its contour plot, one gets the following graphs:</p>
+<p><img src="primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png" alt="primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png" title="primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png" /></p>
+<p>
+When θ_0 = 360 and θ_1 = 0, the value of J(θ_0, θ_1) the contour plot gets
+closer to the center thus reducing the cost function error. Now giving
+our hypothesis function a slightly positive slope results in a better
+fit of the data.</p>
+<p><img src="primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png" alt="primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png" title="primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png" /></p>
+<p>
+The graph above minimizes the cost function as much as possible and
+consequently, the result of θ_1 and θ_0 tend to be around 0.12 and 250
+respectively. Plotting those values on our graph to the right seems to
+put our point in the center of the inner most &#39;circle&#39;.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-21" class="outline-2">
+<h2 id="headline-21">
+parameter learning
+</h2>
+<div id="outline-text-headline-21" class="outline-text-2">
+<div id="outline-container-headline-22" class="outline-3">
+<h3 id="headline-22">
+gradient descent
+</h3>
+<div id="outline-text-headline-22" class="outline-text-3">
+<div id="outline-container-headline-23" class="outline-4">
+<h4 id="headline-23">
+leitura
+</h4>
+<div id="outline-text-headline-23" class="outline-text-4">
+<p>So we have our hypothesis function and we have a way of measuring how
+well it fits into the data. Now we need to estimate the parameters in
+the hypothesis function. That&#39;s where gradient descent comes in.</p>
+<p>
+Imagine that we graph our hypothesis function based on its fields θ_0
+and θ_1 (actually we are graphing the cost function as a function of
+the parameter estimates). We are not graphing x and y itself, but the
+parameter range of our hypothesis function and the cost resulting from
+selecting a particular set of parameters.</p>
+<p>
+We put θ_0 on the x axis and θ_1 on the y axis, with the cost
+function on the vertical z axis. The points on our graph will be the
+result of the cost function using our hypothesis with those specific
+theta parameters. The graph below depicts such a setup.</p>
+<p><img src="primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png" alt="primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png" title="primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png" /></p>
+<p>
+We will know that we have succeeded when our cost function is at the
+very bottom of the pits in our graph, i.e. when its value is the
+minimum. The red arrows show the minimum points in the graph.</p>
+<p>
+The way we do this is by taking the derivative (the tangential line to
+a function) of our cost function. The slope of the tangent is the
+derivative at that point and it will give us a direction to move
+towards. We make steps down the cost function in the direction with
+the steepest descent. The size of each step is determined by the
+parameter α, which is called the learning rate.</p>
+<p>
+For example, the distance between each &#39;star&#39; in the graph above
+represents a step determined by our parameter α. A smaller α would
+result in a smaller step and a larger α results in a larger step. The
+direction in which the step is taken is determined by the partial
+derivative of J(θ_0, θ_1). Depending on where one starts on the graph,
+one could end up at different points. The image above shows us two
+different starting points that end up in two different places.</p>
+<p>
+The gradient descent algorithm is:</p>
+<p>
+repeat until convergence:</p>
+<p>
+$$ \theta_j := \theta_j - \alpha\frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1) $$</p>
+<p>
+where</p>
+<p>
+j = 0, 1 represents the feature index number.</p>
+<p>
+At each iteration j, one should simultaeously update the parameters
+θ_1, θ_2,…, θ_n. Updating a specific parameter prior to calculating
+another one on the j^(th) iteration would yield to a wrong
+implementation.</p>
+<p><img src="primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png" alt="primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png" title="primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-24" class="outline-3">
+<h3 id="headline-24">
+gradient descent intuition
+</h3>
+<div id="outline-text-headline-24" class="outline-text-3">
+<p>In this video we explored the scenario where we used one parameter θ_1
+and plotted its cost function to implement a gradient descent. Our
+formula for a single parameter was :</p>
+<p>
+Repeat until convergence:</p>
+<p>
+$$ \theta_1 := \theta_1 - \alpha\frac{d}{d\theta_1}J(\theta_1) $$</p>
+<p>
+Regardless of the slope&#39;s sign for $$ \frac{d}{d\theta_1}J(\theta_1) $$, θ_1
+eventually converges to its minimum value. The following grapg shows
+that when the slope is negative, the value of θ_1 increases and when it
+is positive, the value of θ_1 decreases.</p>
+<p><img src="primeira_semana/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06_2019-08-09_10-33-08.png" alt="primeira_semana/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06_2019-08-09_10-33-08.png" title="primeira_semana/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06_2019-08-09_10-33-08.png" /></p>
+<p>
+On a side note, we should adjust our parameter α to ensure that
+the gradient descent algorithm converges in a reasonable time. Failure
+to converge or too much time to obtain the minimum value imply that
+our step size is wrong.</p>
+<p><img src="primeira_semana/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27_2019-08-09_12-32-34.png" alt="primeira_semana/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27_2019-08-09_12-32-34.png" title="primeira_semana/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27_2019-08-09_12-32-34.png" /></p>
+<p>
+How does gradient descent converge with a fixed step size α?</p>
+<p>
+The intuition behind the convergence is that $$ \frac{d}{d\theta_1} J(\theta_1) $$
+approaches 0 as we approach the bottom of our convex function. At the
+minimum, the derivative will always be 0 and thus we get:</p>
+<p>
+$$ \theta_1 := \theta_1 - \alpha.0 $$</p>
+<p><img src="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" alt="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" title="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" /></p>
+</div>
+</div>
+<div id="outline-container-headline-25" class="outline-3">
+<h3 id="headline-25">
+gradiente descent for linear regression
+</h3>
+<div id="outline-text-headline-25" class="outline-text-3">
+<p>When specifically applied to the case of linear regression, a new form
+of the gradient descent equation can be derived. We can substitute our
+actual cost function and our actual hypothesis function and modify the
+equation to :</p>
+<p>
+$$ \begin{align*} \text{repeat until convergence: } \lbrace &amp; \\
+\theta_0 := &amp; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \\
+\theta_1 := &amp; \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i})
+x_{i}\right) \\ \rbrace&amp; \end{align*} $$</p>
+<p>
+Where m is the size of the training set, θ_0 a constant that will be
+changing simultaneously with θ_1 and x_i, y_i are values of the given
+training set (data).</p>
+<p>
+Note that we have separated out the two cases for θ_j into separte
+equations for θ_0 and θ_1; and that for θ_1 we are multiplying x_i at the
+end due to the derivative. The following is a derivation of $$
+\frac{\delta}{\delta\theta_j} J(\theta) $$ for a single example:</p>
+<p><img src="primeira_semana/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54_2019-08-09_13-29-59.png" alt="primeira_semana/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54_2019-08-09_13-29-59.png" title="primeira_semana/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54_2019-08-09_13-29-59.png" /></p>
+<p>
+The point of all this is that if we start with a guess for our
+hypothesis and then repeatedly apply these gradient descent equations,
+our hypothesis will become more and more accurate.</p>
+<p>
+So, this is simply gradient descent on the original cost function</p>
+<ol>
+<li>
+<p>This method looks at every example in the entire training set on</p>
+</li>
+</ol>
+<p>every step, and is called batch gradient descent. Note that, while
+gradient descent can be susceptible to local minima in general, the
+optimization problem we have posed here for linear regression has only
+one global, and no other local, optima; thus gradient descent always
+converges (assuming the learning rate α is not too large) to the
+global minimum. Indeed, J is a convex quadratic function. Here is an
+example of gradient descent as it is run to minimize a quadratic
+function.</p>
+<p><img src="primeira_semana/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49_2019-08-09_13-34-35.png" alt="primeira_semana/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49_2019-08-09_13-34-35.png" title="primeira_semana/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49_2019-08-09_13-34-35.png" /></p>
+<p>
+The ellipses shown above are the contours of a quadratic
+function. Also shown is the trajectory taken by gradient descent,
+which was initialized at (48,30). The x’s in the figure (joined by
+straight lines) mark the successive values of θ that gradient descent
+went through as it converged to its minimum.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-26" class="outline-2">
+<h2 id="headline-26">
+linear algebra review
+</h2>
+<div id="outline-text-headline-26" class="outline-text-2">
+<div id="outline-container-headline-27" class="outline-3">
+<h3 id="headline-27">
+☛ TODO matrices and vectors
+</h3>
+<div id="outline-text-headline-27" class="outline-text-3">
+<p>Matrices are 2-dimensional arrays:</p>
+<p>
+$$\begin{bmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \\ j &amp; k &amp; l\end{bmatrix} $$</p>
+<p>
+The above matrix has four rows and three columns, so it is a 4 x 3 matrix.</p>
+<p>
+A vector is a matrix with one column and many rows:</p>
+<p>
+$$ \begin{bmatrix} w \\ x \\ y \\ z \end{bmatrix} $$</p>
+<p>
+Notation and terms:</p>
+<ul>
+<li>
+<p>A<sub>ij</sub> refers to the element in the ith row and jth column of matrix A.</p>
+</li>
+<li>
+<p>A vector with &#39;n&#39; rows is referred to as an &#39;n&#39;-dimensional</p>
+</li>
+</ul>
+<p>vector.</p>
+<ul>
+<li>
+<p>v_iv refers to the element in the ith row of the vector.</p>
+</li>
+<li>
+<p>In general, all our vectors and matrices will be 1-indexed. Note that</p>
+</li>
+</ul>
+<p>for some programming languages, the arrays are 0-indexed.  </p>
+<ul>
+<li>
+<p>Matrices are usually denoted by uppercase names while vectors are lowercase.</p>
+</li>
+<li>
+<p>&#34;Scalar&#34; means that an object is a single value, not a vector or</p>
+</li>
+</ul>
+<p>matrix.</p>
+<ul>
+<li>
+<p>$$\Re$$ refers to the set of scalar real numbers.  </p>
+</li>
+<li>
+<p>$$\Re^n$$ refers to the set of n-dimensional vectors of real numbers. </p>
+</li>
+</ul>
+<p>Run the cell below to get familiar with the commands in
+Octave/Matlab. Feel free to create matrices and vectors and try out
+different things.</p>
+<div class="src src-octave">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-octave" data-lang="octave"><span style="color:#75715e">% The ; denotes we are going back to a new row.</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>; <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>; <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>; <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = A<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Initialize a vector </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>v = [<span style="color:#ae81ff">1</span>;<span style="color:#ae81ff">2</span>;<span style="color:#ae81ff">3</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = v<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Get the dimension of the matrix A where m = rows and n = columns</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[m,n] = size(A);<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = [m,n]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% You could also store it this way</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>dim_A = size(A);<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = dim_A<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Get the dimension of the vector v </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>dim_v = size(v);<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = dim_v<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Now let&#39;s index into the 2nd row 3rd column of matrix A</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A_23 = A(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>);<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = [m, n, dim_A, dim_v, A_23]</code></pre></div>
+</div>
+<table>
+<tbody>
+<tr>
+<td class="align-right">4</td>
+<td class="align-right">3</td>
+<td class="align-right">4</td>
+<td class="align-right">3</td>
+<td class="align-right">3</td>
+<td class="align-right">1</td>
+<td class="align-right">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-headline-28" class="outline-3">
+<h3 id="headline-28">
+addition and scalar multiplication
+</h3>
+<div id="outline-text-headline-28" class="outline-text-3">
+<p>
+Addition and subtraction are element-wise, so you simply add or
+subtract each corresponding element:</p>
+<p>
+$$ \begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix}
++\begin{bmatrix} w &amp; x \\ y &amp; z \\ \end{bmatrix}
+=\begin{bmatrix} a+w &amp; b+x \\ c+y &amp; d+z \\ \end{bmatrix} $$</p>
+<p>
+Subtracting Matrices:</p>
+<p>
+$$ \begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix} - \begin{bmatrix} w
+&amp; x \\ y &amp; z \\ \end{bmatrix} =\begin{bmatrix} a-w &amp; b-x \\ c-y &amp; d-z
+\\ \end{bmatrix} $$</p>
+<p>
+To add or subtract two matrices, their dimensions must be the same.</p>
+<p>
+In scalar multiplication, we simply multiply every element by the
+scalar value:</p>
+<p>
+$$ \begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix} * x
+=\begin{bmatrix} a*x &amp; b*x \\ c*x &amp; d*x \\ \end{bmatrix} $$</p>
+<p>
+In scalar division, we simply divide every element by the scalar
+value:</p>
+<p>
+$$ \frac{\begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix}}{x}
+=\begin{bmatrix} a /x &amp; b/x \\ c /x &amp; d /x \\
+\end{bmatrix} $$</p>
+<p>
+Experiment below with the Octave/Matlab commands for matrix addition
+and scalar multiplication. Feel free to try out different
+commands. Try to write out your answers for each command before
+running the cell below.</p>
+<div class="src src-octave">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-octave" data-lang="octave"><span style="color:#75715e">% Initialize matrix A and B </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>; <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>B = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>; <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Initialize constant s </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>s = <span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% See how element-wise addition works</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>add_AB = A <span style="color:#f92672">+</span> B <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% See how element-wise subtraction works</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>sub_AB = A <span style="color:#f92672">-</span> B<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% See how scalar multiplication works</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>mult_As = A <span style="color:#f92672">*</span> s<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Divide A by s</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>div_As = A <span style="color:#f92672">/</span> s<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% What happens if we have a Matrix + scalar?</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>add_As = A <span style="color:#f92672">+</span> s<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = add_As</code></pre></div>
+</div>
+<table>
+<tbody>
+<tr>
+<td class="align-right">3</td>
+<td class="align-right">4</td>
+<td class="align-right">6</td>
+</tr>
+<tr>
+<td class="align-right">7</td>
+<td class="align-right">5</td>
+<td class="align-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-headline-29" class="outline-3">
+<h3 id="headline-29">
+matrix and vector multiplication
+</h3>
+<div id="outline-text-headline-29" class="outline-text-3">
+<p>We map the column of the vector onto each row of the matrix,
+multiplying each element and summing the result.</p>
+<p>
+$$ \begin{bmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{bmatrix}
+*\begin{bmatrix} x \\ y \\ \end{bmatrix} =\begin{bmatrix}
+a*x + b*y \\ c*x + d*y \\ e*x + f*y\end{bmatrix} $$</p>
+<p>
+The result is a vector. The number of columns of the matrix must equal
+the number of rows of the vector.</p>
+<p>
+An m x n matrix multiplied by an n x 1 vector results in an m x 1
+vector.</p>
+<p>
+Below is an example of a matrix-vector multiplication. Make sure you
+understand how the multiplication works. Feel free to try different
+matrix-vector multiplications.</p>
+<div class="src src-octave">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-octave" data-lang="octave"><span style="color:#75715e">% Initialize matrix A </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>; <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>;<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>] <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Initialize vector v </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>v = [<span style="color:#ae81ff">1</span>; <span style="color:#ae81ff">1</span>; <span style="color:#ae81ff">1</span>] <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Multiply A * v</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>Av = A <span style="color:#f92672">*</span> v<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% ans = Av</span></code></pre></div>
+</div>
+<div id="outline-container-headline-30" class="outline-3">
+<h3 id="headline-30">
+matrix matrix multiplication
+</h3>
+<div id="outline-text-headline-30" class="outline-text-3">
+<p>We multiply two matrices by breaking it into several vector
+multiplications and concatenating the result.</p>
+<p>
+$$ \begin{bmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{bmatrix}
+*\begin{bmatrix} w &amp; x \\ y &amp; z \\ \end{bmatrix}
+=\begin{bmatrix} a*w + b*y &amp; a*x + b*z \\ c*w + d*y &amp; c*x + d*z
+\\ e*w + f*y &amp; e*x + f*z\end{bmatrix} $$</p>
+<p>
+An m x n matrix multiplied by an n x o matrix results in an m x o
+matrix. In the above example, a 3 x 2 matrix times a 2 x 2 matrix
+resulted in a 3 x 2 matrix.</p>
+<p>
+To multiply two matrices, the number of columns of the first matrix
+must equal the number of rows of the second matrix.</p>
+<p>
+For example:</p>
+<div class="src src-octave">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-octave" data-lang="octave"><span style="color:#75715e">% Initialize a 3 by 2 matrix </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>; <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>;<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Initialize a 2 by 1 matrix </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>B = [<span style="color:#ae81ff">1</span>; <span style="color:#ae81ff">2</span>] <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% We expect a resulting matrix of (3 by 2)*(2 by 1) = (3 by 1) </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>mult_AB = A<span style="color:#f92672">*</span>B<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = mult_AB<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Make sure you understand why we got that result</span></code></pre></div>
+</div>
+<table>
+<tbody>
+<tr>
+<td class="align-right">5</td>
+</tr>
+<tr>
+<td class="align-right">11</td>
+</tr>
+<tr>
+<td class="align-right">17</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-31" class="outline-3">
+<h3 id="headline-31">
+matrix multiplication properties
+</h3>
+<div id="outline-text-headline-31" class="outline-text-3">
+<ul>
+<li>
+<p>Matrices are not commutative: $$ A * B \neq B * A $$</p>
+</li>
+<li>
+<p>Matrices are associative: $$ (A * B) * C = A * (B * C) $$</p>
+</li>
+</ul>
+<p>The identity matrix, when multiplied by any matrix of the same
+dimensions, results in the original matrix. It&#39;s just like multiplying
+numbers by 1. The identity matrix simply has 1&#39;s on the diagonal
+(upper left to lower right diagonal) and 0&#39;s elsewhere.</p>
+<p>
+$$ \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1
+\\ \end{bmatrix} $$</p>
+<p>
+When multiplying the identity matrix after some matrix (A∗I), the
+square identity matrix&#39;s dimension should match the other matrix&#39;s
+columns. When multiplying the identity matrix before some other matrix
+(I∗A), the square identity matrix&#39;s dimension should match the other
+matrix&#39;s rows.</p>
+<div class="src src-octave">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-octave" data-lang="octave"><span style="color:#75715e">% Initialize random matrices A and B </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>;<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>B = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>;<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Initialize a 2 by 2 identity matrix</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">I</span> = eye(<span style="color:#ae81ff">2</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% The above notation is the same as I = [1,0;0,1]</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% What happens when we multiply I*A ? </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>IA = <span style="color:#66d9ef">I</span><span style="color:#f92672">*</span>A <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% How about A*I ? </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>AI = A<span style="color:#f92672">*</span><span style="color:#66d9ef">I</span> <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Compute A*B </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>AB = A<span style="color:#f92672">*</span>B <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Is it equal to B*A? </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>BA = B<span style="color:#f92672">*</span>A <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = AB<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Note that IA = AI but AB != BA</span></code></pre></div>
+</div>
+<table>
+<tbody>
+<tr>
+<td class="align-right">1</td>
+<td class="align-right">5</td>
+</tr>
+<tr>
+<td class="align-right">4</td>
+<td class="align-right">14</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-headline-32" class="outline-3">
+<h3 id="headline-32">
+inverse and transpose
+</h3>
+<div id="outline-text-headline-32" class="outline-text-3">
+<p>The inverse of a matrix A is denoted A<sup>-1</sup>. Multiplying by the
+inverse results in the identity matrix.</p>
+<p>
+A non square matrix does not have an inverse matrix. We can compute
+inverses of matrices in octave with the pinv(A) function and in
+Matlab with the inv(A) function. Matrices that don&#39;t have an
+inverse are singular or degenerate.</p>
+<p>
+The transposition of a matrix is like rotating the matrix 90° in
+clockwise direction and then reversing it. We can compute
+transposition of matrices in matlab with the transpose(A) function or
+A&#39;:</p>
+<p>
+$$ A = \begin{bmatrix} a &amp; b \\ c &amp; d \\ e &amp; f
+\end{bmatrix} $$</p>
+<p>
+$$ A^T = \begin{bmatrix} a &amp; c &amp; e \\ b &amp; d &amp; f \\
+\end{bmatrix} $$</p>
+<p>
+In other words:</p>
+<p>
+A<sub>ij</sub> = A^T<sub>ji</sub>
+​	</p>
+<div class="src src-octave">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-octave" data-lang="octave"><span style="color:#75715e">% Initialize matrix A </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>;<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>;<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">9</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Transpose A </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A_trans = A<span style="color:#f92672">&#39;</span> <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% Take the inverse of A </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A_inv = pinv(A)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% What is A^(-1)*A? </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>A_invA = pinv(A)<span style="color:#f92672">*</span>A<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>ans = A_inv</code></pre></div>
+</div>
+<table>
+<tbody>
+<tr>
+<td class="align-right">0.3488372093023258</td>
+<td class="align-right">-0.1395348837209303</td>
+<td class="align-right">0.09302325581395343</td>
+</tr>
+<tr>
+<td class="align-right">0.3255813953488373</td>
+<td class="align-right">0.06976744186046503</td>
+<td class="align-right">-0.04651162790697672</td>
+</tr>
+<tr>
+<td class="align-right">-0.2713178294573644</td>
+<td class="align-right">0.1085271317829458</td>
+<td class="align-right">0.03875968992248063</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+        </article>
+	</div>
+</section>
+<aside id="meta">
+    <div>
+		
+		<a class="btn btn-sm btn-outline-dark previous" href="http://seanvert.github.io/blog/outroteste/">
+			<i class="fa fa-arrow-left"></i> 
+		</a>
+		<a class="btn btn-sm previous" href="http://seanvert.github.io/blog/outroteste/"  aria-hidden="true"> flow</a>
+				
+		
+    </div>
+</aside>
+
+
+
+		
+
+
+		
+
+	</body>
+</html>

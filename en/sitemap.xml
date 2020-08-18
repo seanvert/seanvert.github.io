@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://seanvert.github.io/tags/please-ignore/</loc>
-    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
+    <loc>http://seanvert.github.io/blog/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seanvert.github.io/tags/coursera/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seanvert.github.io/blog/machinelearningsemana1/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seanvert.github.io/tags/machine_learning/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,6 +63,11 @@
   </url>
   
   <url>
+    <loc>http://seanvert.github.io/tags/please-ignore/</loc>
+    <lastmod>2020-08-18T14:02:29-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://seanvert.github.io/tags/test/</loc>
     <lastmod>2020-08-18T14:02:29-03:00</lastmod>
   </url>
@@ -55,11 +75,6 @@
   <url>
     <loc>http://seanvert.github.io/trueteste/</loc>
     <lastmod>2020-08-18T14:02:29-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/blog/</loc>
-    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
