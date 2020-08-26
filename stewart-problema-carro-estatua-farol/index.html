@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8">
+	<title>
+		Resolução do problema extra 8 do capítulo 3 (regras de derivação)
+		</title>
+	
+	
+	<script>
+	 MathJax = {
+		 tex: {
+			 inlineMath: [['$', '$'], ['\\(', '\\)']],
+			 displayMath: [['$$','$$'], ['\[','\]']],
+			 tags: 'all'
+		 },
+		 svg: {
+			 fontCache: 'global'
+		 }
+	 };	 
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+	</script>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style>
+ body {
+	 background-color: beige;
+ }
+ 
+  
+ #socialmedia {
+	 text-align: center;
+ }
+
+ small > a {
+	 display: inline;
+ }
+
+ small > #date {
+	 display: inline;
+	 float: right;
+ }
+
+ .jumbotron {
+	 background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 vertical-align: middle;
+	 background-color: gray;
+	 background-blend-mode: soft-light;
+ }
+
+ .display-4 {
+	 color: white;
+ }
+
+ .lead {
+	 color: #F0F0F0;
+ }
+
+ .my-4 {
+	 border-color: white;
+	 
+ }
+
+ .card-columns {
+	 @include media-breakpoint-only(md) {
+		 column-count: 3;
+	 }
+	 
+	 @include media-breakpoint-only(lg) {
+		 column-count: 4;
+	 }
+	 @include media-breakpoint-only(xl) {
+		 column-count: 5;
+	 }
+ }
+ 
+ #title {
+	 text-align: center;
+ }
+
+ #main {
+	 background: beige;
+ }
+
+ #meta {
+	 background: beige;
+ }
+
+ .src {
+	 margin: 2%;
+ }
+
+ main {
+	 padding: 2%;
+ }
+ 
+ pre code {
+	 border: 5%;
+ }
+
+  
+
+ #headline-1 {
+	 margin: 2%;
+ }
+
+ #subtitle {
+	 text-align: center;
+ }
+
+ .jumbotron > #date {
+	 margin: 5%;
+	 color: white;
+	 display: inline;
+ }
+
+ .jumbotron > #tags {
+	 color: white;
+	 margin: 5%;
+ }
+
+ .header {
+	 margin-bottom: 10%;
+ }
+ 
+ #meta {
+	 padding: 10%;
+ }
+
+ #content {
+	 background-color: #dcdcc6;
+	 border-radius: 25px;
+	 padding-left: 3%;
+	 padding-right: 3%;
+	 padding-top: 5px;
+	 padding-bottom: 4%;
+	 margin-left: 2%;
+	 margin-right: 2%;
+	 margin-bottom: 2%;
+ }
+
+  
+ pre {
+	 margin: 1%;
+	 padding: 3%;
+	 border-radius: 20px;
+ }
+ 
+ .previous {
+	 font-size: 1.3rem;
+ }
+
+ .next {
+	 font-size: 1.3rem;
+	 float: right;
+ }
+
+</style>
+
+	</head>
+
+
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<a class="navbar-brand" href="/"><i class="fa fa-grav fa-2x" aria-hidden="true"></i></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		 <span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a>
+			</li>
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/blog/"><i class="fa fa-edit"></i> Blog</a>
+			</li>
+			
+			
+			
+			<li class="nav-item">
+				<a class="nav-link" href="/tags/"><i class="fa fa-tag"></i> Tags</a>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+
+
+		
+		
+<section id="main">
+	<div class="header">
+		<div class="jumbotron" style="background-image: url(http://seanvert.github.io/assets/images/integral.jpeg)">
+		<h1 class="display-4">Resolução do problema extra 8 do capítulo 3 (regras de derivação)</h1>
+		<p class="lead">Resolução do problema do carro andando de noite iluminando a estátua</p>
+		<hr class="my-4">
+		<div id="date">
+	
+	
+	<i class="fa fa-calendar"></i> <time datetime="26-08-2020">26 Aug 2020</time>
+</div>
+
+
+
+		<div id="tags">
+	
+	<i class="fa fa-tags"></i>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/matem%C3%A1tica">matemática</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/portugu%C3%AAs">português</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/c%C3%A1lculo">cálculo</a>
+	
+	
+	<a class="" href="http://seanvert.github.io/tags/derivadas">derivadas</a>
+	
+	
+</div>
+
+
+		</div>
+	</div>
+	<div>
+        <article id="content">
+			
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+problema 8
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+Primeiro, a equação da parábola</p>
+<p>
+Temos:</p>
+<p>
+O ponto inicial do carro (-100, 100), o vértice da parábola na origem
+(0, 0). </p>
+<p>
+$y(x) = ax^2 + bx + c$</p>
+<p>
+É a equação geral da parábola. Substituindo o ponto (0, 0) na equação,
+obtemos $c=0$. Substituindo (-100, 100),</p>
+<p>
+$$ \begin{align*}
+&amp; \text{substituindo (-100, 100)} \; \\
+&amp; y(-100) = a(-100)^2+b(-100) \; \\
+&amp; 100 = 10000a-100b \; \\
+&amp; \dfrac{100}{100} = \dfrac{10000}{100}a-\dfrac{100}{100}b \; \\
+&amp; 1 = 100a - b \;
+\end{align*} $$</p>
+<p>
+Agora usaremos a fórmula da soma das raízes $-\frac{b}{2a}$ para descobrir o valor
+de b, também podemos usar o delta (determinante). Pegaremos o valor do
+gráfico (duas raízes reais e duplas iguais a zero).</p>
+<p>
+$$ \begin{align*}
+&amp; 0 = -\dfrac{b}{2a} \; \\
+&amp; 0 = -b \; \\
+&amp; 0 = b\; \\
+\end{align*}
+$$</p>
+<p>
+Obtivemos, $c = 0$ e $b=0$. Substituindo o valor de b em $1=100a-b$, </p>
+<p>
+$$ \begin{align*}
+&amp; 1 = 100a- 0\; \\
+&amp; 1 = 100a \; \\
+&amp; \dfrac{1}{100} = a \;
+\end{align*}
+$$</p>
+<p>
+Agora que calculamos os coeficientes, temos a equação da parábola
+$y(x) = \dfrac{x^2}{100}$ que representa a trajetória do carro. Ele
+pede o ponto em que o carro iluminaria a estátua no ponto (100, 50), a
+figura está meio ambígua, mas iremos presumir que o farol do carro
+emite luz em linha reta, não em formato cônico como na figura. </p>
+<p>
+Usaremos a derivada da função y para definir o coeficiente angular da
+trajetória da luz. $\dfrac{dy}{dx}=\dfrac{x}{50}$, este será o
+coeficiente angular da reta que representa a trajetória da
+luz. Sabemos que a reta obrigatoriamente deve passar pelo ponto
+(100, 50), substituindo um ponto genérico da equação da trajetória
+$(x, \dfrac{x^2}{100})$, as
+coordenadas da estátua na definição do coeficiente angular, temos</p>
+<p>
+$$\begin{align*}
+&amp; \dfrac{x}{50} = \dfrac{50-\dfrac{x^2}{100}}{100-x} \; \\
+&amp; 100x - x^2 = 50^2 - \dfrac{x^2}{2} \; \\
+&amp; \dfrac{x^2}{2} - 100x + 50^2 = 0 \; \\
+\end{align*}
+$$</p>
+<p>
+Obtemos as raízes $x_1 = 100 + 50 \sqrt{2}$ e $x_2 = 100 - 50
+\sqrt{2}$. Como o valor não pode passar a abcissa da estátua, ficamos
+com $x_2$ como valor da abcissa do carro. Substituímos o valor na
+equação da trajetória para obter o ponto na rodovia e obtemos
+$(100-50\sqrt{2}, 150-100\sqrt{2})$</p>
+</div>
+</div>
+
+        </article>
+	</div>
+</section>
+<aside id="meta">
+    <div>
+		
+		<a class="btn btn-sm btn-outline-dark previous" href="http://seanvert.github.io/integrais/">
+			<i class="fa fa-arrow-left"></i> 
+		</a>
+		<a class="btn btn-sm previous" href="http://seanvert.github.io/integrais/"  aria-hidden="true"> Diagrama de Integrais no LaTeX e PlantUML</a>
+				
+		
+    </div>
+	<h2>Comentários</h2>
+	<blockquote	data-width="600" data-tweet-limit="20" class="twitter-tweet">
+		<a href="">
+		</a>
+	</blockquote>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+	</script>
+</aside>
+
+
+		
+
+
+		
+
+	</body>
+</html>

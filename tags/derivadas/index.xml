@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>derivadas on Salad</title>
+    <link>http://seanvert.github.io/tags/derivadas/</link>
+    <description>Recent content in derivadas on Salad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>não sei</copyright>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://seanvert.github.io/tags/derivadas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Resolução do problema extra 8 do capítulo 3 (regras de derivação)</title>
+      <link>http://seanvert.github.io/stewart-problema-carro-estatua-farol/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/stewart-problema-carro-estatua-farol/</guid>
+      <description>problema 8   Primeiro, a equação da parábola
+ Temos:
+ O ponto inicial do carro (-100, 100), o vértice da parábola na origem (0, 0).  $y(x) = ax^2 + bx + c$
+ É a equação geral da parábola. Substituindo o ponto (0, 0) na equação, obtemos $c=0$. Substituindo (-100, 100),
+ $$ \begin{align*} &amp;amp; \text{substituindo (-100, 100)} \; \\ &amp;amp; y(-100) = a(-100)^2+b(-100) \; \\ &amp;amp; 100 = 10000a-100b \; \\ &amp;amp; \dfrac{100}{100} = \dfrac{10000}{100}a-\dfrac{100}{100}b \; \\ &amp;amp; 1 = 100a - b \; \end{align*} $$</description>
+    </item>
+    
+  </channel>
+</rss>

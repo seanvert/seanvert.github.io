@@ -7,17 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>não sei</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://seanvert.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>aprendizado_máquina</title>
-      <link>http://seanvert.github.io/tags/aprendizado_m%C3%A1quina/</link>
+      <title>cálculo</title>
+      <link>http://seanvert.github.io/tags/c%C3%A1lculo/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/c%C3%A1lculo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>derivadas</title>
+      <link>http://seanvert.github.io/tags/derivadas/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/derivadas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matemática</title>
+      <link>http://seanvert.github.io/tags/matem%C3%A1tica/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/matem%C3%A1tica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>português</title>
+      <link>http://seanvert.github.io/tags/portugu%C3%AAs/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/tags/portugu%C3%AAs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aprendizagem_automática</title>
+      <link>http://seanvert.github.io/tags/aprendizagem_autom%C3%A1tica/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://seanvert.github.io/tags/aprendizado_m%C3%A1quina/</guid>
+      <guid>http://seanvert.github.io/tags/aprendizagem_autom%C3%A1tica/</guid>
       <description></description>
     </item>
     
@@ -27,15 +63,6 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seanvert.github.io/tags/coursera/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cálculo</title>
-      <link>http://seanvert.github.io/tags/c%C3%A1lculo/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/tags/c%C3%A1lculo/</guid>
       <description></description>
     </item>
     
@@ -54,24 +81,6 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seanvert.github.io/tags/machine_learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>matemática</title>
-      <link>http://seanvert.github.io/tags/matem%C3%A1tica/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/tags/matem%C3%A1tica/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>português</title>
-      <link>http://seanvert.github.io/tags/portugu%C3%AAs/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://seanvert.github.io/tags/portugu%C3%AAs/</guid>
       <description></description>
     </item>
     

@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>não sei</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://seanvert.github.io/tags/portugu%C3%AAs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resolução do problema extra 8 do capítulo 3 (regras de derivação)</title>
+      <link>http://seanvert.github.io/stewart-problema-carro-estatua-farol/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seanvert.github.io/stewart-problema-carro-estatua-farol/</guid>
+      <description>problema 8   Primeiro, a equação da parábola
+ Temos:
+ O ponto inicial do carro (-100, 100), o vértice da parábola na origem (0, 0).  $y(x) = ax^2 + bx + c$
+ É a equação geral da parábola. Substituindo o ponto (0, 0) na equação, obtemos $c=0$. Substituindo (-100, 100),
+ $$ \begin{align*} &amp;amp; \text{substituindo (-100, 100)} \; \\ &amp;amp; y(-100) = a(-100)^2+b(-100) \; \\ &amp;amp; 100 = 10000a-100b \; \\ &amp;amp; \dfrac{100}{100} = \dfrac{10000}{100}a-\dfrac{100}{100}b \; \\ &amp;amp; 1 = 100a - b \; \end{align*} $$</description>
+    </item>
     
     <item>
       <title>Diagrama de Integrais no LaTeX e PlantUML</title>
@@ -28,7 +41,7 @@
       
       <guid>http://seanvert.github.io/blog/machinelearningsemana1/</guid>
       <description>Introdução  Copiei as anotações do curso do Andrew Ng de machine learning no Coursera e vou dar uma revisitada nelas pra montar um projeto pessoal. Vou adicionar algumas coisas aqui conforme for lendo. Mas é tudo tirado do Coursera salvo um post do stack overflow que ele indica no próprio curso.
-  Definições, informal e formal, do que é aprendizado de máquina  Há duas definições do que é aprendizado de máquina.</description>
+  Definições, informal e formal, do que é aprendizagem automática  Há duas definições do que é aprendizado de máquina.</description>
     </item>
     
   </channel>

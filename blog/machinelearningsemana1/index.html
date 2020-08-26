@@ -235,7 +235,7 @@
 	<a class="" href="http://seanvert.github.io/tags/portugu%C3%AAs">português</a>
 	
 	
-	<a class="" href="http://seanvert.github.io/tags/aprendizado_m%C3%A1quina">aprendizado_máquina</a>
+	<a class="" href="http://seanvert.github.io/tags/aprendizagem_autom%C3%A1tica">aprendizagem_automática</a>
 	
 	
 </div>
@@ -260,7 +260,7 @@ no próprio curso.</p>
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-Definições, informal e formal, do que é aprendizado de máquina
+Definições, informal e formal, do que é aprendizagem automática
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <p>Há duas definições do que é aprendizado de máquina. Arthur Samuel
@@ -411,13 +411,13 @@ Modelo e função de custo
 Representação do modelo
 </h4>
 <div id="outline-text-headline-10" class="outline-text-4">
-<p>Vamos introduzir esta notação que usaremos no decorrer do curso, $x^{(i)}$
+<p>Vamos introduzir a notação que usaremos no decorrer do curso, $x^{(i)}$
 será usado para denotar as variáveis de &#34;entrada&#34; (tamanho da sala neste
 exemplo), também chamadas de características de entrada, e $y^{(i)}$ para
 simbolizar a &#34;saída&#34; ou o resultado alvo que estamos estimando
 (preço). O par $(x^{(i)}, y^{(i)})$ é chamado de exemplo de treinamento, e o
 conjunto de dados que nós usaremos para o aprendizado — uma lista com
-m exemplos de treinamento $(x^{(i)},y^{(i)});i=1,...,m$ — é chamado de
+m exemplos de treinamento $(x^{(i)},y^{(i)}); i=1,...,m$ — é chamado de
 conjunto de treinamento. Note que o sobrescrito &#34;$(i)$&#34; na notação é
 só um índice no conjunto de treinamento, e não tem nenhuma relação com
 expoentes. Nós usaremos $X$ para denotar o espaço das entradas, e $Y$
@@ -494,13 +494,13 @@ Isso aumenta nossa função de custo para 0.58. Colocando outros pontos
 num gráfico, temos:</p>
 <p><img src="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" alt="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" title="primeira_semana/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05_2019-08-08_21-26-02.png" /></p>
 <p>
-Portanto, devemos er como objetivo minimizar o valor da função de
+Portanto, devemos ter como objetivo minimizar o valor da função de
 custo. Neste caso, $\theta_1 = 1$ é o mínimo global.</p>
 </div>
 </div>
 <div id="outline-container-headline-13" class="outline-3">
 <h3 id="headline-13">
-Intuição da função de custo II
+Intuição da função de Custo II
 </h3>
 <div id="outline-text-headline-13" class="outline-text-3">
 <p>
@@ -517,26 +517,19 @@ consequentemente eles estão na mesma linha. O x circulado mostra o
 valor da função de custo para o gráfico da esquerda quando $\theta_0 =
 800$ e $\theta_1 = -0.15$. Com outra $h(x)$ e montamos suas
 curvas de nível, e obtemos os gráficos:</p>
-<p>
-Taking any color and going along the &#39;circle&#39;, one would expect to get
-the same value of the cost function. For example, the three green
-points found on the green line above have the same value for
-J(θ_0, θ_1) and as a result, they are found along the
-same line. The circled x displays the value of the cost function for
-the graph on the left when θ_0 = 800 and θ_1 = -0.15. Taking another
-h(x) and plotting its contour plot, one gets the following graphs:</p>
 <p><img src="primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png" alt="primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png" title="primeira_semana/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57_2019-08-08_21-45-52.png" /></p>
 <p>
-When θ_0 = 360 and θ_1 = 0, the value of J(θ_0, θ_1) the contour plot gets
-closer to the center thus reducing the cost function error. Now giving
-our hypothesis function a slightly positive slope results in a better
-fit of the data.</p>
+Quando $\theta_0 = 360$ e $\theta_1 = 0$, o valor de $J(\theta_0, \theta_1)$ nas curvas de
+nível se aproxima do centro, e consequentemente, reduz o valor da
+função de custo. Agora a função hipótese tem um coeficiente angular um
+pouco mais opsitivo e obtemos um encaixe um pouco melhor com os dados.</p>
 <p><img src="primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png" alt="primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png" title="primeira_semana/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41_2019-08-08_21-53-32.png" /></p>
 <p>
-The graph above minimizes the cost function as much as possible and
-consequently, the result of θ_1 and θ_0 tend to be around 0.12 and 250
-respectively. Plotting those values on our graph to the right seems to
-put our point in the center of the inner most &#39;circle&#39;.</p>
+O gráfico acima minimiza a função de custo o máximo possível e
+consequentemente, o resultado e $\theta_1$ e $\theta_0$ tendem a ser
+aproximadamente 0.12 e 250, respectivamente. Com esses valores
+no gráfico da direita, parece que o nosso ponto fica bem no centro do
+&#39;círculo&#39; mais interno.</p>
 </div>
 </div>
 </div>
@@ -551,71 +544,64 @@ parameter learning
 gradient descent
 </h3>
 <div id="outline-text-headline-15" class="outline-text-3">
-<div id="outline-container-headline-16" class="outline-4">
-<h4 id="headline-16">
-leitura
-</h4>
-<div id="outline-text-headline-16" class="outline-text-4">
-<p>So we have our hypothesis function and we have a way of measuring how
-well it fits into the data. Now we need to estimate the parameters in
-the hypothesis function. That&#39;s where gradient descent comes in.</p>
 <p>
-Imagine that we graph our hypothesis function based on its fields θ_0
-and θ_1 (actually we are graphing the cost function as a function of
-the parameter estimates). We are not graphing x and y itself, but the
-parameter range of our hypothesis function and the cost resulting from
-selecting a particular set of parameters.</p>
+Agora, temos nossa função hipótese e também temos uma maneira de
+medir quão bem ela se encaixa nos dados. Falta estimar os parâmetros
+na função hipótese. É aqui que entra o gradiente descendente. </p>
 <p>
-We put θ_0 on the x axis and θ_1 on the y axis, with the cost
-function on the vertical z axis. The points on our graph will be the
-result of the cost function using our hypothesis with those specific
-theta parameters. The graph below depicts such a setup.</p>
+Imagine que desenhamos o gráfico da função hipótese usando os valores
+de $\theta_0$ e $\theta_1$ (na verdade, estamos plotando a função de custo em
+função das estimativas dos parâmetros). Não estamos plotando x e y,
+mas os valores dos parâmetros da nossa função hipótese e o custo
+resultante desse conjunto de parâmetros em particular.</p>
+<p>
+Usamos $\theta_0$ no eixo x e $\theta_1$ no eixo y, com o valor da função de custo
+no eixo z. Os pontos do nosso gráfico serão o resultado da função de
+custo usando nossa hipótese com aqueles valores específicos de teta. O
+gráfico abaixo exemplifica isso.</p>
 <p><img src="primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png" alt="primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png" title="primeira_semana/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26_2019-08-08_22-39-33.png" /></p>
 <p>
-We will know that we have succeeded when our cost function is at the
-very bottom of the pits in our graph, i.e. when its value is the
-minimum. The red arrows show the minimum points in the graph.</p>
+Se a nossa função de custo atinge o &#39;fundo&#39; da superfície (valor
+mínimo), obtivemos êxito. As setas vermelhas mostram os valores
+mínimos on gráfico.</p>
 <p>
-The way we do this is by taking the derivative (the tangential line to
-a function) of our cost function. The slope of the tangent is the
-derivative at that point and it will give us a direction to move
-towards. We make steps down the cost function in the direction with
-the steepest descent. The size of each step is determined by the
-parameter α, which is called the learning rate.</p>
+A maneira que usamos usamos para fazer isso é tirando a derivada (a
+linha tangenge à função) da nossa função de custo. A inclinação da
+reta tangente é a derivada naquele ponto e nos dará a direção para
+mover em seguida. Daremos passos diminuindo a função de custo na
+direção com maior inclinação. O tamaho de cada passo é determinado
+pelo parâmetro $\alpha$, que é chamado de taxa de aprendizagem.</p>
 <p>
-For example, the distance between each &#39;star&#39; in the graph above
-represents a step determined by our parameter α. A smaller α would
-result in a smaller step and a larger α results in a larger step. The
-direction in which the step is taken is determined by the partial
-derivative of J(θ_0, θ_1). Depending on where one starts on the graph,
-one could end up at different points. The image above shows us two
-different starting points that end up in two different places.</p>
+Por exemplo, distância entre cada &#39;estrela&#39; no gráfico acima
+representa um passo do nosso parâmetro $\alpha$. Um $\alpha$ pequeno resulta em
+passos menores, e analogamente, um $\alpha$ maior, em passos maiores. A
+direção na qual cada passo será dado é determinada pela derivada de
+$J(\theta_0, \theta_1)$. Dependendo de onde começamos no nosso gráfico, podemos
+acabar em pontos diferentes. A imagem abaixo mostra dois diferentes
+pontos de partida que levam a dois lugares diferentes.</p>
 <p>
-The gradient descent algorithm is:</p>
+O algoritmo do gradiente descendente é:</p>
 <p>
-repeat until convergence:</p>
+Repetir até convergir:</p>
 <p>
-$$ \theta_j := \theta_j - \alpha\frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1) $$</p>
+$$\theta_j := \theta_j - \alpha\frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1)$$</p>
 <p>
-where</p>
+j = 0, 1 representa o índice da característica (um parâmetro da
+função hipótese).</p>
 <p>
-j = 0, 1 represents the feature index number.</p>
-<p>
-At each iteration j, one should simultaeously update the parameters
-θ_1, θ_2,…, θ_n. Updating a specific parameter prior to calculating
-another one on the j^(th) iteration would yield to a wrong
-implementation.</p>
+Em cada iteração em j, você deve mudar simultaneamente os parâmetros
+$\theta_1, \theta_2,..., \theta_n$. Atualizar os parâmetros antes de calcular alguma das
+n-ésimas iterações de j é um erro de implementação.</p>
 <p><img src="primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png" alt="primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png" title="primeira_semana/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56_2019-08-08_22-49-00.png" /></p>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-headline-17" class="outline-3">
-<h3 id="headline-17">
+<div id="outline-container-headline-16" class="outline-3">
+<h3 id="headline-16">
 gradient descent intuition
 </h3>
-<div id="outline-text-headline-17" class="outline-text-3">
-<p>In this video we explored the scenario where we used one parameter θ_1
+<div id="outline-text-headline-16" class="outline-text-3">
+<p>
+In this video we explored the scenario where we used one parameter θ_1
 and plotted its cost function to implement a gradient descent. Our
 formula for a single parameter was :</p>
 <p>
@@ -645,11 +631,11 @@ $$ \theta_1 := \theta_1 - \alpha.0 $$</p>
 <p><img src="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" alt="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" title="primeira_semana/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00_2019-08-09_12-34-41.png" /></p>
 </div>
 </div>
-<div id="outline-container-headline-18" class="outline-3">
-<h3 id="headline-18">
+<div id="outline-container-headline-17" class="outline-3">
+<h3 id="headline-17">
 gradiente descent for linear regression
 </h3>
-<div id="outline-text-headline-18" class="outline-text-3">
+<div id="outline-text-headline-17" class="outline-text-3">
 <p>When specifically applied to the case of linear regression, a new form
 of the gradient descent equation can be derived. We can substitute our
 actual cost function and our actual hypothesis function and modify the
@@ -699,16 +685,16 @@ went through as it converged to its minimum.</p>
 </div>
 </div>
 </div>
-<div id="outline-container-headline-19" class="outline-2">
-<h2 id="headline-19">
+<div id="outline-container-headline-18" class="outline-2">
+<h2 id="headline-18">
 linear algebra review
 </h2>
-<div id="outline-text-headline-19" class="outline-text-2">
-<div id="outline-container-headline-20" class="outline-3">
-<h3 id="headline-20">
+<div id="outline-text-headline-18" class="outline-text-2">
+<div id="outline-container-headline-19" class="outline-3">
+<h3 id="headline-19">
 ☛ TODO matrices and vectors
 </h3>
-<div id="outline-text-headline-20" class="outline-text-3">
+<div id="outline-text-headline-19" class="outline-text-3">
 <p>Matrices are 2-dimensional arrays:</p>
 <p>
 $$\begin{bmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \\ j &amp; k &amp; l\end{bmatrix} $$</p>
@@ -785,11 +771,11 @@ different things.</p>
 </table>
 </div>
 </div>
-<div id="outline-container-headline-21" class="outline-3">
-<h3 id="headline-21">
+<div id="outline-container-headline-20" class="outline-3">
+<h3 id="headline-20">
 addition and scalar multiplication
 </h3>
-<div id="outline-text-headline-21" class="outline-text-3">
+<div id="outline-text-headline-20" class="outline-text-3">
 <p>
 Addition and subtraction are element-wise, so you simply add or
 subtract each corresponding element:</p>
@@ -863,11 +849,11 @@ running the cell below.</p>
 </table>
 </div>
 </div>
-<div id="outline-container-headline-22" class="outline-3">
-<h3 id="headline-22">
+<div id="outline-container-headline-21" class="outline-3">
+<h3 id="headline-21">
 matrix and vector multiplication
 </h3>
-<div id="outline-text-headline-22" class="outline-text-3">
+<div id="outline-text-headline-21" class="outline-text-3">
 <p>We map the column of the vector onto each row of the matrix,
 multiplying each element and summing the result.</p>
 <p>
@@ -895,11 +881,11 @@ matrix-vector multiplications.</p>
 </span><span style="color:#960050;background-color:#1e0010"></span>Av = A <span style="color:#f92672">*</span> v<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">% ans = Av</span></code></pre></div>
 </div>
-<div id="outline-container-headline-23" class="outline-3">
-<h3 id="headline-23">
+<div id="outline-container-headline-22" class="outline-3">
+<h3 id="headline-22">
 matrix matrix multiplication
 </h3>
-<div id="outline-text-headline-23" class="outline-text-3">
+<div id="outline-text-headline-22" class="outline-text-3">
 <p>We multiply two matrices by breaking it into several vector
 multiplications and concatenating the result.</p>
 <p>
@@ -945,11 +931,11 @@ For example:</p>
 </div>
 </div>
 </div>
-<div id="outline-container-headline-24" class="outline-3">
-<h3 id="headline-24">
+<div id="outline-container-headline-23" class="outline-3">
+<h3 id="headline-23">
 matrix multiplication properties
 </h3>
-<div id="outline-text-headline-24" class="outline-text-3">
+<div id="outline-text-headline-23" class="outline-text-3">
 <ul>
 <li>
 <p>Matrices are not commutative: $$ A * B \neq B * A $$</p>
@@ -1009,11 +995,11 @@ matrix&#39;s rows.</p>
 </table>
 </div>
 </div>
-<div id="outline-container-headline-25" class="outline-3">
-<h3 id="headline-25">
+<div id="outline-container-headline-24" class="outline-3">
+<h3 id="headline-24">
 inverse and transpose
 </h3>
-<div id="outline-text-headline-25" class="outline-text-3">
+<div id="outline-text-headline-24" class="outline-text-3">
 <p>The inverse of a matrix A is denoted A<sup>-1</sup>. Multiplying by the
 inverse results in the identity matrix.</p>
 <p>
