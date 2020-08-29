@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>http://seanvert.github.io/posts/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://seanvert.github.io/stewart-problema-carro-estatua-farol/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
@@ -89,21 +94,6 @@
   
   <url>
     <loc>http://seanvert.github.io/blog/machinelearningsemana1/</loc>
-    <lastmod>2020-08-18T20:18:45-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/posts/</loc>
-    <lastmod>2020-08-18T20:18:45-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/tags/please-ignore/</loc>
-    <lastmod>2020-08-18T20:18:45-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://seanvert.github.io/tags/test/</loc>
     <lastmod>2020-08-18T20:18:45-03:00</lastmod>
   </url>
   
