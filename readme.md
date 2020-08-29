@@ -7,9 +7,8 @@
   - [X] index geral das tags
   - [ ] index de tags específicas
 - [-] mathjax
-  - [ ] só com tags de matemática ou math
-  - [X] colocar um condional por tag pra ele só adicionar o mathjax em
-    posts com tags
+  - [X] colocar um condicional por tag 
+  - [ ] adicionar o mathjax só em posts com tag math ou matemática
 - [ ] adicionar o resto da tradução do site
 - [-] colocar um widget do twitter em cada post
   - [X] colocar um link do twitter nos metadados de cada post
