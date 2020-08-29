@@ -14,6 +14,7 @@
 - [-] colocar um widget do twitter em cada post
   - [X] colocar um link do twitter nos metadados de cada post
   - [ ] falta ver se tem jeito de enfiar a thread no twitter
+- [ ] fazer um profile do tmuxinator pro hugo
 
 
 
