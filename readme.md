@@ -3,7 +3,9 @@
 - [-] colocar uma pesquisa do google
   - [X] colocar uma barra de pesquisa na navbar
   - [X] arrumar a cor do botão
-  - [ ] adicionar a pesquisa do google
+  - [X] adicionar a pesquisa do google
+  - [ ] mudar a aparência da pesquisa do google
+  - [ ] ver se o meu site tá funcionando direito amanhã
   - [X] adicionar uma pesquisa
 - [-] colocar a parte das tags
   - [X] index geral das tags
