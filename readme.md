@@ -1,10 +1,10 @@
-* to do list
 - [X] arrumar a parte do blog pra ficar separada
 - [ ] ver o que dá pra fazer pra transformar isso em template
 - [-] colocar uma pesquisa do google
   - [X] colocar uma barra de pesquisa na navbar
-  - [ ] arrumar a cor do botão
-  - [ ] adicionar uma pesquisa
+  - [X] arrumar a cor do botão
+  - [ ] adicionar a pesquisa do google
+  - [X] adicionar uma pesquisa
 - [-] colocar a parte das tags
   - [X] index geral das tags
   - [ ] index de tags específicas
@@ -16,6 +16,9 @@
   - [X] colocar um link do twitter nos metadados de cada post
   - [ ] falta ver se tem jeito de enfiar a thread no twitter
 - [X] fazer um profile do tmuxinator pro hugo
+- [ ] ignorar as pastas latex do org-mode
+- [ ] colocar os créditos das fotos do unsplash
+
 
 
 
