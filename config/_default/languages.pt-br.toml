@@ -1,11 +1,11 @@
-languageCode = "en"
-languageName = "English"
+languageCode = "pt-br"
+languageName = "Português"
 weight = 1
-title = "Blowfish"
+title = "putStrLn"
 
 [params]
   displayName = "Português"
-  isoCode = "pt"
+  isoCode = "pt-br"
   rtl = false
   dateFormat = "2 January 2006"
   # logo = "img/logo.png"

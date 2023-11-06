@@ -43,7 +43,7 @@
 #  weight = 20
 
 [[main]]
- name = "Categories"
+ name = "Categorias"
  pageRef = "categories"
  weight = 20
 
@@ -64,6 +64,6 @@
   weight = 10
 
 [[footer]]
-  name = "Categories"
+  name = "Categorias"
   pageRef = "categories"
   weight = 20
