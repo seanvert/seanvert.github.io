@@ -16,7 +16,7 @@ title = "putStrLn"
 [author]
   name = "Sean Uchida"
   image = "img/author.jpeg"
-  headline = "I'm only human"
+  headline = "Um revirador de coisas"
   bio = "A little bit about you"
   links = [
     { email = "mailto:seanguchida@gmail.com" },

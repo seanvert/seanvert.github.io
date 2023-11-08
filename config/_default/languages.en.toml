@@ -16,7 +16,7 @@ title = "putStrLn"
 [author]
   name = "Your name here"
   image = "img/blowfish_logo.png"
-  headline = "I'm only human"
+  headline = "I enjoy messing around with things"
   bio = "A little bit about you"
   links = [
     { email = "mailto:seankuchida@gmail.com" },
