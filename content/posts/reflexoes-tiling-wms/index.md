@@ -44,7 +44,9 @@ o que também pode ser uma vantagem dependendo da pessoa. Pode ser uma boa oport
 
 - use um papel de parede com os atalhos de teclado
 - ou alternativamente, faça um scratchpad com o feh com uma imagem com os seus atalhos
-{{< img src="/img/i3.webp" caption="Exemplo do que você não deve fazer se quiser se focar" >}}
+
+![Exemplo do que você não deve fazer se quiser se focar](/img/i3.webp)
+
 - se perguntar se faz sentido você usar isso
 por mais que as screenshots no r/unixporn sejam legais, acho que vale a pena se perguntar se você vai ter alguma utilidade pra esse tipo de coisa porque ele *vai* te atrapalhar até você se acostumar. E não sei até que ponto é o tipo de coisa legal pra quem teme TDAH, mas também vou comentar algo sobre foco na próxima.
 - você pode copiar uma janela para todas as áreas de trabalho
